@@ -42,7 +42,9 @@ end top;
 architecture Behavioral of top is
 signal scol: std_logic_vector(7 downto 0):="01000111";
 signal srow: std_logic_vector(7 downto 0):="01111111";
-constant maxcnt: integer := 25_000_000;--one second
+--constant maxcnt: integer := 25_000_000;--one second
+constant maxcnt: integer := 25_000;--one second
+
 signal cnt: integer range 0 to maxcnt :=0;
 
 
@@ -50,6 +52,7 @@ signal cnt: integer range 0 to maxcnt :=0;
 signal counter_display: std_logic_vector(63 downto 0);
 signal cnt_dis_enable: std_logic:='0';
 signal cnt_dis_rst: std_logic:='0';
+signal col_indx: integer range 0 to 7:=0;
 
 begin
 
@@ -67,13 +70,34 @@ output=>counter_display
 process(clk) is
 begin
     if rising_edge(clk) then
---        if cnt = maxcnt then
---            cnt<=0;
+        if cnt = maxcnt then
+            cnt<=0;
+            
 --            scol<= not scol;
---            srow <= srow(srow'high - 1 downto srow'low) & srow(srow'high);
---        else
---            cnt <= 1+cnt;
---        end if;
+            
+            
+            case col_indx is
+                when 0 => scol<=counter_display(63 downto 56);
+                when 1 => scol<=counter_display(55 downto 48);
+                when 2 => scol<=counter_display(47 downto 40);
+                when 3 => scol<=counter_display(39 downto 32);
+                when 4 => scol<=counter_display(31 downto 24);
+                when 5 => scol<=counter_display(23 downto 16);
+                when 6 => scol<=counter_display(15 downto 8);
+                when 7 => scol<=counter_display(7 downto 0);
+                when others => scol<=counter_display(63 downto 56);
+            end case;
+            srow <= srow(srow'high - 1 downto srow'low) & srow(srow'high);
+            
+            if col_indx=7 then
+                col_indx<=0;
+                else
+                col_indx<=col_indx+1;
+            end if;
+            
+        else
+            cnt <= 1+cnt;
+        end if;
 
     end if;
 end process;

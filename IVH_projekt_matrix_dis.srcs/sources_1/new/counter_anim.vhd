@@ -64,6 +64,6 @@ begin
 -- there will be 2 counters and one luckup table that will contain ways to draw the numbers
 
 
-
+out_val<="00000000"&char_table(239 downto 192)&"00000000";--prototype
 OUTPUT<=out_val;
 end Behavioral;
