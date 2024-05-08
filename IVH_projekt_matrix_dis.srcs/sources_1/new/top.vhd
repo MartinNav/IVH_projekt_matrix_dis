@@ -21,6 +21,8 @@
 
 library IEEE;
 use IEEE.STD_LOGIC_1164.ALL;
+library xil_defaultlib;
+use xil_defaultlib.all;
 
 -- Uncomment the following library declaration if using
 -- arithmetic functions with Signed or Unsigned values
@@ -42,10 +44,26 @@ signal scol: std_logic_vector(7 downto 0):="01000111";
 signal srow: std_logic_vector(7 downto 0):="01111111";
 constant maxcnt: integer := 25_000_000 /2 -1;
 signal cnt: integer range 0 to maxcnt :=0;
+
+
+
+signal counter_display: std_logic_vector(63 downto 0);
+
+
 begin
 
-process(clk) is
 
+cnt_dis:entity xil_defaultlib.counter_anim 
+port map(
+clk=>clk,
+reset=>'0',
+en=>clk,
+output=>counter_display
+);
+
+
+
+process(clk) is
 begin
     if rising_edge(clk) then
         if cnt = maxcnt then
@@ -56,9 +74,9 @@ begin
             cnt <= 1+cnt;
         end if;
     end if;
-
-
 end process;
+
+
 
 
 row<=srow;
