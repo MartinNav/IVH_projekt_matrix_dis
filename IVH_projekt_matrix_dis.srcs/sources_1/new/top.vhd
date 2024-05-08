@@ -42,13 +42,14 @@ end top;
 architecture Behavioral of top is
 signal scol: std_logic_vector(7 downto 0):="01000111";
 signal srow: std_logic_vector(7 downto 0):="01111111";
-constant maxcnt: integer := 25_000_000 /2 -1;
+constant maxcnt: integer := 25_000_000;--one second
 signal cnt: integer range 0 to maxcnt :=0;
 
 
 
 signal counter_display: std_logic_vector(63 downto 0);
-
+signal cnt_dis_enable: std_logic:='0';
+signal cnt_dis_rst: std_logic:='0';
 
 begin
 
@@ -56,8 +57,8 @@ begin
 cnt_dis:entity xil_defaultlib.counter_anim 
 port map(
 clk=>clk,
-reset=>'0',
-en=>clk,
+reset=>cnt_dis_rst,
+en=>cnt_dis_enable,
 output=>counter_display
 );
 
@@ -66,13 +67,14 @@ output=>counter_display
 process(clk) is
 begin
     if rising_edge(clk) then
-        if cnt = maxcnt then
-            cnt<=0;
-            scol<= not scol;
-            srow <= srow(srow'high - 1 downto srow'low) & srow(srow'high);
-        else
-            cnt <= 1+cnt;
-        end if;
+--        if cnt = maxcnt then
+--            cnt<=0;
+--            scol<= not scol;
+--            srow <= srow(srow'high - 1 downto srow'low) & srow(srow'high);
+--        else
+--            cnt <= 1+cnt;
+--        end if;
+
     end if;
 end process;
 
