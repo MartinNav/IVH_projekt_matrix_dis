@@ -40,7 +40,7 @@ entity counter_anim is
            RESET : in  STD_LOGIC;
            EN    : in  STD_LOGIC;
            --OUTPUT: out T_DISPLAY := (others => (others => '0'))
-           OUTPUT: out std_logic_vector(63 downto 0):=(others=>'0')-- by default it will not print anything
+           OUTPUT: out std_logic_vector(63 downto 0):=(others=>'1')-- by default it will not print anything
            );
 end counter_anim;
 

@@ -40,15 +40,15 @@ entity top is
 end top;
 
 architecture Behavioral of top is
-signal scol: std_logic_vector(7 downto 0):="01000111";
+signal scol: std_logic_vector(7 downto 0):="11111111";
 signal srow: std_logic_vector(7 downto 0):="01111111";
 --constant maxcnt: integer := 25_000_000;--one second
 constant maxcnt: integer := 25_000;--100 fps
 signal cnt: integer range 0 to maxcnt :=0;
---constant max_sec_cnt: integer := 25_000_000;--1 sec
-constant max_sec_cnt: integer := 250_000;--0.01 sec
+constant max_sec_cnt: integer := 25_000_000;--1 sec
+--constant max_sec_cnt: integer := 250_000;--0.01 sec
 
-signal sec_cnt: integer range 0 to maxcnt :=0;
+signal sec_cnt: integer range 0 to max_sec_cnt :=0;
 
 
 
