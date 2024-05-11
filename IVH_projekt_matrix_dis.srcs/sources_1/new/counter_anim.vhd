@@ -45,7 +45,7 @@ entity counter_anim is
 end counter_anim;
 
 architecture Behavioral of counter_anim is
- signal out_val: std_logic_vector(63 downto 0):=(others=>'0');
+ --signal out_val: std_logic_vector(63 downto 0):=(others=>'0');
  constant char_table: std_logic_vector( 239 downto 0):=(
  -- this table contains all 10 digits that will fit on 3 cols
  --0= 239 to 215
@@ -119,8 +119,51 @@ port map( clk=>clk,
         
         end if;
     end process;
+    
+    
+    process (clk)--creating the second digit (in fact it is the right one  this_value| X)
+    begin
+        if rising_edge(clk) then
+            case cnt2_value is
+                when "0000"=>
+                    second_value<=char_table(239 downto 216);
+                when "0001"=>
+                    second_value<=char_table(215 downto 192);
+                when "0010"=>
+                    second_value<=char_table(191 downto 168);
+                when "0011"=>
+                    second_value<=char_table(167 downto 144);
+                when "0100"=>
+                    second_value<=char_table(143 downto 120);
+                when "0101"=>
+                    second_value<=char_table(119 downto 96);
+                when "0110"=>
+                    second_value<=char_table(95 downto 72);
+                when "0111"=>
+                    second_value<=char_table(71 downto 48);
+                when "1000"=>
+                    second_value<=char_table(47 downto 24);
+                when "1001"=>
+                    second_value<=char_table(23 downto 0);
+            end case;
+        
+        end if;
+    end process;
+    
+    
+    
+    process (clk)--combinator
+    begin
+        if rising_edge(clk) then
+        screen_value<=second_value & "0000000000000000"& first_value;
+        end if;
+    
+    end process;
+    
+    
 
 
-out_val<="00000000"&char_table(239 downto 192)&"00000000";--prototype
-OUTPUT<=out_val;
+--out_val<="00000000"&char_table(239 downto 192)&"00000000";--prototype
+OUTPUT<=screen_value;
+--OUTPUT<=out_val;
 end Behavioral;

@@ -85,7 +85,7 @@ begin
                 when 5 => scol<=counter_display(23 downto 16);
                 when 6 => scol<=counter_display(15 downto 8);
                 when 7 => scol<=counter_display(7 downto 0);
-                when others => scol<=counter_display(63 downto 56);
+                when others => scol<=(others=>'1');--this will make failure green
             end case;
             srow <= srow(srow'high - 1 downto srow'low) & srow(srow'high);
             
