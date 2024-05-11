@@ -55,7 +55,7 @@ architecture Behavioral of counter_anim is
  "01111100"& "01010100"&"01010100"& --three 167-144
  "01111100"& "00010000"&"01110000"& --four 143-120
  "01011100"& "01010100"&"01110100"& --five 119-96
- "00011100"& "00010100"&"01111100"& --six 95-72
+ "01011100"& "01010100"&"01111100"& --six 95-72
  "01111100"& "01000000"&"01000000"& --seven 71-48
  "01111100"& "01010100"&"01111100"& --eight 47-24
  "01111100"& "01010000"&"01110000" --nine 23-0
@@ -159,7 +159,7 @@ port map( clk=>clk,
     process (clk)--combinator
     begin
         if rising_edge(clk) then
-        screen_value<= "00000000"&first_value & "00000000"& second_value;
+        screen_value<= first_value & "00000000"& second_value&"00000000";
         end if;
     
     end process;
