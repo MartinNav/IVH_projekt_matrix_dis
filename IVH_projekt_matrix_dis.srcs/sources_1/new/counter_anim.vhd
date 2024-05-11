@@ -115,6 +115,8 @@ port map( clk=>clk,
                     first_value<=char_table(47 downto 24);
                 when "1001"=>
                     first_value<=char_table(23 downto 0);
+                when others=>
+                    first_value<=(others=>'1');--this should be unreachable if it will be reachable it will be green
             end case;
         
         end if;
@@ -145,6 +147,8 @@ port map( clk=>clk,
                     second_value<=char_table(47 downto 24);
                 when "1001"=>
                     second_value<=char_table(23 downto 0);
+                when others=>
+                    second_value<=(others=>'1');
             end case;
         
         end if;

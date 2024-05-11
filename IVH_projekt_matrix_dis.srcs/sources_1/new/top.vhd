@@ -43,9 +43,11 @@ architecture Behavioral of top is
 signal scol: std_logic_vector(7 downto 0):="01000111";
 signal srow: std_logic_vector(7 downto 0):="01111111";
 --constant maxcnt: integer := 25_000_000;--one second
-constant maxcnt: integer := 25_000;--one second
-
+constant maxcnt: integer := 25_000;--100 fps
 signal cnt: integer range 0 to maxcnt :=0;
+constant max_sec_cnt: integer := 25_000_000;--100 fps
+signal sec_cnt: integer range 0 to maxcnt :=0;
+
 
 
 
@@ -100,6 +102,21 @@ begin
         end if;
 
     end if;
+end process;
+
+
+process(clk)
+begin
+    if rising_edge(clk) then
+        if sec_cnt = max_sec_cnt then
+            sec_cnt<=0;
+            cnt_dis_enable<='1';
+            else
+            sec_cnt<= sec_cnt + 1;
+            cnt_dis_enable<='0';
+        end if;
+    end if;
+
 end process;
 
 

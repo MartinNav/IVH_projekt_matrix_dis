@@ -3,8 +3,8 @@
 # SW Build 4029153 on Fri Oct 13 20:14:34 MDT 2023
 # IP Build 4028589 on Sat Oct 14 00:45:43 MDT 2023
 # SharedData Build 4025554 on Tue Oct 10 17:18:54 MDT 2023
-# Start of session at: Wed May  8 19:19:31 2024
-# Process ID: 13288
+# Start of session at: Sat May 11 10:40:37 2024
+# Process ID: 7608
 # Current directory: D:/VUT_FIT/IVH/IVH_projekt_matrix_dis/IVH_projekt_matrix_dis.runs/synth_1
 # Command line: vivado.exe -log design_1_wrapper.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source design_1_wrapper.tcl
 # Log file: D:/VUT_FIT/IVH/IVH_projekt_matrix_dis/IVH_projekt_matrix_dis.runs/synth_1/design_1_wrapper.vds
@@ -12,7 +12,7 @@
 # Running On: LAPTOP-O3BSDE06, OS: Windows, CPU Frequency: 2096 MHz, CPU Physical cores: 8, Host memory: 32155 MB
 #-----------------------------------------------------------
 source design_1_wrapper.tcl -notrace
-create_project: Time (s): cpu = 00:00:08 ; elapsed = 00:00:09 . Memory (MB): peak = 455.719 ; gain = 184.801
+create_project: Time (s): cpu = 00:00:09 ; elapsed = 00:00:10 . Memory (MB): peak = 454.988 ; gain = 183.219
 INFO: [IP_Flow 19-234] Refreshing IP repositories
 INFO: [IP_Flow 19-1704] No user IP repositories specified
 INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'D:/XILINX/Vivado/2023.2/data/ip'.
@@ -28,32 +28,32 @@ INFO: [Designutils 20-5440] No compile time benefit to using incremental synthes
 INFO: [Designutils 20-4379] Flow is switching to default flow due to incremental criteria not met. If you would like to alter this behaviour and have the flow terminate instead, please set the following parameter config_implementation {autoIncr.Synth.RejectBehavior Terminate}
 INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 2 processes.
 INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
-INFO: [Synth 8-7075] Helper process launched with PID 11740
+INFO: [Synth 8-7075] Helper process launched with PID 12100
 ---------------------------------------------------------------------------------
-Starting RTL Elaboration : Time (s): cpu = 00:00:10 ; elapsed = 00:00:12 . Memory (MB): peak = 1331.355 ; gain = 440.367
+Starting RTL Elaboration : Time (s): cpu = 00:00:09 ; elapsed = 00:00:10 . Memory (MB): peak = 1331.133 ; gain = 439.723
 ---------------------------------------------------------------------------------
-INFO: [Synth 8-638] synthesizing module 'design_1_wrapper' [d:/VUT_FIT/IVH/IVH_projekt_matrix_dis/IVH_projekt_matrix_dis.gen/sources_1/bd/design_1/hdl/design_1_wrapper.vhd:23]
-INFO: [Synth 8-3491] module 'design_1' declared at 'd:/VUT_FIT/IVH/IVH_projekt_matrix_dis/IVH_projekt_matrix_dis.gen/sources_1/bd/design_1/synth/design_1.vhd:15' bound to instance 'design_1_i' of component 'design_1' [d:/VUT_FIT/IVH/IVH_projekt_matrix_dis/IVH_projekt_matrix_dis.gen/sources_1/bd/design_1/hdl/design_1_wrapper.vhd:32]
+INFO: [Synth 8-638] synthesizing module 'design_1_wrapper' [D:/VUT_FIT/IVH/IVH_projekt_matrix_dis/IVH_projekt_matrix_dis.gen/sources_1/bd/design_1/hdl/design_1_wrapper.vhd:23]
+INFO: [Synth 8-3491] module 'design_1' declared at 'd:/VUT_FIT/IVH/IVH_projekt_matrix_dis/IVH_projekt_matrix_dis.gen/sources_1/bd/design_1/synth/design_1.vhd:15' bound to instance 'design_1_i' of component 'design_1' [D:/VUT_FIT/IVH/IVH_projekt_matrix_dis/IVH_projekt_matrix_dis.gen/sources_1/bd/design_1/hdl/design_1_wrapper.vhd:32]
 INFO: [Synth 8-638] synthesizing module 'design_1' [d:/VUT_FIT/IVH/IVH_projekt_matrix_dis/IVH_projekt_matrix_dis.gen/sources_1/bd/design_1/synth/design_1.vhd:27]
-INFO: [Synth 8-3491] module 'design_1_clk_wiz_0_0' declared at 'D:/VUT_FIT/IVH/IVH_projekt_matrix_dis/IVH_projekt_matrix_dis.runs/synth_1/.Xil/Vivado-13288-LAPTOP-O3BSDE06/realtime/design_1_clk_wiz_0_0_stub.vhdl:6' bound to instance 'clk_wiz_0' of component 'design_1_clk_wiz_0_0' [d:/VUT_FIT/IVH/IVH_projekt_matrix_dis/IVH_projekt_matrix_dis.gen/sources_1/bd/design_1/synth/design_1.vhd:56]
-INFO: [Synth 8-638] synthesizing module 'design_1_clk_wiz_0_0' [D:/VUT_FIT/IVH/IVH_projekt_matrix_dis/IVH_projekt_matrix_dis.runs/synth_1/.Xil/Vivado-13288-LAPTOP-O3BSDE06/realtime/design_1_clk_wiz_0_0_stub.vhdl:16]
-INFO: [Synth 8-3491] module 'design_1_top_0_0' declared at 'D:/VUT_FIT/IVH/IVH_projekt_matrix_dis/IVH_projekt_matrix_dis.runs/synth_1/.Xil/Vivado-13288-LAPTOP-O3BSDE06/realtime/design_1_top_0_0_stub.vhdl:6' bound to instance 'top_0' of component 'design_1_top_0_0' [d:/VUT_FIT/IVH/IVH_projekt_matrix_dis/IVH_projekt_matrix_dis.gen/sources_1/bd/design_1/synth/design_1.vhd:63]
-INFO: [Synth 8-638] synthesizing module 'design_1_top_0_0' [D:/VUT_FIT/IVH/IVH_projekt_matrix_dis/IVH_projekt_matrix_dis.runs/synth_1/.Xil/Vivado-13288-LAPTOP-O3BSDE06/realtime/design_1_top_0_0_stub.vhdl:15]
+INFO: [Synth 8-3491] module 'design_1_clk_wiz_0_0' declared at 'D:/VUT_FIT/IVH/IVH_projekt_matrix_dis/IVH_projekt_matrix_dis.runs/synth_1/.Xil/Vivado-7608-LAPTOP-O3BSDE06/realtime/design_1_clk_wiz_0_0_stub.vhdl:6' bound to instance 'clk_wiz_0' of component 'design_1_clk_wiz_0_0' [d:/VUT_FIT/IVH/IVH_projekt_matrix_dis/IVH_projekt_matrix_dis.gen/sources_1/bd/design_1/synth/design_1.vhd:56]
+INFO: [Synth 8-638] synthesizing module 'design_1_clk_wiz_0_0' [D:/VUT_FIT/IVH/IVH_projekt_matrix_dis/IVH_projekt_matrix_dis.runs/synth_1/.Xil/Vivado-7608-LAPTOP-O3BSDE06/realtime/design_1_clk_wiz_0_0_stub.vhdl:16]
+INFO: [Synth 8-3491] module 'design_1_top_0_0' declared at 'D:/VUT_FIT/IVH/IVH_projekt_matrix_dis/IVH_projekt_matrix_dis.runs/synth_1/.Xil/Vivado-7608-LAPTOP-O3BSDE06/realtime/design_1_top_0_0_stub.vhdl:6' bound to instance 'top_0' of component 'design_1_top_0_0' [d:/VUT_FIT/IVH/IVH_projekt_matrix_dis/IVH_projekt_matrix_dis.gen/sources_1/bd/design_1/synth/design_1.vhd:63]
+INFO: [Synth 8-638] synthesizing module 'design_1_top_0_0' [D:/VUT_FIT/IVH/IVH_projekt_matrix_dis/IVH_projekt_matrix_dis.runs/synth_1/.Xil/Vivado-7608-LAPTOP-O3BSDE06/realtime/design_1_top_0_0_stub.vhdl:15]
 INFO: [Synth 8-256] done synthesizing module 'design_1' (0#1) [d:/VUT_FIT/IVH/IVH_projekt_matrix_dis/IVH_projekt_matrix_dis.gen/sources_1/bd/design_1/synth/design_1.vhd:27]
-INFO: [Synth 8-256] done synthesizing module 'design_1_wrapper' (0#1) [d:/VUT_FIT/IVH/IVH_projekt_matrix_dis/IVH_projekt_matrix_dis.gen/sources_1/bd/design_1/hdl/design_1_wrapper.vhd:23]
+INFO: [Synth 8-256] done synthesizing module 'design_1_wrapper' (0#1) [D:/VUT_FIT/IVH/IVH_projekt_matrix_dis/IVH_projekt_matrix_dis.gen/sources_1/bd/design_1/hdl/design_1_wrapper.vhd:23]
 ---------------------------------------------------------------------------------
-Finished RTL Elaboration : Time (s): cpu = 00:00:12 ; elapsed = 00:00:15 . Memory (MB): peak = 1438.977 ; gain = 547.988
+Finished RTL Elaboration : Time (s): cpu = 00:00:11 ; elapsed = 00:00:14 . Memory (MB): peak = 1438.652 ; gain = 547.242
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:12 ; elapsed = 00:00:15 . Memory (MB): peak = 1438.977 ; gain = 547.988
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:11 ; elapsed = 00:00:14 . Memory (MB): peak = 1438.652 ; gain = 547.242
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:12 ; elapsed = 00:00:15 . Memory (MB): peak = 1438.977 ; gain = 547.988
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:11 ; elapsed = 00:00:14 . Memory (MB): peak = 1438.652 ; gain = 547.242
 ---------------------------------------------------------------------------------
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 1438.977 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1438.652 ; gain = 0.000
 INFO: [Project 1-570] Preparing netlist for logic optimization
 
 Processing XDC Constraints
@@ -76,22 +76,22 @@ Parsing XDC File [D:/VUT_FIT/IVH/IVH_projekt_matrix_dis/IVH_projekt_matrix_dis.r
 Finished Parsing XDC File [D:/VUT_FIT/IVH/IVH_projekt_matrix_dis/IVH_projekt_matrix_dis.runs/synth_1/dont_touch.xdc]
 Completed Processing XDC Constraints
 
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1445.422 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1450.840 ; gain = 0.000
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
-Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.004 . Memory (MB): peak = 1445.422 ; gain = 0.000
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.004 . Memory (MB): peak = 1450.840 ; gain = 0.000
 INFO: [Designutils 20-5440] No compile time benefit to using incremental synthesis; A full resynthesis will be run
 INFO: [Designutils 20-4379] Flow is switching to default flow due to incremental criteria not met. If you would like to alter this behaviour and have the flow terminate instead, please set the following parameter config_implementation {autoIncr.Synth.RejectBehavior Terminate}
 ---------------------------------------------------------------------------------
-Finished Constraint Validation : Time (s): cpu = 00:00:24 ; elapsed = 00:00:28 . Memory (MB): peak = 1445.422 ; gain = 554.434
+Finished Constraint Validation : Time (s): cpu = 00:00:23 ; elapsed = 00:00:27 . Memory (MB): peak = 1450.840 ; gain = 559.430
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Loading Part and Timing Information
 ---------------------------------------------------------------------------------
 Loading part: xc7z020clg400-1
 ---------------------------------------------------------------------------------
-Finished Loading Part and Timing Information : Time (s): cpu = 00:00:24 ; elapsed = 00:00:28 . Memory (MB): peak = 1445.422 ; gain = 554.434
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:23 ; elapsed = 00:00:27 . Memory (MB): peak = 1450.840 ; gain = 559.430
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying 'set_property' XDC Constraints
@@ -102,10 +102,10 @@ Applied set_property KEEP_HIERARCHY = SOFT for design_1_i. (constraint file  aut
 Applied set_property KEEP_HIERARCHY = SOFT for design_1_i/clk_wiz_0. (constraint file  auto generated constraint).
 Applied set_property KEEP_HIERARCHY = SOFT for design_1_i/top_0. (constraint file  auto generated constraint).
 ---------------------------------------------------------------------------------
-Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:24 ; elapsed = 00:00:28 . Memory (MB): peak = 1445.422 ; gain = 554.434
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:23 ; elapsed = 00:00:27 . Memory (MB): peak = 1450.840 ; gain = 559.430
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:24 ; elapsed = 00:00:28 . Memory (MB): peak = 1445.422 ; gain = 554.434
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:23 ; elapsed = 00:00:27 . Memory (MB): peak = 1450.840 ; gain = 559.430
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start RTL Component Statistics 
@@ -128,25 +128,25 @@ Start Cross Boundary and Area Optimization
 ---------------------------------------------------------------------------------
 WARNING: [Synth 8-7080] Parallel synthesis criteria is not met
 ---------------------------------------------------------------------------------
-Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:26 ; elapsed = 00:00:31 . Memory (MB): peak = 1445.422 ; gain = 554.434
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:25 ; elapsed = 00:00:30 . Memory (MB): peak = 1450.840 ; gain = 559.430
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying XDC Timing Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:34 ; elapsed = 00:00:40 . Memory (MB): peak = 1445.422 ; gain = 554.434
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:33 ; elapsed = 00:00:39 . Memory (MB): peak = 1450.840 ; gain = 559.430
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Timing Optimization
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Timing Optimization : Time (s): cpu = 00:00:34 ; elapsed = 00:00:40 . Memory (MB): peak = 1445.422 ; gain = 554.434
+Finished Timing Optimization : Time (s): cpu = 00:00:33 ; elapsed = 00:00:39 . Memory (MB): peak = 1450.840 ; gain = 559.430
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Technology Mapping
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Technology Mapping : Time (s): cpu = 00:00:34 ; elapsed = 00:00:40 . Memory (MB): peak = 1445.422 ; gain = 554.434
+Finished Technology Mapping : Time (s): cpu = 00:00:33 ; elapsed = 00:00:39 . Memory (MB): peak = 1450.840 ; gain = 559.430
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start IO Insertion
@@ -164,37 +164,37 @@ Start Final Netlist Cleanup
 Finished Final Netlist Cleanup
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished IO Insertion : Time (s): cpu = 00:00:41 ; elapsed = 00:00:47 . Memory (MB): peak = 1445.422 ; gain = 554.434
+Finished IO Insertion : Time (s): cpu = 00:00:40 ; elapsed = 00:00:47 . Memory (MB): peak = 1450.840 ; gain = 559.430
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Instances
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Instances : Time (s): cpu = 00:00:41 ; elapsed = 00:00:47 . Memory (MB): peak = 1445.422 ; gain = 554.434
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:40 ; elapsed = 00:00:47 . Memory (MB): peak = 1450.840 ; gain = 559.430
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Rebuilding User Hierarchy
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:41 ; elapsed = 00:00:47 . Memory (MB): peak = 1445.422 ; gain = 554.434
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:40 ; elapsed = 00:00:47 . Memory (MB): peak = 1450.840 ; gain = 559.430
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Ports
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Ports : Time (s): cpu = 00:00:41 ; elapsed = 00:00:47 . Memory (MB): peak = 1445.422 ; gain = 554.434
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:40 ; elapsed = 00:00:47 . Memory (MB): peak = 1450.840 ; gain = 559.430
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:41 ; elapsed = 00:00:47 . Memory (MB): peak = 1445.422 ; gain = 554.434
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:40 ; elapsed = 00:00:47 . Memory (MB): peak = 1450.840 ; gain = 559.430
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Nets
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Nets : Time (s): cpu = 00:00:41 ; elapsed = 00:00:47 . Memory (MB): peak = 1445.422 ; gain = 554.434
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:40 ; elapsed = 00:00:47 . Memory (MB): peak = 1450.840 ; gain = 559.430
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Writing Synthesis Report
@@ -217,16 +217,16 @@ Report Cell Usage:
 |3     |OBUF                      |    16|
 +------+--------------------------+------+
 ---------------------------------------------------------------------------------
-Finished Writing Synthesis Report : Time (s): cpu = 00:00:41 ; elapsed = 00:00:47 . Memory (MB): peak = 1445.422 ; gain = 554.434
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:40 ; elapsed = 00:00:47 . Memory (MB): peak = 1450.840 ; gain = 559.430
 ---------------------------------------------------------------------------------
 Synthesis finished with 0 errors, 0 critical warnings and 1 warnings.
-Synthesis Optimization Runtime : Time (s): cpu = 00:00:26 ; elapsed = 00:00:44 . Memory (MB): peak = 1445.422 ; gain = 547.988
-Synthesis Optimization Complete : Time (s): cpu = 00:00:41 ; elapsed = 00:00:47 . Memory (MB): peak = 1445.422 ; gain = 554.434
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:27 ; elapsed = 00:00:44 . Memory (MB): peak = 1450.840 ; gain = 547.242
+Synthesis Optimization Complete : Time (s): cpu = 00:00:41 ; elapsed = 00:00:47 . Memory (MB): peak = 1450.840 ; gain = 559.430
 INFO: [Project 1-571] Translating synthesized netlist
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1451.027 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1450.840 ; gain = 0.000
 INFO: [Project 1-570] Preparing netlist for logic optimization
 INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1457.602 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1456.371 ; gain = 0.000
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
@@ -234,8 +234,8 @@ Synth Design complete | Checksum: 504db74
 INFO: [Common 17-83] Releasing license: Synthesis
 31 Infos, 7 Warnings, 0 Critical Warnings and 0 Errors encountered.
 synth_design completed successfully
-synth_design: Time (s): cpu = 00:00:48 ; elapsed = 00:00:56 . Memory (MB): peak = 1457.602 ; gain = 985.805
-Write ShapeDB Complete: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 1457.602 ; gain = 0.000
+synth_design: Time (s): cpu = 00:00:47 ; elapsed = 00:00:57 . Memory (MB): peak = 1456.371 ; gain = 985.828
+Write ShapeDB Complete: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.002 . Memory (MB): peak = 1456.371 ; gain = 0.000
 INFO: [Common 17-1381] The checkpoint 'D:/VUT_FIT/IVH/IVH_projekt_matrix_dis/IVH_projekt_matrix_dis.runs/synth_1/design_1_wrapper.dcp' has been generated.
 INFO: [runtcl-4] Executing : report_utilization -file design_1_wrapper_utilization_synth.rpt -pb design_1_wrapper_utilization_synth.pb
-INFO: [Common 17-206] Exiting Vivado at Wed May  8 19:20:40 2024...
+INFO: [Common 17-206] Exiting Vivado at Sat May 11 10:41:48 2024...
