@@ -2,10 +2,10 @@
 // Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
 // --------------------------------------------------------------------------------
 // Tool Version: Vivado v.2023.2 (win64) Build 4029153 Fri Oct 13 20:14:34 MDT 2023
-// Date        : Sat May 11 14:39:12 2024
+// Date        : Sat May 11 14:51:51 2024
 // Host        : LAPTOP-O3BSDE06 running 64-bit major release  (build 9200)
-// Command     : write_verilog -force -mode funcsim -rename_top design_1_top_0_0 -prefix
-//               design_1_top_0_0_ design_1_top_0_0_sim_netlist.v
+// Command     : write_verilog -force -mode funcsim -rename_top decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix -prefix
+//               decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ design_1_top_0_0_sim_netlist.v
 // Design      : design_1_top_0_0
 // Purpose     : This verilog netlist is a functional simulation representation of the design and should not be modified
 //               or synthesized. This netlist cannot be used for SDF annotated simulation.
@@ -13,7 +13,7 @@
 // --------------------------------------------------------------------------------
 `timescale 1 ps / 1 ps
 
-module design_1_top_0_0_counter
+module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_counter
    (carry,
     \bcd_value_reg[0]_0 ,
     bcd_value_reg,
@@ -138,7 +138,7 @@ module design_1_top_0_0_counter
 endmodule
 
 (* ORIG_REF_NAME = "counter" *) 
-module design_1_top_0_0_counter_0
+module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_counter_0
    (\bcd_value_reg[0]_0 ,
     bcd_value_reg,
     \bcd_value_reg[1]_0 ,
@@ -242,17 +242,17 @@ module design_1_top_0_0_counter_0
         .O(\bcd_value_reg[1]_0 ));
 endmodule
 
-module design_1_top_0_0_counter_anim
+module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_counter_anim
    (D,
     clk,
     Q,
     cnt_dis_enable);
-  output [6:0]D;
+  output [5:0]D;
   input clk;
   input [2:0]Q;
   input cnt_dis_enable;
 
-  wire [6:0]D;
+  wire [5:0]D;
   wire [2:0]Q;
   wire [3:0]bcd_value_reg;
   wire [3:0]bcd_value_reg_0;
@@ -266,7 +266,6 @@ module design_1_top_0_0_counter_anim
   wire [7:2]data0;
   wire [6:4]data1;
   wire [6:3]data2;
-  wire [7:7]data4;
   wire [7:2]data5;
   wire [6:4]data6;
   wire [23:3]first_value;
@@ -297,14 +296,14 @@ module design_1_top_0_0_counter_anim
   wire \second_value[3]_i_1_n_0 ;
   wire [23:18]second_value_1;
 
-  design_1_top_0_0_counter cnt1
+  decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_counter cnt1
        (.bcd_value_reg(bcd_value_reg),
         .\bcd_value_reg[0]_0 (cnt1_n_1),
         .\bcd_value_reg[1]_0 (cnt1_n_6),
         .carry(carry),
         .clk(clk),
         .cnt_dis_enable(cnt_dis_enable));
-  design_1_top_0_0_counter_0 cnt2
+  decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_counter_0 cnt2
        (.bcd_value_reg(bcd_value_reg_0),
         .\bcd_value_reg[0]_0 (cnt2_n_0),
         .\bcd_value_reg[1]_0 (cnt2_n_5),
@@ -472,16 +471,6 @@ module design_1_top_0_0_counter_anim
         .Q(first_value[6]),
         .S(bcd_value_reg[3]));
   LUT6 #(
-    .INIT(64'hB8BBBB33B8888800)) 
-    \scol[1]_i_1 
-       (.I0(data5[7]),
-        .I1(Q[2]),
-        .I2(data4),
-        .I3(Q[0]),
-        .I4(Q[1]),
-        .I5(data0[7]),
-        .O(D[0]));
-  LUT6 #(
     .INIT(64'hC0B8BB33C0B88800)) 
     \scol[2]_i_1 
        (.I0(data5[2]),
@@ -490,7 +479,7 @@ module design_1_top_0_0_counter_anim
         .I3(Q[0]),
         .I4(Q[1]),
         .I5(data0[2]),
-        .O(D[1]));
+        .O(D[0]));
   LUT5 #(
     .INIT(32'h30BB3088)) 
     \scol[3]_i_2 
@@ -563,35 +552,34 @@ module design_1_top_0_0_counter_anim
         .I3(Q[0]),
         .I4(data5[6]),
         .O(\scol[6]_i_3_n_0 ));
-  LUT6 #(
-    .INIT(64'hA0AFAFCFA0A0A0C0)) 
+  LUT5 #(
+    .INIT(32'h8BB38880)) 
     \scol[7]_i_2 
        (.I0(data5[7]),
-        .I1(data4),
-        .I2(Q[2]),
-        .I3(Q[0]),
-        .I4(Q[1]),
-        .I5(data0[7]),
-        .O(D[6]));
+        .I1(Q[2]),
+        .I2(Q[0]),
+        .I3(Q[1]),
+        .I4(data0[7]),
+        .O(D[5]));
   MUXF7 \scol_reg[3]_i_1 
        (.I0(\scol[3]_i_2_n_0 ),
         .I1(\scol[3]_i_3_n_0 ),
-        .O(D[2]),
+        .O(D[1]),
         .S(Q[2]));
   MUXF7 \scol_reg[4]_i_1 
        (.I0(\scol[4]_i_2_n_0 ),
         .I1(\scol[4]_i_3_n_0 ),
-        .O(D[3]),
+        .O(D[2]),
         .S(Q[2]));
   MUXF7 \scol_reg[5]_i_1 
        (.I0(\scol[5]_i_2_n_0 ),
         .I1(\scol[5]_i_3_n_0 ),
-        .O(D[4]),
+        .O(D[3]),
         .S(Q[2]));
   MUXF7 \scol_reg[6]_i_1 
        (.I0(\scol[6]_i_2_n_0 ),
         .I1(\scol[6]_i_3_n_0 ),
-        .O(D[5]),
+        .O(D[4]),
         .S(Q[2]));
   FDRE #(
     .INIT(1'b0)) 
@@ -656,14 +644,6 @@ module design_1_top_0_0_counter_anim
         .CE(1'b1),
         .D(first_value[23]),
         .Q(data5[7]),
-        .R(1'b0));
-  FDRE #(
-    .INIT(1'b0)) 
-    \screen_value_reg[31] 
-       (.C(clk),
-        .CE(1'b1),
-        .D(1'b1),
-        .Q(data4),
         .R(1'b0));
   FDRE #(
     .INIT(1'b0)) 
@@ -959,7 +939,7 @@ endmodule
 (* CHECK_LICENSE_TYPE = "design_1_top_0_0,top,{}" *) (* downgradeipidentifiedwarnings = "yes" *) (* ip_definition_source = "module_ref" *) 
 (* x_core_info = "top,Vivado 2023.2" *) 
 (* NotValidForBitStream *)
-module design_1_top_0_0
+module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix
    (clk,
     col,
     row);
@@ -968,23 +948,23 @@ module design_1_top_0_0
   output [7:0]row;
 
   wire clk;
-  wire [7:0]\^col ;
+  wire [6:1]\^col ;
   wire [7:0]row;
 
-  assign col[7:2] = \^col [7:2];
-  assign col[1] = \^col [0];
-  assign col[0] = \^col [0];
-  design_1_top_0_0_top U0
+  assign col[7] = \^col [1];
+  assign col[6:1] = \^col [6:1];
+  assign col[0] = \^col [1];
+  decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_top U0
        (.clk(clk),
-        .col({\^col [7:2],\^col [0]}),
+        .col({\^col [1],\^col [6:2]}),
         .row(row));
 endmodule
 
-module design_1_top_0_0_top
+module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_top
    (col,
     row,
     clk);
-  output [6:0]col;
+  output [5:0]col;
   output [7:0]row;
   input clk;
 
@@ -1025,19 +1005,18 @@ module design_1_top_0_0_top
   wire cnt_dis_n_3;
   wire cnt_dis_n_4;
   wire cnt_dis_n_5;
-  wire cnt_dis_n_6;
-  wire [6:0]col;
+  wire [5:0]col;
   wire [2:0]col_indx;
   wire \col_indx[0]_i_1_n_0 ;
   wire \col_indx[1]_i_1_n_0 ;
   wire \col_indx[2]_i_1_n_0 ;
-  wire [24:0]p_1_in;
+  wire [27:0]p_1_in;
   wire [7:0]row;
   wire \scol[7]_i_1_n_0 ;
   wire \scol[7]_i_3_n_0 ;
   wire \scol[7]_i_4_n_0 ;
   wire \scol[7]_i_5_n_0 ;
-  wire [24:0]sec_cnt;
+  wire [27:0]sec_cnt;
   wire sec_cnt0_carry__0_n_0;
   wire sec_cnt0_carry__0_n_1;
   wire sec_cnt0_carry__0_n_2;
@@ -1054,23 +1033,26 @@ module design_1_top_0_0_top
   wire sec_cnt0_carry__3_n_1;
   wire sec_cnt0_carry__3_n_2;
   wire sec_cnt0_carry__3_n_3;
+  wire sec_cnt0_carry__4_n_0;
   wire sec_cnt0_carry__4_n_1;
   wire sec_cnt0_carry__4_n_2;
   wire sec_cnt0_carry__4_n_3;
+  wire sec_cnt0_carry__5_n_2;
+  wire sec_cnt0_carry__5_n_3;
   wire sec_cnt0_carry_n_0;
   wire sec_cnt0_carry_n_1;
   wire sec_cnt0_carry_n_2;
   wire sec_cnt0_carry_n_3;
-  wire \sec_cnt[24]_i_1_n_0 ;
-  wire \sec_cnt[24]_i_2_n_0 ;
-  wire \sec_cnt[24]_i_3_n_0 ;
-  wire \sec_cnt[24]_i_4_n_0 ;
-  wire \sec_cnt[24]_i_5_n_0 ;
-  wire \sec_cnt[24]_i_6_n_0 ;
-  wire \sec_cnt[24]_i_7_n_0 ;
+  wire \sec_cnt[27]_i_1_n_0 ;
+  wire \sec_cnt[27]_i_2_n_0 ;
+  wire \sec_cnt[27]_i_3_n_0 ;
+  wire \sec_cnt[27]_i_4_n_0 ;
+  wire \sec_cnt[27]_i_5_n_0 ;
+  wire \sec_cnt[27]_i_6_n_0 ;
   wire [3:1]NLW_cnt0_carry__2_CO_UNCONNECTED;
   wire [3:2]NLW_cnt0_carry__2_O_UNCONNECTED;
-  wire [3:3]NLW_sec_cnt0_carry__4_CO_UNCONNECTED;
+  wire [3:2]NLW_sec_cnt0_carry__5_CO_UNCONNECTED;
+  wire [3:3]NLW_sec_cnt0_carry__5_O_UNCONNECTED;
 
   (* ADDER_THRESHOLD = "35" *) 
   CARRY4 cnt0_carry
@@ -1112,8 +1094,8 @@ module design_1_top_0_0_top
         .I2(\scol[7]_i_5_n_0 ),
         .I3(cnt[0]),
         .O(cnt_0));
-  design_1_top_0_0_counter_anim cnt_dis
-       (.D({cnt_dis_n_0,cnt_dis_n_1,cnt_dis_n_2,cnt_dis_n_3,cnt_dis_n_4,cnt_dis_n_5,cnt_dis_n_6}),
+  decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_counter_anim cnt_dis
+       (.D({cnt_dis_n_0,cnt_dis_n_1,cnt_dis_n_2,cnt_dis_n_3,cnt_dis_n_4,cnt_dis_n_5}),
         .Q(col_indx),
         .clk(clk),
         .cnt_dis_enable(cnt_dis_enable));
@@ -1122,7 +1104,7 @@ module design_1_top_0_0_top
     cnt_dis_enable_reg
        (.C(clk),
         .CE(1'b1),
-        .D(\sec_cnt[24]_i_1_n_0 ),
+        .D(\sec_cnt[27]_i_1_n_0 ),
         .Q(cnt_dis_enable),
         .R(1'b0));
   FDRE #(
@@ -1250,14 +1232,14 @@ module design_1_top_0_0_top
     \col_indx[0]_i_1 
        (.I0(col_indx[0]),
         .O(\col_indx[0]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair14" *) 
+  (* SOFT_HLUTNM = "soft_lutpair15" *) 
   LUT2 #(
     .INIT(4'h6)) 
     \col_indx[1]_i_1 
        (.I0(col_indx[0]),
         .I1(col_indx[1]),
         .O(\col_indx[1]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair14" *) 
+  (* SOFT_HLUTNM = "soft_lutpair15" *) 
   LUT3 #(
     .INIT(8'h6A)) 
     \col_indx[2]_i_1 
@@ -1325,19 +1307,11 @@ module design_1_top_0_0_top
         .O(\scol[7]_i_5_n_0 ));
   FDRE #(
     .INIT(1'b1)) 
-    \scol_reg[1] 
-       (.C(clk),
-        .CE(\scol[7]_i_1_n_0 ),
-        .D(cnt_dis_n_6),
-        .Q(col[0]),
-        .R(1'b0));
-  FDRE #(
-    .INIT(1'b1)) 
     \scol_reg[2] 
        (.C(clk),
         .CE(\scol[7]_i_1_n_0 ),
         .D(cnt_dis_n_5),
-        .Q(col[1]),
+        .Q(col[0]),
         .R(1'b0));
   FDRE #(
     .INIT(1'b1)) 
@@ -1345,7 +1319,7 @@ module design_1_top_0_0_top
        (.C(clk),
         .CE(\scol[7]_i_1_n_0 ),
         .D(cnt_dis_n_4),
-        .Q(col[2]),
+        .Q(col[1]),
         .R(1'b0));
   FDRE #(
     .INIT(1'b1)) 
@@ -1353,7 +1327,7 @@ module design_1_top_0_0_top
        (.C(clk),
         .CE(\scol[7]_i_1_n_0 ),
         .D(cnt_dis_n_3),
-        .Q(col[3]),
+        .Q(col[2]),
         .R(1'b0));
   FDRE #(
     .INIT(1'b1)) 
@@ -1361,7 +1335,7 @@ module design_1_top_0_0_top
        (.C(clk),
         .CE(\scol[7]_i_1_n_0 ),
         .D(cnt_dis_n_2),
-        .Q(col[4]),
+        .Q(col[3]),
         .R(1'b0));
   FDRE #(
     .INIT(1'b1)) 
@@ -1369,7 +1343,7 @@ module design_1_top_0_0_top
        (.C(clk),
         .CE(\scol[7]_i_1_n_0 ),
         .D(cnt_dis_n_1),
-        .Q(col[5]),
+        .Q(col[4]),
         .R(1'b0));
   FDRE #(
     .INIT(1'b1)) 
@@ -1377,7 +1351,7 @@ module design_1_top_0_0_top
        (.C(clk),
         .CE(\scol[7]_i_1_n_0 ),
         .D(cnt_dis_n_0),
-        .Q(col[6]),
+        .Q(col[5]),
         .R(1'b0));
   (* ADDER_THRESHOLD = "35" *) 
   CARRY4 sec_cnt0_carry
@@ -1422,75 +1396,83 @@ module design_1_top_0_0_top
   (* ADDER_THRESHOLD = "35" *) 
   CARRY4 sec_cnt0_carry__4
        (.CI(sec_cnt0_carry__3_n_0),
-        .CO({NLW_sec_cnt0_carry__4_CO_UNCONNECTED[3],sec_cnt0_carry__4_n_1,sec_cnt0_carry__4_n_2,sec_cnt0_carry__4_n_3}),
+        .CO({sec_cnt0_carry__4_n_0,sec_cnt0_carry__4_n_1,sec_cnt0_carry__4_n_2,sec_cnt0_carry__4_n_3}),
         .CYINIT(1'b0),
         .DI({1'b0,1'b0,1'b0,1'b0}),
         .O(p_1_in[24:21]),
         .S(sec_cnt[24:21]));
+  (* ADDER_THRESHOLD = "35" *) 
+  CARRY4 sec_cnt0_carry__5
+       (.CI(sec_cnt0_carry__4_n_0),
+        .CO({NLW_sec_cnt0_carry__5_CO_UNCONNECTED[3:2],sec_cnt0_carry__5_n_2,sec_cnt0_carry__5_n_3}),
+        .CYINIT(1'b0),
+        .DI({1'b0,1'b0,1'b0,1'b0}),
+        .O({NLW_sec_cnt0_carry__5_O_UNCONNECTED[3],p_1_in[27:25]}),
+        .S({1'b0,sec_cnt[27:25]}));
+  (* SOFT_HLUTNM = "soft_lutpair14" *) 
   LUT1 #(
     .INIT(2'h1)) 
     \sec_cnt[0]_i_1 
        (.I0(sec_cnt[0]),
         .O(p_1_in[0]));
+  LUT5 #(
+    .INIT(32'h80000000)) 
+    \sec_cnt[27]_i_1 
+       (.I0(\sec_cnt[27]_i_2_n_0 ),
+        .I1(\sec_cnt[27]_i_3_n_0 ),
+        .I2(\sec_cnt[27]_i_4_n_0 ),
+        .I3(\sec_cnt[27]_i_5_n_0 ),
+        .I4(\sec_cnt[27]_i_6_n_0 ),
+        .O(\sec_cnt[27]_i_1_n_0 ));
   LUT6 #(
-    .INIT(64'h0000000000000010)) 
-    \sec_cnt[24]_i_1 
-       (.I0(\sec_cnt[24]_i_2_n_0 ),
-        .I1(\sec_cnt[24]_i_3_n_0 ),
-        .I2(\sec_cnt[24]_i_4_n_0 ),
-        .I3(\sec_cnt[24]_i_5_n_0 ),
-        .I4(\sec_cnt[24]_i_6_n_0 ),
-        .I5(\sec_cnt[24]_i_7_n_0 ),
-        .O(\sec_cnt[24]_i_1_n_0 ));
-  LUT4 #(
-    .INIT(16'hEFFF)) 
-    \sec_cnt[24]_i_2 
-       (.I0(sec_cnt[17]),
-        .I1(sec_cnt[10]),
-        .I2(sec_cnt[11]),
-        .I3(sec_cnt[14]),
-        .O(\sec_cnt[24]_i_2_n_0 ));
-  LUT4 #(
-    .INIT(16'hFF7F)) 
-    \sec_cnt[24]_i_3 
-       (.I0(sec_cnt[21]),
-        .I1(sec_cnt[3]),
-        .I2(sec_cnt[1]),
+    .INIT(64'h0000002000000000)) 
+    \sec_cnt[27]_i_2 
+       (.I0(sec_cnt[18]),
+        .I1(sec_cnt[19]),
+        .I2(sec_cnt[17]),
+        .I3(sec_cnt[16]),
+        .I4(sec_cnt[20]),
+        .I5(sec_cnt[21]),
+        .O(\sec_cnt[27]_i_2_n_0 ));
+  LUT6 #(
+    .INIT(64'h2000000000000000)) 
+    \sec_cnt[27]_i_3 
+       (.I0(sec_cnt[25]),
+        .I1(sec_cnt[24]),
+        .I2(sec_cnt[22]),
         .I3(sec_cnt[23]),
-        .O(\sec_cnt[24]_i_3_n_0 ));
-  LUT3 #(
-    .INIT(8'h80)) 
-    \sec_cnt[24]_i_4 
-       (.I0(sec_cnt[22]),
-        .I1(sec_cnt[20]),
-        .I2(sec_cnt[19]),
-        .O(\sec_cnt[24]_i_4_n_0 ));
-  LUT4 #(
-    .INIT(16'hFF7F)) 
-    \sec_cnt[24]_i_5 
+        .I4(sec_cnt[27]),
+        .I5(sec_cnt[26]),
+        .O(\sec_cnt[27]_i_3_n_0 ));
+  LUT6 #(
+    .INIT(64'h0000000800000000)) 
+    \sec_cnt[27]_i_4 
        (.I0(sec_cnt[12]),
         .I1(sec_cnt[13]),
-        .I2(sec_cnt[18]),
-        .I3(sec_cnt[9]),
-        .O(\sec_cnt[24]_i_5_n_0 ));
+        .I2(sec_cnt[10]),
+        .I3(sec_cnt[11]),
+        .I4(sec_cnt[14]),
+        .I5(sec_cnt[15]),
+        .O(\sec_cnt[27]_i_4_n_0 ));
+  (* SOFT_HLUTNM = "soft_lutpair14" *) 
   LUT4 #(
-    .INIT(16'hFF7F)) 
-    \sec_cnt[24]_i_6 
-       (.I0(sec_cnt[24]),
-        .I1(sec_cnt[5]),
-        .I2(sec_cnt[16]),
-        .I3(sec_cnt[6]),
-        .O(\sec_cnt[24]_i_6_n_0 ));
+    .INIT(16'h8000)) 
+    \sec_cnt[27]_i_5 
+       (.I0(sec_cnt[1]),
+        .I1(sec_cnt[0]),
+        .I2(sec_cnt[3]),
+        .I3(sec_cnt[2]),
+        .O(\sec_cnt[27]_i_5_n_0 ));
   LUT6 #(
-    .INIT(64'hFFFFFDFFFFFFFFFF)) 
-    \sec_cnt[24]_i_7 
-       (.I0(sec_cnt[4]),
-        .I1(sec_cnt[15]),
-        .I2(sec_cnt[8]),
-        .I3(sec_cnt[0]),
-        .I4(sec_cnt[7]),
-        .I5(sec_cnt[2]),
-        .O(\sec_cnt[24]_i_7_n_0 ));
+    .INIT(64'h0000200000000000)) 
+    \sec_cnt[27]_i_6 
+       (.I0(sec_cnt[6]),
+        .I1(sec_cnt[7]),
+        .I2(sec_cnt[4]),
+        .I3(sec_cnt[5]),
+        .I4(sec_cnt[8]),
+        .I5(sec_cnt[9]),
+        .O(\sec_cnt[27]_i_6_n_0 ));
   FDRE #(
     .INIT(1'b0)) 
     \sec_cnt_reg[0] 
@@ -1498,7 +1480,7 @@ module design_1_top_0_0_top
         .CE(1'b1),
         .D(p_1_in[0]),
         .Q(sec_cnt[0]),
-        .R(\sec_cnt[24]_i_1_n_0 ));
+        .R(\sec_cnt[27]_i_1_n_0 ));
   FDRE #(
     .INIT(1'b0)) 
     \sec_cnt_reg[10] 
@@ -1506,7 +1488,7 @@ module design_1_top_0_0_top
         .CE(1'b1),
         .D(p_1_in[10]),
         .Q(sec_cnt[10]),
-        .R(\sec_cnt[24]_i_1_n_0 ));
+        .R(\sec_cnt[27]_i_1_n_0 ));
   FDRE #(
     .INIT(1'b0)) 
     \sec_cnt_reg[11] 
@@ -1514,7 +1496,7 @@ module design_1_top_0_0_top
         .CE(1'b1),
         .D(p_1_in[11]),
         .Q(sec_cnt[11]),
-        .R(\sec_cnt[24]_i_1_n_0 ));
+        .R(\sec_cnt[27]_i_1_n_0 ));
   FDRE #(
     .INIT(1'b0)) 
     \sec_cnt_reg[12] 
@@ -1522,7 +1504,7 @@ module design_1_top_0_0_top
         .CE(1'b1),
         .D(p_1_in[12]),
         .Q(sec_cnt[12]),
-        .R(\sec_cnt[24]_i_1_n_0 ));
+        .R(\sec_cnt[27]_i_1_n_0 ));
   FDRE #(
     .INIT(1'b0)) 
     \sec_cnt_reg[13] 
@@ -1530,7 +1512,7 @@ module design_1_top_0_0_top
         .CE(1'b1),
         .D(p_1_in[13]),
         .Q(sec_cnt[13]),
-        .R(\sec_cnt[24]_i_1_n_0 ));
+        .R(\sec_cnt[27]_i_1_n_0 ));
   FDRE #(
     .INIT(1'b0)) 
     \sec_cnt_reg[14] 
@@ -1538,7 +1520,7 @@ module design_1_top_0_0_top
         .CE(1'b1),
         .D(p_1_in[14]),
         .Q(sec_cnt[14]),
-        .R(\sec_cnt[24]_i_1_n_0 ));
+        .R(\sec_cnt[27]_i_1_n_0 ));
   FDRE #(
     .INIT(1'b0)) 
     \sec_cnt_reg[15] 
@@ -1546,7 +1528,7 @@ module design_1_top_0_0_top
         .CE(1'b1),
         .D(p_1_in[15]),
         .Q(sec_cnt[15]),
-        .R(\sec_cnt[24]_i_1_n_0 ));
+        .R(\sec_cnt[27]_i_1_n_0 ));
   FDRE #(
     .INIT(1'b0)) 
     \sec_cnt_reg[16] 
@@ -1554,7 +1536,7 @@ module design_1_top_0_0_top
         .CE(1'b1),
         .D(p_1_in[16]),
         .Q(sec_cnt[16]),
-        .R(\sec_cnt[24]_i_1_n_0 ));
+        .R(\sec_cnt[27]_i_1_n_0 ));
   FDRE #(
     .INIT(1'b0)) 
     \sec_cnt_reg[17] 
@@ -1562,7 +1544,7 @@ module design_1_top_0_0_top
         .CE(1'b1),
         .D(p_1_in[17]),
         .Q(sec_cnt[17]),
-        .R(\sec_cnt[24]_i_1_n_0 ));
+        .R(\sec_cnt[27]_i_1_n_0 ));
   FDRE #(
     .INIT(1'b0)) 
     \sec_cnt_reg[18] 
@@ -1570,7 +1552,7 @@ module design_1_top_0_0_top
         .CE(1'b1),
         .D(p_1_in[18]),
         .Q(sec_cnt[18]),
-        .R(\sec_cnt[24]_i_1_n_0 ));
+        .R(\sec_cnt[27]_i_1_n_0 ));
   FDRE #(
     .INIT(1'b0)) 
     \sec_cnt_reg[19] 
@@ -1578,7 +1560,7 @@ module design_1_top_0_0_top
         .CE(1'b1),
         .D(p_1_in[19]),
         .Q(sec_cnt[19]),
-        .R(\sec_cnt[24]_i_1_n_0 ));
+        .R(\sec_cnt[27]_i_1_n_0 ));
   FDRE #(
     .INIT(1'b0)) 
     \sec_cnt_reg[1] 
@@ -1586,7 +1568,7 @@ module design_1_top_0_0_top
         .CE(1'b1),
         .D(p_1_in[1]),
         .Q(sec_cnt[1]),
-        .R(\sec_cnt[24]_i_1_n_0 ));
+        .R(\sec_cnt[27]_i_1_n_0 ));
   FDRE #(
     .INIT(1'b0)) 
     \sec_cnt_reg[20] 
@@ -1594,7 +1576,7 @@ module design_1_top_0_0_top
         .CE(1'b1),
         .D(p_1_in[20]),
         .Q(sec_cnt[20]),
-        .R(\sec_cnt[24]_i_1_n_0 ));
+        .R(\sec_cnt[27]_i_1_n_0 ));
   FDRE #(
     .INIT(1'b0)) 
     \sec_cnt_reg[21] 
@@ -1602,7 +1584,7 @@ module design_1_top_0_0_top
         .CE(1'b1),
         .D(p_1_in[21]),
         .Q(sec_cnt[21]),
-        .R(\sec_cnt[24]_i_1_n_0 ));
+        .R(\sec_cnt[27]_i_1_n_0 ));
   FDRE #(
     .INIT(1'b0)) 
     \sec_cnt_reg[22] 
@@ -1610,7 +1592,7 @@ module design_1_top_0_0_top
         .CE(1'b1),
         .D(p_1_in[22]),
         .Q(sec_cnt[22]),
-        .R(\sec_cnt[24]_i_1_n_0 ));
+        .R(\sec_cnt[27]_i_1_n_0 ));
   FDRE #(
     .INIT(1'b0)) 
     \sec_cnt_reg[23] 
@@ -1618,7 +1600,7 @@ module design_1_top_0_0_top
         .CE(1'b1),
         .D(p_1_in[23]),
         .Q(sec_cnt[23]),
-        .R(\sec_cnt[24]_i_1_n_0 ));
+        .R(\sec_cnt[27]_i_1_n_0 ));
   FDRE #(
     .INIT(1'b0)) 
     \sec_cnt_reg[24] 
@@ -1626,7 +1608,31 @@ module design_1_top_0_0_top
         .CE(1'b1),
         .D(p_1_in[24]),
         .Q(sec_cnt[24]),
-        .R(\sec_cnt[24]_i_1_n_0 ));
+        .R(\sec_cnt[27]_i_1_n_0 ));
+  FDRE #(
+    .INIT(1'b0)) 
+    \sec_cnt_reg[25] 
+       (.C(clk),
+        .CE(1'b1),
+        .D(p_1_in[25]),
+        .Q(sec_cnt[25]),
+        .R(\sec_cnt[27]_i_1_n_0 ));
+  FDRE #(
+    .INIT(1'b0)) 
+    \sec_cnt_reg[26] 
+       (.C(clk),
+        .CE(1'b1),
+        .D(p_1_in[26]),
+        .Q(sec_cnt[26]),
+        .R(\sec_cnt[27]_i_1_n_0 ));
+  FDRE #(
+    .INIT(1'b0)) 
+    \sec_cnt_reg[27] 
+       (.C(clk),
+        .CE(1'b1),
+        .D(p_1_in[27]),
+        .Q(sec_cnt[27]),
+        .R(\sec_cnt[27]_i_1_n_0 ));
   FDRE #(
     .INIT(1'b0)) 
     \sec_cnt_reg[2] 
@@ -1634,7 +1640,7 @@ module design_1_top_0_0_top
         .CE(1'b1),
         .D(p_1_in[2]),
         .Q(sec_cnt[2]),
-        .R(\sec_cnt[24]_i_1_n_0 ));
+        .R(\sec_cnt[27]_i_1_n_0 ));
   FDRE #(
     .INIT(1'b0)) 
     \sec_cnt_reg[3] 
@@ -1642,7 +1648,7 @@ module design_1_top_0_0_top
         .CE(1'b1),
         .D(p_1_in[3]),
         .Q(sec_cnt[3]),
-        .R(\sec_cnt[24]_i_1_n_0 ));
+        .R(\sec_cnt[27]_i_1_n_0 ));
   FDRE #(
     .INIT(1'b0)) 
     \sec_cnt_reg[4] 
@@ -1650,7 +1656,7 @@ module design_1_top_0_0_top
         .CE(1'b1),
         .D(p_1_in[4]),
         .Q(sec_cnt[4]),
-        .R(\sec_cnt[24]_i_1_n_0 ));
+        .R(\sec_cnt[27]_i_1_n_0 ));
   FDRE #(
     .INIT(1'b0)) 
     \sec_cnt_reg[5] 
@@ -1658,7 +1664,7 @@ module design_1_top_0_0_top
         .CE(1'b1),
         .D(p_1_in[5]),
         .Q(sec_cnt[5]),
-        .R(\sec_cnt[24]_i_1_n_0 ));
+        .R(\sec_cnt[27]_i_1_n_0 ));
   FDRE #(
     .INIT(1'b0)) 
     \sec_cnt_reg[6] 
@@ -1666,7 +1672,7 @@ module design_1_top_0_0_top
         .CE(1'b1),
         .D(p_1_in[6]),
         .Q(sec_cnt[6]),
-        .R(\sec_cnt[24]_i_1_n_0 ));
+        .R(\sec_cnt[27]_i_1_n_0 ));
   FDRE #(
     .INIT(1'b0)) 
     \sec_cnt_reg[7] 
@@ -1674,7 +1680,7 @@ module design_1_top_0_0_top
         .CE(1'b1),
         .D(p_1_in[7]),
         .Q(sec_cnt[7]),
-        .R(\sec_cnt[24]_i_1_n_0 ));
+        .R(\sec_cnt[27]_i_1_n_0 ));
   FDRE #(
     .INIT(1'b0)) 
     \sec_cnt_reg[8] 
@@ -1682,7 +1688,7 @@ module design_1_top_0_0_top
         .CE(1'b1),
         .D(p_1_in[8]),
         .Q(sec_cnt[8]),
-        .R(\sec_cnt[24]_i_1_n_0 ));
+        .R(\sec_cnt[27]_i_1_n_0 ));
   FDRE #(
     .INIT(1'b0)) 
     \sec_cnt_reg[9] 
@@ -1690,7 +1696,7 @@ module design_1_top_0_0_top
         .CE(1'b1),
         .D(p_1_in[9]),
         .Q(sec_cnt[9]),
-        .R(\sec_cnt[24]_i_1_n_0 ));
+        .R(\sec_cnt[27]_i_1_n_0 ));
   FDRE #(
     .INIT(1'b1)) 
     \srow_reg[0] 
