@@ -159,7 +159,7 @@ port map( clk=>clk,
     process (clk)--combinator
     begin
         if rising_edge(clk) then
-        screen_value<=second_value & "0000000000000000"& first_value;
+        screen_value<=second_value & "0000001110000000"& first_value;
         end if;
     
     end process;
