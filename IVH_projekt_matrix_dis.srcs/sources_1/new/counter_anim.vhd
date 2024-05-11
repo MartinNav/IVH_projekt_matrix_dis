@@ -66,6 +66,10 @@ signal en_2nd_ctr: std_logic:='0';
 signal cnt2_value: std_logic_vector(3 downto 0):="0000";
 signal cnt2_out_en: std_logic:='0';
 
+signal first_value: std_logic_vector(23 downto 0):=(others=>'0');
+signal second_value: std_logic_vector(23 downto 0):=(others=>'0');
+
+signal screen_value: std_logic_vector(63 downto 0):=(others=>'0');
 
 begin
 -- there will be 2 counters and one luckup table that will contain ways to draw the numbers
@@ -86,6 +90,35 @@ port map( clk=>clk,
 		  q=>cnt2_value,
 		   en_out=>cnt2_out_en
 		   );
+		   
+    process (clk)--creating the first digit (in fact it is the right one  X | this_value)
+    begin
+        if rising_edge(clk) then
+            case cnt1_value is
+                when "0000"=>
+                    first_value<=char_table(239 downto 216);
+                when "0001"=>
+                    first_value<=char_table(215 downto 192);
+                when "0010"=>
+                    first_value<=char_table(191 downto 168);
+                when "0011"=>
+                    first_value<=char_table(167 downto 144);
+                when "0100"=>
+                    first_value<=char_table(143 downto 120);
+                when "0101"=>
+                    first_value<=char_table(119 downto 96);
+                when "0110"=>
+                    first_value<=char_table(95 downto 72);
+                when "0111"=>
+                    first_value<=char_table(71 downto 48);
+                when "1000"=>
+                    first_value<=char_table(47 downto 24);
+                when "1001"=>
+                    first_value<=char_table(23 downto 0);
+            end case;
+        
+        end if;
+    end process;
 
 
 out_val<="00000000"&char_table(239 downto 192)&"00000000";--prototype
