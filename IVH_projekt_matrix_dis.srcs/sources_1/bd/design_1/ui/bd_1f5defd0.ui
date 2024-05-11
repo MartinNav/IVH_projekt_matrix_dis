@@ -15,7 +15,9 @@ preplace netloc clk_wiz_0_clk_out1 1 1 1 50 -70n
 preplace netloc top_0_col 1 2 1 N -40
 preplace netloc top_0_row 1 2 1 N -20
 levelinfo -pg 1 -160 -40 280 400
-pagesize -pg 1 -db -bbox -sgen -260 -200 520 140
+pagesize -pg 1 -db -bbox -sgen -290 -200 520 140
 "
 }
-0
+{
+   "da_board_cnt":"2"
+}

@@ -1,14 +1,6 @@
 set_property SRC_FILE_INFO {cfile:D:/VUT_FIT/IVH/IVH_projekt_matrix_dis/IVH_projekt_matrix_dis.srcs/constrs_1/new/constrains.xdc rfile:../../../IVH_projekt_matrix_dis.srcs/constrs_1/new/constrains.xdc id:1} [current_design]
 set_property src_info {type:XDC file:1 line:12 export:INPUT save:INPUT read:READ} [current_design]
 set_property -dict { PACKAGE_PIN U18   IOSTANDARD LVCMOS33 } [get_ports { sysclk }]; #IO_L12P_T1_MRCC_34 Sch=RPIO_06_R
-set_property src_info {type:XDC file:1 line:31 export:INPUT save:INPUT read:READ} [current_design]
-set_property -dict { PACKAGE_PIN R14   IOSTANDARD LVCMOS33 } [get_ports { led[0] }]; #IO_L6N_T0_VREF_34 Sch=led[0]
-set_property src_info {type:XDC file:1 line:32 export:INPUT save:INPUT read:READ} [current_design]
-set_property -dict { PACKAGE_PIN P14   IOSTANDARD LVCMOS33 } [get_ports { led[1] }]; #IO_L6P_T0_34 Sch=led[1]
-set_property src_info {type:XDC file:1 line:33 export:INPUT save:INPUT read:READ} [current_design]
-set_property -dict { PACKAGE_PIN N16   IOSTANDARD LVCMOS33 } [get_ports { led[2] }]; #IO_L21N_T3_DQS_AD14N_35 Sch=led[2]
-set_property src_info {type:XDC file:1 line:34 export:INPUT save:INPUT read:READ} [current_design]
-set_property -dict { PACKAGE_PIN M14   IOSTANDARD LVCMOS33 } [get_ports { led[3] }]; #IO_L23P_T3_35 Sch=led[3]
 set_property src_info {type:XDC file:1 line:138 export:INPUT save:INPUT read:READ} [current_design]
 set_property -dict { PACKAGE_PIN W18   IOSTANDARD LVCMOS33 DRIVE 12 } [get_ports { row[5] }]; #IO_L22P_T3_34 Sch=rpio_02_r
 set_property src_info {type:XDC file:1 line:139 export:INPUT save:INPUT read:READ} [current_design]
