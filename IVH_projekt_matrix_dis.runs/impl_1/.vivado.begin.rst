@@ -28,3 +28,18 @@
     <Process Command="vivado.bat" Owner="marti" Host="LAPTOP-O3BSDE06" Pid="7532" HostCore="8" HostMemory="032155774976">
     </Process>
 </ProcessHandle>
+<?xml version="1.0"?>
+<ProcessHandle Version="1" Minor="0">
+    <Process Command="vivado.bat" Owner="marti" Host="LAPTOP-O3BSDE06" Pid="8012" HostCore="8" HostMemory="032155774976">
+    </Process>
+</ProcessHandle>
+<?xml version="1.0"?>
+<ProcessHandle Version="1" Minor="0">
+    <Process Command="vivado.bat" Owner="marti" Host="LAPTOP-O3BSDE06" Pid="16908" HostCore="8" HostMemory="032155774976">
+    </Process>
+</ProcessHandle>
+<?xml version="1.0"?>
+<ProcessHandle Version="1" Minor="0">
+    <Process Command="vivado.bat" Owner="marti" Host="LAPTOP-O3BSDE06" Pid="15784" HostCore="8" HostMemory="032155774976">
+    </Process>
+</ProcessHandle>

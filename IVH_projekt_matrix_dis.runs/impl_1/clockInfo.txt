@@ -1,6 +1,6 @@
 -------------------------------------
 | Tool Version : Vivado v.2023.2
-| Date         : Sat May 11 19:43:00 2024
+| Date         : Sat May 11 20:52:20 2024
 | Host         : LAPTOP-O3BSDE06
 | Design       : design_1
 | Device       : xc7z020-clg400-1--
