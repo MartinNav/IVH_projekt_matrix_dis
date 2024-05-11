@@ -21,6 +21,8 @@
 
 library IEEE;
 use IEEE.STD_LOGIC_1164.ALL;
+library xil_defaultlib;
+use xil_defaultlib.all;
 
 -- Uncomment the following library declaration if using
 -- arithmetic functions with Signed or Unsigned values
@@ -59,9 +61,31 @@ architecture Behavioral of counter_anim is
  "01110000"& "01010000"&"01111100" --nine 23-0
 
  );
+signal cnt1_value: std_logic_vector(3 downto 0):="0000";
+signal en_2nd_ctr: std_logic:='0';
+signal cnt2_value: std_logic_vector(3 downto 0):="0000";
+signal cnt2_out_en: std_logic:='0';
+
 
 begin
 -- there will be 2 counters and one luckup table that will contain ways to draw the numbers
+
+cnt1: entity xil_defaultlib.counter
+port map( clk=>clk,
+          reset=>reset,
+          en=>en,
+		  q=>cnt1_value,
+		   en_out=>en_2nd_ctr
+		   );
+
+
+cnt2: entity xil_defaultlib.counter
+port map( clk=>clk,
+          reset=>reset,
+          en=>en_2nd_ctr,
+		  q=>cnt2_value,
+		   en_out=>cnt2_out_en
+		   );
 
 
 out_val<="00000000"&char_table(239 downto 192)&"00000000";--prototype
