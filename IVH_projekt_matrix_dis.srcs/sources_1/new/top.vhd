@@ -66,7 +66,7 @@ signal display_buffer: std_logic_vector(63 downto 0):=(others=>'0');
 signal anim_mode: std_logic :='0';
 signal anim_enable: std_logic:='0';
 
-signal anim_ctr_max: integer := 25_000_000/5;
+constant anim_ctr_max: integer := (25_000_000/5) -1;
 signal anim_ctr: integer range 0 to anim_ctr_max:=0;
 
 begin
