@@ -47,7 +47,7 @@ constant IMAGE: std_logic_vector(63 downto 0):=
 
 
 signal VUT_LOGO: std_logic_vector(63 downto 0):=(others=>'0');
-constant frame_count: integer:=10;
+constant frame_count: integer:=20;
 signal frame_num: integer range 0 to frame_count :=0;
 
 signal screen_buffer: std_logic_vector(63 downto 0);
@@ -64,83 +64,152 @@ begin
             if en='1' then
                 case frame_num is
                     when 0=>vut_logo<=(others=>'0');
-                    when 1=>vut_logo(39)<='1';-- bottom 0001 1111
-                            vut_logo(31)<='1';
-                            vut_logo(23)<='1';
-                            vut_logo(15)<='1';
-                            vut_logo(7)<='1';
-                            vut_logo(0)<='1';
+--                    when 1=>vut_logo(39)<='1';-- bottom 0001 1111
+--                            vut_logo(31)<='1';
+--                            vut_logo(23)<='1';
+--                            vut_logo(15)<='1';
+--                            vut_logo(7)<='1';
+--                            vut_logo(0)<='1';
                             
-                    when 2=>vut_logo(40)<='1';
-                            vut_logo(32)<='1';
-                            vut_logo(24)<='1';
-                            vut_logo(16)<='1';
-                            vut_logo(8)<='1';
-                            vut_logo(1)<='1';
+--                    when 2=>vut_logo(40)<='1';
+--                            vut_logo(32)<='1';
+--                            vut_logo(24)<='1';
+--                            vut_logo(16)<='1';
+--                            vut_logo(8)<='1';
+--                            vut_logo(1)<='1';
                             
-                    when 3=>vut_logo(41)<='1';
-                            vut_logo(33)<='1';
-                            vut_logo(25)<='1';
-                            vut_logo(17)<='1';
-                            vut_logo(9)<='1';
-                            vut_logo(2)<='1';
-                            vut_logo(23)<='0';
-                            vut_logo(15)<='0';
-                            vut_logo(7)<='0';
-                            vut_logo(0)<='0';
+--                    when 3=>vut_logo(41)<='1';
+--                            vut_logo(33)<='1';
+--                            vut_logo(25)<='1';
+--                            vut_logo(17)<='1';
+--                            vut_logo(9)<='1';
+--                            vut_logo(2)<='1';
+--                            vut_logo(23)<='0';
+--                            vut_logo(15)<='0';
+--                            vut_logo(7)<='0';
+--                            vut_logo(0)<='0';
                             
-                    when 4=>vut_logo(42)<='1';
-                            vut_logo(34)<='1';
-                            vut_logo(26)<='1';
-                            vut_logo(18)<='1';
-                            vut_logo(10)<='1';
-                            vut_logo(3)<='1';
-                            vut_logo(24)<='0';
-                            vut_logo(16)<='0';
-                            vut_logo(8)<='0';
-                            vut_logo(1)<='0';
+--                    when 4=>vut_logo(42)<='1';
+--                            vut_logo(34)<='1';
+--                            vut_logo(26)<='1';
+--                            vut_logo(18)<='1';
+--                            vut_logo(10)<='1';
+--                            vut_logo(3)<='1';
+--                            vut_logo(24)<='0';
+--                            vut_logo(16)<='0';
+--                            vut_logo(8)<='0';
+--                            vut_logo(1)<='0';
                             
-                    when 5=>vut_logo(43)<='1';
-                            vut_logo(35)<='1';
-                            vut_logo(27)<='1';
-                            vut_logo(19)<='1';
-                            vut_logo(11)<='1';
-                            vut_logo(4)<='1';
-                            vut_logo(25)<='0';
-                            vut_logo(17)<='0';
-                            vut_logo(9)<='0';
-                            vut_logo(2)<='0';
+--                    when 5=>vut_logo(43)<='1';
+--                            vut_logo(35)<='1';
+--                            vut_logo(27)<='1';
+--                            vut_logo(19)<='1';
+--                            vut_logo(11)<='1';
+--                            vut_logo(4)<='1';
+--                            vut_logo(25)<='0';
+--                            vut_logo(17)<='0';
+--                            vut_logo(9)<='0';
+--                            vut_logo(2)<='0';
                     
-                    when 6=>vut_logo(44)<='1';
-                            vut_logo(36)<='1';
-                            vut_logo(28)<='1';
-                            vut_logo(20)<='1';
-                            vut_logo(12)<='1';
-                            vut_logo(5)<='1';
-                            vut_logo(26)<='0';
-                            vut_logo(18)<='0';
-                            vut_logo(10)<='0';
-                            vut_logo(3)<='0';
+--                    when 6=>vut_logo(44)<='1';
+--                            vut_logo(36)<='1';
+--                            vut_logo(28)<='1';
+--                            vut_logo(20)<='1';
+--                            vut_logo(12)<='1';
+--                            vut_logo(5)<='1';
+--                            vut_logo(26)<='0';
+--                            vut_logo(18)<='0';
+--                            vut_logo(10)<='0';
+--                            vut_logo(3)<='0';
 
-                    when 7=>vut_logo(45)<='1';
+--                    when 7=>vut_logo(45)<='1';
+--                            vut_logo(37)<='1';
+--                            vut_logo(29)<='1';
+--                            vut_logo(21)<='1';
+--                            vut_logo(13)<='1';
+--                            vut_logo(6)<='1';
+--                            vut_logo(27)<='0';
+--                            vut_logo(19)<='0';
+--                            vut_logo(11)<='0';
+--                            vut_logo(4)<='0';
+                            
+--                    when 8=>vut_logo(63)<='1';--floating left side
+--                            vut_logo(62)<='1';
+                            
+--                    when 9=>vut_logo(55)<='1';
+--                            vut_logo(54)<='1';
+                            
+--                   when 10=>vut_logo(47)<='1';
+--                            vut_logo(46)<='1';
+                    when 1=>vut_logo(24)<='1';
+                            vut_logo(32)<='1';
+                            vut_logo(40)<='1';
+                            vut_logo(48)<='1';
+                            vut_logo(56)<='1';
+                            
+                    when 2=>vut_logo(25)<='1';
+                            vut_logo(33)<='1';
+                            vut_logo(41)<='1';
+                            vut_logo(49)<='1';
+                            vut_logo(57)<='1';
+                            
+                    when 3=>vut_logo(26)<='1';
+                            vut_logo(34)<='1';
+                            vut_logo(42)<='1';
+                            vut_logo(50)<='1';
+                            vut_logo(58)<='1';
+                            vut_logo(40)<='0';
+                            vut_logo(48)<='0';
+                            vut_logo(56)<='0';
+                            
+                    when 4=>vut_logo(27)<='1';
+                            vut_logo(35)<='1';
+                            vut_logo(43)<='1';
+                            vut_logo(51)<='1';
+                            vut_logo(59)<='1';
+                            vut_logo(41)<='0';
+                            vut_logo(49)<='0';
+                            vut_logo(57)<='0';
+                            
+                    when 5=>vut_logo(28)<='1';
+                            vut_logo(36)<='1';
+                            vut_logo(44)<='1';
+                            vut_logo(52)<='1';
+                            vut_logo(60)<='1';
+                            vut_logo(42)<='0';
+                            vut_logo(50)<='0';
+                            vut_logo(58)<='0';
+                    
+                    when 6=>vut_logo(29)<='1';
                             vut_logo(37)<='1';
-                            vut_logo(29)<='1';
-                            vut_logo(21)<='1';
-                            vut_logo(13)<='1';
-                            vut_logo(6)<='1';
-                            vut_logo(27)<='0';
-                            vut_logo(19)<='0';
-                            vut_logo(11)<='0';
-                            vut_logo(4)<='0';
-                            
-                    when 8=>vut_logo(63)<='1';--floating left side
-                            vut_logo(62)<='1';
-                            
-                    when 9=>vut_logo(55)<='1';
-                            vut_logo(54)<='1';
-                            
-                   when 10=>vut_logo(47)<='1';
+                            vut_logo(45)<='1';
+                            vut_logo(53)<='1';
+                            vut_logo(61)<='1';
+                            vut_logo(43)<='0';
+                            vut_logo(51)<='0';
+                            vut_logo(59)<='0';
+
+                    when 7=>vut_logo(30)<='1';
+                            vut_logo(38)<='1';
                             vut_logo(46)<='1';
+                            vut_logo(54)<='1';
+                            vut_logo(62)<='1';
+                            vut_logo(44)<='0';
+                            vut_logo(52)<='0';
+                            vut_logo(60)<='0';
+                            
+                    when 8=>vut_logo(7)<='1';--floating left side
+                            vut_logo(6)<='1';
+                            
+                    when 9=>vut_logo(15)<='1';
+                            vut_logo(14)<='1';
+                            
+                   when 10=>vut_logo(23)<='1';
+                            vut_logo(22)<='1';
+                            
+                   when 15=> vut_logo<= not vut_logo;
+                  
+                   when others=>NULL;
                 end case;
                 frame_num<=frame_num+1;
             end if;
