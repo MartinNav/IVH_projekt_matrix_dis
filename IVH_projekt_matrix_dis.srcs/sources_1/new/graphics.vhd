@@ -43,7 +43,7 @@ end graphics;
 
 architecture Behavioral of graphics is
 constant IMAGE: std_logic_vector(63 downto 0):=
-"00000000" & "11111110" & "01000000" & "00100000" & "00100000"&"01000000"&"00000000";
+"00000000" & "11111110" & "01000000" & "00100000" & "00100000"&"01000000"& "11111110"&"00000000";
 
 begin
 

@@ -70,6 +70,8 @@ proc create_report { reportName command } {
   }
 }
 OPTRACE "design_1_top_0_0_synth_1" START { ROLLUP_AUTO }
+set_param chipscope.maxJobs 2
+set_param xicom.use_bs_reader 1
 set_param project.vivado.isBlockSynthRun true
 OPTRACE "Creating in-memory project" START { }
 set_param ips.modRefOverrideMrefDirPath d:/VUT_FIT/IVH/IVH_projekt_matrix_dis/IVH_projekt_matrix_dis.gen/sources_1/bd/mref
@@ -92,6 +94,7 @@ OPTRACE "Adding files" START { }
 read_vhdl -library xil_defaultlib {
   D:/VUT_FIT/IVH/IVH_projekt_matrix_dis/IVH_projekt_matrix_dis.srcs/sources_1/new/counter.vhd
   D:/VUT_FIT/IVH/IVH_projekt_matrix_dis/IVH_projekt_matrix_dis.srcs/sources_1/new/counter_anim.vhd
+  D:/VUT_FIT/IVH/IVH_projekt_matrix_dis/IVH_projekt_matrix_dis.srcs/sources_1/new/graphics.vhd
   D:/VUT_FIT/IVH/IVH_projekt_matrix_dis/IVH_projekt_matrix_dis.srcs/sources_1/new/top.vhd
 }
 read_ip -quiet D:/VUT_FIT/IVH/IVH_projekt_matrix_dis/IVH_projekt_matrix_dis.srcs/sources_1/bd/design_1/ip/design_1_top_0_0/design_1_top_0_0.xci

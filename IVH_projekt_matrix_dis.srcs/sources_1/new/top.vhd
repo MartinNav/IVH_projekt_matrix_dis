@@ -57,6 +57,11 @@ signal col_indx: integer range 0 to 7:=0;
 constant loop_t: integer:=63;
 signal time_from_start: integer range 0 to loop_t:=0;
 
+
+
+signal animation_dis: std_logic_vector(63 downto 0):=(others=>'0');
+signal display_buffer: std_logic_vector(63 downto 0):=(others=>'0');
+
 begin
 
 
@@ -68,6 +73,14 @@ en=>cnt_dis_enable,
 output=>counter_display
 );
 
+animation: entity xil_defaultlib.graphics
+port map(
+clk=>clk,
+en=>'0',
+mode=>'0',
+output=>animation_dis
+);
+
 
 
 process(clk) is
@@ -77,42 +90,15 @@ begin
             cnt<=0;
             
 --            scol<= not scol;
-            
+           if time_from_start<30 then
             if time_from_start>20 then
-            case col_indx is
-                when 0 => scol<= not counter_display(63 downto 56);
-                when 1 => scol<= not counter_display(55 downto 48);
-                when 2 => scol<= not counter_display(47 downto 40);
-                when 3 => scol<= not counter_display(39 downto 32);
-                when 4 => scol<= not counter_display(31 downto 24);
-                when 5 => scol<= not counter_display(23 downto 16);
-                when 6 => scol<= not counter_display(15 downto 8);
-                when 7 => scol<= not counter_display(7 downto 0);
-                when others => scol<=(others=>'1');--this will make failure green
-            end case;
-            else
---            to_norm_scol: for II in 7 downto 0 generate
---                if col_indx=II then
---                    scol<=counter_display((63-(8*II)) downto (56-(8*II)));
---                end if;
---            end generate to_norm_scol;
---                g_GENERATE_FOR: for ii in 0 to 7 generate
---                if col_indx=ii then
---                     scol <=counter_display((63-(8*ii)) downto (56-(8*ii)));
---                   end if;
---                end generate g_GENERATE_FOR;
-              case col_indx is
-                when 0 => scol<=counter_display(63 downto 56);
-                when 1 => scol<=counter_display(55 downto 48);
-                when 2 => scol<=counter_display(47 downto 40);
-                when 3 => scol<=counter_display(39 downto 32);
-                when 4 => scol<=counter_display(31 downto 24);
-                when 5 => scol<=counter_display(23 downto 16);
-                when 6 => scol<=counter_display(15 downto 8);
-                when 7 => scol<=counter_display(7 downto 0);
-                when others => scol<=(others=>'1');--this will make failure green
-            end case;
+               display_buffer<= not counter_display;
+                else
+                display_buffer<=counter_display;
             end if;
+            else 
+               display_buffer<=animation_dis;
+           end if;
             srow <= srow(srow'high - 1 downto srow'low) & srow(srow'high);
             
             if col_indx=7 then
@@ -147,6 +133,25 @@ begin
         end if;
     end if;
 
+end process;
+
+
+process (clk)--writeout buffer
+begin
+   if rising_edge(clk) then
+    case col_indx is 
+        when 0 => scol<=display_buffer(7 downto 0);
+        when 1 => scol<=display_buffer(63 downto 56);
+        when 2 => scol<=display_buffer(55 downto 48);
+        when 3 => scol<=display_buffer(47 downto 40);
+        when 4 => scol<=display_buffer(39 downto 32);
+        when 5 => scol<=display_buffer(31 downto 24);
+        when 6 => scol<=display_buffer(23 downto 16);
+        when 7 => scol<=display_buffer(15 downto 8);
+
+        when others => scol<=(others=>'1');--this will make failure green
+        end case;
+      end if;
 end process;
 
 
