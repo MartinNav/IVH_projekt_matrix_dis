@@ -14,8 +14,11 @@
 
 library IEEE;
 use IEEE.STD_LOGIC_1164.ALL;
+use IEEE.numeric_std.all;
 library xil_defaultlib;
 use xil_defaultlib.all;
+--use xil_defaultlib.matrix_pack.all;
+
 
 -- Uncomment the following library declaration if using
 -- arithmetic functions with Signed or Unsigned values
@@ -88,6 +91,16 @@ begin
                 when others => scol<=(others=>'1');--this will make failure green
             end case;
             else
+--            to_norm_scol: for II in 7 downto 0 generate
+--                if col_indx=II then
+--                    scol<=counter_display((63-(8*II)) downto (56-(8*II)));
+--                end if;
+--            end generate to_norm_scol;
+--                g_GENERATE_FOR: for ii in 0 to 7 generate
+--                if col_indx=ii then
+--                     scol <=counter_display((63-(8*ii)) downto (56-(8*ii)));
+--                   end if;
+--                end generate g_GENERATE_FOR;
               case col_indx is
                 when 0 => scol<=counter_display(63 downto 56);
                 when 1 => scol<=counter_display(55 downto 48);
