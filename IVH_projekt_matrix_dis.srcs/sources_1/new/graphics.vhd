@@ -47,7 +47,7 @@ constant IMAGE: std_logic_vector(63 downto 0):=
 
 
 signal VUT_LOGO: std_logic_vector(63 downto 0):=(others=>'0');
-constant frame_count: integer:=16;
+constant frame_count: integer:=10;
 signal frame_num: integer range 0 to frame_count :=0;
 
 signal screen_buffer: std_logic_vector(63 downto 0);

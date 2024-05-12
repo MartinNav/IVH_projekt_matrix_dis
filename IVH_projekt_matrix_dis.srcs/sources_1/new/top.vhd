@@ -62,6 +62,13 @@ signal time_from_start: integer range 0 to loop_t:=0;
 signal animation_dis: std_logic_vector(63 downto 0):=(others=>'0');
 signal display_buffer: std_logic_vector(63 downto 0):=(others=>'0');
 
+
+signal anim_mode: std_logic :='0';
+signal anim_enable: std_logic:='0';
+
+signal anim_ctr_max: integer := 25_000_000/5;
+signal anim_ctr: integer range 0 to anim_ctr_max:=0;
+
 begin
 
 
@@ -76,8 +83,8 @@ output=>counter_display
 animation: entity xil_defaultlib.graphics
 port map(
 clk=>clk,
-en=>'0',
-mode=>'0',
+en=>anim_enable,
+mode=>anim_mode,
 output=>animation_dis
 );
 
@@ -91,12 +98,17 @@ begin
             
 --            scol<= not scol;
            if time_from_start<30 then
+            anim_mode<='0';
+            --anim_enable<='0';
             if time_from_start>20 then
                display_buffer<= not counter_display;
                 else
                 display_buffer<=counter_display;
             end if;
             else 
+                if time_from_start=35 then
+                    anim_mode<='1';
+                end if;
                display_buffer<=animation_dis;
            end if;
             srow <= srow(srow'high - 1 downto srow'low) & srow(srow'high);
@@ -133,6 +145,19 @@ begin
         end if;
     end if;
 
+end process;
+
+process (clk)
+begin
+    if rising_edge(clk)then
+        if anim_ctr = anim_ctr_max then
+            anim_ctr<=0;
+            anim_enable<='1';
+          else
+            anim_enable<='0';
+            anim_ctr<=anim_ctr+1;
+        end if;
+    end if;
 end process;
 
 
