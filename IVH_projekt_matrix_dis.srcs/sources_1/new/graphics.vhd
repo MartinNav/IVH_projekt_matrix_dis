@@ -45,7 +45,40 @@ architecture Behavioral of graphics is
 constant IMAGE: std_logic_vector(63 downto 0):=
 "00000000" & "11111110" & "01000000" & "00100000" & "00100000"&"01000000"& "11111110"&"00000000";
 
+
+signal VUT_LOGO: std_logic_vector(63 downto 0):=(others=>'0');
+constant frame_count: integer:=16;
+signal frame_num: integer range 0 to frame_count :=0;
+
+signal screen_buffer: std_logic_vector(63 downto 0);
+
 begin
 
-OUTPUT<=IMAGE;
+process(clk)
+begin
+    if rising_edge(clk) then
+        if mode='0' then
+            screen_buffer<=IMAGE;
+        else
+            if en='1' then
+                case frame_num is
+                    when 0=>vut_logo<=(others=>'0');
+                    when 1=>vut_logo(39)<='1';-- bottom 0001 1111
+                            vut_logo(31)<='1';
+                            vut_logo(23)<='1';
+                            vut_logo(15)<='1';
+                            vut_logo(7)<='1';
+                            vut_logo(0)<='1';
+                    
+                end case;
+            end if;
+            screen_buffer<=VUT_LOGO;
+        end if;
+    end if;
+
+
+end process;
+
+
+OUTPUT<=screen_buffer;
 end Behavioral;

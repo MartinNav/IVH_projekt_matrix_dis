@@ -4,8 +4,8 @@
 // Tool Version: Vivado v.2023.2 (win64) Build 4029153 Fri Oct 13 20:14:34 MDT 2023
 // Date        : Sun May 12 12:24:27 2024
 // Host        : LAPTOP-O3BSDE06 running 64-bit major release  (build 9200)
-// Command     : write_verilog -force -mode funcsim
-//               d:/VUT_FIT/IVH/IVH_projekt_matrix_dis/IVH_projekt_matrix_dis.gen/sources_1/bd/design_1/ip/design_1_top_0_0/design_1_top_0_0_sim_netlist.v
+// Command     : write_verilog -force -mode funcsim -rename_top decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix -prefix
+//               decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ design_1_top_0_0_sim_netlist.v
 // Design      : design_1_top_0_0
 // Purpose     : This verilog netlist is a functional simulation representation of the design and should not be modified
 //               or synthesized. This netlist cannot be used for SDF annotated simulation.
@@ -13,31 +13,7 @@
 // --------------------------------------------------------------------------------
 `timescale 1 ps / 1 ps
 
-(* CHECK_LICENSE_TYPE = "design_1_top_0_0,top,{}" *) (* downgradeipidentifiedwarnings = "yes" *) (* ip_definition_source = "module_ref" *) 
-(* x_core_info = "top,Vivado 2023.2" *) 
-(* NotValidForBitStream *)
-module design_1_top_0_0
-   (clk,
-    col,
-    row);
-  (* x_interface_info = "xilinx.com:signal:clock:1.0 clk CLK" *) (* x_interface_parameter = "XIL_INTERFACENAME clk, FREQ_HZ 25000000, FREQ_TOLERANCE_HZ 0, PHASE 0.0, CLK_DOMAIN /clk_wiz_0_clk_out1, INSERT_VIP 0" *) input clk;
-  output [7:0]col;
-  output [7:0]row;
-
-  wire clk;
-  wire [6:0]\^col ;
-  wire [7:0]row;
-
-  assign col[7] = \^col [1];
-  assign col[6:0] = \^col [6:0];
-  design_1_top_0_0_top U0
-       (.clk(clk),
-        .col({\^col [1],\^col [6:2],\^col [0]}),
-        .row(row));
-endmodule
-
-(* ORIG_REF_NAME = "counter" *) 
-module design_1_top_0_0_counter
+module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_counter
    (E,
     Q,
     \bcd_value_reg[0]_0 ,
@@ -294,7 +270,7 @@ module design_1_top_0_0_counter
 endmodule
 
 (* ORIG_REF_NAME = "counter" *) 
-module design_1_top_0_0_counter_0
+module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_counter_0
    (Q,
     \bcd_value_reg[0]_0 ,
     D,
@@ -486,8 +462,7 @@ module design_1_top_0_0_counter_0
         .O(\bcd_value_reg[2]_3 ));
 endmodule
 
-(* ORIG_REF_NAME = "counter_anim" *) 
-module design_1_top_0_0_counter_anim
+module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_counter_anim
    (\screen_value_reg[11]_0 ,
     \screen_value_reg[12]_0 ,
     \screen_value_reg[13]_0 ,
@@ -587,7 +562,7 @@ module design_1_top_0_0_counter_anim
   wire [23:3]second_value;
   wire [23:3]second_value_1;
 
-  design_1_top_0_0_counter cnt1
+  decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_counter cnt1
        (.AR(AR),
         .D({first_value_0[23],first_value_0[10],first_value_0[3]}),
         .E(en_2nd_ctr),
@@ -601,7 +576,7 @@ module design_1_top_0_0_counter_anim
         .\bcd_value_reg[2]_3 (cnt1_n_10),
         .\bcd_value_reg[2]_4 (cnt1_n_11),
         .clk(clk));
-  design_1_top_0_0_counter_0 cnt2
+  decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_counter_0 cnt2
        (.AR(AR),
         .D({second_value_1[23],second_value_1[10],second_value_1[3]}),
         .E(en_2nd_ctr),
@@ -1098,8 +1073,30 @@ module design_1_top_0_0_counter_anim
         .S(bcd_value_reg_0));
 endmodule
 
-(* ORIG_REF_NAME = "top" *) 
-module design_1_top_0_0_top
+(* CHECK_LICENSE_TYPE = "design_1_top_0_0,top,{}" *) (* downgradeipidentifiedwarnings = "yes" *) (* ip_definition_source = "module_ref" *) 
+(* x_core_info = "top,Vivado 2023.2" *) 
+(* NotValidForBitStream *)
+module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix
+   (clk,
+    col,
+    row);
+  (* x_interface_info = "xilinx.com:signal:clock:1.0 clk CLK" *) (* x_interface_parameter = "XIL_INTERFACENAME clk, FREQ_HZ 25000000, FREQ_TOLERANCE_HZ 0, PHASE 0.0, CLK_DOMAIN /clk_wiz_0_clk_out1, INSERT_VIP 0" *) input clk;
+  output [7:0]col;
+  output [7:0]row;
+
+  wire clk;
+  wire [6:0]\^col ;
+  wire [7:0]row;
+
+  assign col[7] = \^col [1];
+  assign col[6:0] = \^col [6:0];
+  decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_top U0
+       (.clk(clk),
+        .col({\^col [1],\^col [6:2],\^col [0]}),
+        .row(row));
+endmodule
+
+module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_top
    (col,
     row,
     clk);
@@ -1264,7 +1261,7 @@ module design_1_top_0_0_top
        (.I0(\srow[7]_i_2_n_0 ),
         .I1(cnt[0]),
         .O(cnt_1));
-  design_1_top_0_0_counter_anim cnt_dis
+  decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_counter_anim cnt_dis
        (.AR(cnt_dis_rst),
         .E(cnt_dis_enable_reg_n_0),
         .clk(clk),
