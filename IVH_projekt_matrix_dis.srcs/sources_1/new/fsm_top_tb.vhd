@@ -54,10 +54,17 @@ begin
     ); 
 process(clk)
 begin
-    if rising_edge(clk)
+    if rising_edge(clk) then
 
-
-
+        case clk_cntr is
+            when 1 =>
+                assert row = "11111110" report "incorrect value in row in 1. test";
+                assert col = "11111111" report "incorrect value in col in 1. test";
+                assert leds = "0000" report "incorrect initial led value";
+        
+        
+           when others => NULL;
+        end case;
 
     clk_cntr<=clk+1;
     end if;
