@@ -37,7 +37,7 @@ end top;
 
 architecture Behavioral of top is
 signal scol: std_logic_vector(7 downto 0):="11111111";
-signal srow: std_logic_vector(7 downto 0):="01111111";
+signal srow: std_logic_vector(7 downto 0):="11111110";
 --constant maxcnt: integer := 25_000_000;--one second
 constant maxcnt: integer := 25_000;--100 fps
 signal cnt: integer range 0 to maxcnt :=0;
@@ -165,14 +165,14 @@ process (clk)--writeout buffer
 begin
    if rising_edge(clk) then
     case col_indx is 
-        when 0 => scol<=display_buffer(7 downto 0);
-        when 1 => scol<=display_buffer(63 downto 56);
-        when 2 => scol<=display_buffer(55 downto 48);
-        when 3 => scol<=display_buffer(47 downto 40);
-        when 4 => scol<=display_buffer(39 downto 32);
-        when 5 => scol<=display_buffer(31 downto 24);
-        when 6 => scol<=display_buffer(23 downto 16);
-        when 7 => scol<=display_buffer(15 downto 8);
+        when 0 => scol<=display_buffer(63 downto 56);
+        when 1 => scol<=display_buffer(55 downto 48);
+        when 2 => scol<=display_buffer(47 downto 40);
+        when 3 => scol<=display_buffer(39 downto 32);
+        when 4 => scol<=display_buffer(31 downto 24);
+        when 5 => scol<=display_buffer(23 downto 16);
+        when 6 => scol<=display_buffer(15 downto 8);
+        when 7 => scol<=display_buffer(7 downto 0);
 
         when others => scol<=(others=>'1');--this will make failure green
         end case;
