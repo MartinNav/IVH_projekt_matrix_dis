@@ -22,18 +22,18 @@ use xil_defaultlib.all;
 -- Uncomment the following library declaration if using
 -- arithmetic functions with Signed or Unsigned values
 --use IEEE.NUMERIC_STD.ALL;
-
-
 -- Uncomment the following library declaration if instantiating
 -- any Xilinx leaf cells in this code.
 
 --library UNISIM;
 --use UNISIM.VComponents.all;
 
+
 entity top is
     Port ( clk : in STD_LOGIC;
            col : out STD_LOGIC_VECTOR (7 downto 0);
-           row : out STD_LOGIC_VECTOR (7 downto 0));
+           row : out STD_LOGIC_VECTOR (7 downto 0);
+           leds: out STD_LOGIC_VECTOR(3 downto 0));
 end top;
 
 architecture Behavioral of top is
@@ -42,7 +42,7 @@ signal srow: std_logic_vector(7 downto 0):="11111110";
 --constant maxcnt: integer := 25_000_000;--one second
 constant maxcnt: integer := 25_000;--100 fps
 signal cnt: integer range 0 to maxcnt :=0;
-constant max_sec_cnt: integer := 25_000_000;--1 sec
+constant max_sec_cnt: integer := 25_000_000-1;--1 sec
 --constant max_sec_cnt: integer := 25_000;--0.001 sec
 
 signal sec_cnt: integer range 0 to max_sec_cnt :=0;
@@ -69,6 +69,8 @@ signal anim_enable: std_logic:='0';
 
 constant anim_ctr_max: integer := (25_000_000/5) -1;
 signal anim_ctr: integer range 0 to anim_ctr_max:=0;
+
+signal pre_leds: std_logic_vector(3 downto 0);
 
 begin
 
@@ -136,6 +138,7 @@ begin
             sec_cnt<=0;
             cnt_dis_enable<='1';
             time_from_start<=time_from_start + 1;
+            pre_leds<=std_logic_vector( unsigned(pre_leds) + 1 );
             else
             sec_cnt<= sec_cnt + 1;
             cnt_dis_enable<='0';
@@ -144,6 +147,7 @@ begin
             cnt_dis_rst<='1';
             time_from_start<=0;
         end if;
+        
     end if;
 
 end process;
@@ -177,6 +181,15 @@ begin
 
         when others => scol<=(others=>'1');--this will make failure green
         end case;
+
+
+
+--        f_gen:for ii in 0 to 7 generate -- version with for generate does not want to work (4h wasted here)
+--            if col_indx = conv_integer(i) then
+--                scol<=display_buffer(63-(8*ii) downto 56-(8*ii));
+--            end if;
+--        end generate f_gen;
+        
       end if;
 end process;
 
@@ -185,6 +198,6 @@ end process;
 
 row<=srow;
 col<=scol;
-
+leds<=pre_leds;
 
 end Behavioral;

@@ -52,6 +52,7 @@ output=>output
 process(clk)
 begin
     if rising_edge(clk) then
+    -- these values may seem weird but they are not it is because I am using little endian to represen the display instead of big endian
         case ctr is
             when 0=> 
                 assert output = x"7c447c007c447c00" report "case 0 does not equal 00";
