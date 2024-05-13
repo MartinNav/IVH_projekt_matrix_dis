@@ -1,8 +1,2 @@
-INFO: [VRFC 10-163] Analyzing VHDL file "D:/VUT_FIT/IVH/IVH_projekt_matrix_dis/IVH_projekt_matrix_dis.srcs/sources_1/new/top.vhd" into library xil_defaultlib
-INFO: [VRFC 10-3107] analyzing entity 'top'
-INFO: [VRFC 10-163] Analyzing VHDL file "D:/VUT_FIT/IVH/IVH_projekt_matrix_dis/IVH_projekt_matrix_dis.ip_user_files/bd/design_1/ip/design_1_top_0_0/sim/design_1_top_0_0.vhd" into library xil_defaultlib
-INFO: [VRFC 10-3107] analyzing entity 'design_1_top_0_0'
-INFO: [VRFC 10-163] Analyzing VHDL file "D:/VUT_FIT/IVH/IVH_projekt_matrix_dis/IVH_projekt_matrix_dis.ip_user_files/bd/design_1/sim/design_1.vhd" into library xil_defaultlib
-INFO: [VRFC 10-3107] analyzing entity 'design_1'
-INFO: [VRFC 10-163] Analyzing VHDL file "D:/VUT_FIT/IVH/IVH_projekt_matrix_dis/IVH_projekt_matrix_dis.gen/sources_1/bd/design_1/hdl/design_1_wrapper.vhd" into library xil_defaultlib
-INFO: [VRFC 10-3107] analyzing entity 'design_1_wrapper'
+INFO: [VRFC 10-163] Analyzing VHDL file "D:/VUT_FIT/IVH/IVH_projekt_matrix_dis/IVH_projekt_matrix_dis.srcs/sources_1/new/counter_rom_tb.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'counter_rom_tb'
