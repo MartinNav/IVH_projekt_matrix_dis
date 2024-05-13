@@ -2,10 +2,10 @@
 // Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
 // --------------------------------------------------------------------------------
 // Tool Version: Vivado v.2023.2 (win64) Build 4029153 Fri Oct 13 20:14:34 MDT 2023
-// Date        : Mon May 13 15:47:45 2024
+// Date        : Mon May 13 15:47:44 2024
 // Host        : LAPTOP-O3BSDE06 running 64-bit major release  (build 9200)
-// Command     : write_verilog -force -mode funcsim
-//               d:/VUT_FIT/IVH/IVH_projekt_matrix_dis/IVH_projekt_matrix_dis.gen/sources_1/bd/design_1/ip/design_1_top_0_0/design_1_top_0_0_sim_netlist.v
+// Command     : write_verilog -force -mode funcsim -rename_top design_1_top_0_0 -prefix
+//               design_1_top_0_0_ design_1_top_0_0_sim_netlist.v
 // Design      : design_1_top_0_0
 // Purpose     : This verilog netlist is a functional simulation representation of the design and should not be modified
 //               or synthesized. This netlist cannot be used for SDF annotated simulation.
@@ -13,34 +13,6 @@
 // --------------------------------------------------------------------------------
 `timescale 1 ps / 1 ps
 
-(* CHECK_LICENSE_TYPE = "design_1_top_0_0,top,{}" *) (* downgradeipidentifiedwarnings = "yes" *) (* ip_definition_source = "module_ref" *) 
-(* x_core_info = "top,Vivado 2023.2" *) 
-(* NotValidForBitStream *)
-module design_1_top_0_0
-   (clk,
-    col,
-    row,
-    leds);
-  (* x_interface_info = "xilinx.com:signal:clock:1.0 clk CLK" *) (* x_interface_parameter = "XIL_INTERFACENAME clk, FREQ_HZ 25000000, FREQ_TOLERANCE_HZ 0, PHASE 0.0, CLK_DOMAIN /clk_wiz_0_clk_out1, INSERT_VIP 0" *) input clk;
-  output [7:0]col;
-  output [7:0]row;
-  output [3:0]leds;
-
-  wire clk;
-  wire [7:0]col;
-  wire [3:0]leds;
-  wire [7:0]row;
-
-  design_1_top_0_0_top U0
-       (.clk(clk),
-        .col(col),
-        .leds(leds[3:2]),
-        .\pre_leds_reg[0]_0 (leds[0]),
-        .\pre_leds_reg[1]_0 (leds[1]),
-        .row(row));
-endmodule
-
-(* ORIG_REF_NAME = "counter" *) 
 module design_1_top_0_0_counter
    (E,
     D,
@@ -452,7 +424,6 @@ module design_1_top_0_0_counter_0
         .O(D[3]));
 endmodule
 
-(* ORIG_REF_NAME = "counter_anim" *) 
 module design_1_top_0_0_counter_anim
    (\screen_value_reg[63]_0 ,
     Q,
@@ -867,7 +838,33 @@ module design_1_top_0_0_counter_anim
         .R(1'b0));
 endmodule
 
-(* ORIG_REF_NAME = "graphics" *) 
+(* CHECK_LICENSE_TYPE = "design_1_top_0_0,top,{}" *) (* downgradeipidentifiedwarnings = "yes" *) (* ip_definition_source = "module_ref" *) 
+(* x_core_info = "top,Vivado 2023.2" *) 
+(* NotValidForBitStream *)
+module design_1_top_0_0
+   (clk,
+    col,
+    row,
+    leds);
+  (* x_interface_info = "xilinx.com:signal:clock:1.0 clk CLK" *) (* x_interface_parameter = "XIL_INTERFACENAME clk, FREQ_HZ 25000000, FREQ_TOLERANCE_HZ 0, PHASE 0.0, CLK_DOMAIN /clk_wiz_0_clk_out1, INSERT_VIP 0" *) input clk;
+  output [7:0]col;
+  output [7:0]row;
+  output [3:0]leds;
+
+  wire clk;
+  wire [7:0]col;
+  wire [3:0]leds;
+  wire [7:0]row;
+
+  design_1_top_0_0_top U0
+       (.clk(clk),
+        .col(col),
+        .leds(leds[3:2]),
+        .\pre_leds_reg[0]_0 (leds[0]),
+        .\pre_leds_reg[1]_0 (leds[1]),
+        .row(row));
+endmodule
+
 module design_1_top_0_0_graphics
    (\time_from_start_reg[2] ,
     \time_from_start_reg[2]_0 ,
@@ -3356,7 +3353,6 @@ module design_1_top_0_0_graphics
         .S(clear));
 endmodule
 
-(* ORIG_REF_NAME = "top" *) 
 module design_1_top_0_0_top
    (\pre_leds_reg[0]_0 ,
     col,
