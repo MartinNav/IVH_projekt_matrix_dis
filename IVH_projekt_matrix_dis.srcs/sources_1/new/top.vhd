@@ -21,7 +21,8 @@ use xil_defaultlib.all;
 
 -- Uncomment the following library declaration if using
 -- arithmetic functions with Signed or Unsigned values
---use IEEE.NUMERIC_STD.ALL; 
+--use IEEE.NUMERIC_STD.ALL;
+
 
 -- Uncomment the following library declaration if instantiating
 -- any Xilinx leaf cells in this code.
@@ -42,7 +43,7 @@ signal srow: std_logic_vector(7 downto 0):="11111110";
 constant maxcnt: integer := 25_000;--100 fps
 signal cnt: integer range 0 to maxcnt :=0;
 constant max_sec_cnt: integer := 25_000_000;--1 sec
---constant max_sec_cnt: integer := 250_000;--0.01 sec
+--constant max_sec_cnt: integer := 25_000;--0.001 sec
 
 signal sec_cnt: integer range 0 to max_sec_cnt :=0;
 

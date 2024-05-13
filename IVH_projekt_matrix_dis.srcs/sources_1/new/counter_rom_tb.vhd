@@ -53,8 +53,29 @@ process(clk)
 begin
     if rising_edge(clk) then
         case ctr is
+            when 0=> 
+                assert output = x"7c447c007c447c00" report "case 0 does not equal 00";
             when 1=>
-            assert output = "01111100"& "01000100"&"01111100"&"00000000"&"01111100"& "01000100"&"01111100"&"00000000" report "first condition does not match";
+                assert output = x"7c0000007c447c00" report "case 1 does not equal 01";
+            when 2=>
+                assert output = x"74545c007c447c00" report "case 2 does not equal 02";
+            when 3=>
+                assert output = x"7c5454007c447c00" report "case 3 does not equal 03";
+            when 4=>
+                assert output = x"7c1070007c447c00" report "case 4 does not equal 04";
+            when 5=>
+                assert output = x"5c5474007c447c00" report "case 5 does not equal 05";
+            when 6=>
+                assert output = x"5c547c007c447c00" report "case 6 does not equal 06";
+            when 7=>
+                assert output = x"7c4040007c447c00" report "case 7 does not equal 07";
+            when 8=>
+                assert output = x"7c547c007c447c00" report "case 8 does not equal 08";
+            when 9=>
+                assert output = x"7c5070007c447c00" report "case 9 does not equal 09";
+            when 10=>
+                assert output = x"7c447c007c000000" report "case 10 does not equal 10";
+                wait;
             
             
             

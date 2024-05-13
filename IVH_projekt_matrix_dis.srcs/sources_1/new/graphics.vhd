@@ -60,6 +60,7 @@ begin
         if mode='0' then
             screen_buffer<=IMAGE;
             frame_num<=0;
+            --vut_logo<=(others=>'0');
         else
             if en='1' then
                 case frame_num is
