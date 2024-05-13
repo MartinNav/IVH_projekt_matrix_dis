@@ -147,7 +147,6 @@ begin
             cnt_dis_rst<='1';
             time_from_start<=0;
         end if;
-        
     end if;
 
 end process;
