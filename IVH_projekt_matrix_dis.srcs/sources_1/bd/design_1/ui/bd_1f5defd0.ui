@@ -1,25 +1,25 @@
 {
    "ActiveEmotionalView":"Default View",
    "Default View_ScaleFactor":"1.0",
-   "Default View_TopLeft":"-485,-260",
+   "Default View_TopLeft":"-480,-260",
    "ExpandedHierarchyInLayout":"",
    "guistr":"# # String gsaved with Nlview 7.5.8 2022-09-21 7111 VDI=41 GEI=38 GUI=JA:10.0
 #  -string -flagsOSRD
 preplace port port-id_sysclk -pg 1 -lvl 0 -x -160 -y -50 -defaultsOSRD
-preplace portBus col -pg 1 -lvl 3 -x 410 -y -40 -defaultsOSRD
-preplace portBus row -pg 1 -lvl 3 -x 410 -y -10 -defaultsOSRD
-preplace portBus led -pg 1 -lvl 3 -x 410 -y 20 -defaultsOSRD
+preplace portBus col -pg 1 -lvl 3 -x 420 -y -40 -defaultsOSRD
+preplace portBus row -pg 1 -lvl 3 -x 420 -y -10 -defaultsOSRD
+preplace portBus led -pg 1 -lvl 3 -x 420 -y 20 -defaultsOSRD
 preplace portBus btn -pg 1 -lvl 0 -x -160 -y -20 -defaultsOSRD
 preplace inst clk_wiz_0 -pg 1 -lvl 1 -x -40 -y -60 -defaultsOSRD
 preplace inst top_0 -pg 1 -lvl 2 -x 270 -y -30 -defaultsOSRD
+preplace netloc btns_0_1 1 0 2 -140J 10 50J
 preplace netloc clk_in1_0_1 1 0 1 N -50
 preplace netloc clk_wiz_0_clk_out1 1 1 1 50 -70n
 preplace netloc top_0_col 1 2 1 390 -50n
 preplace netloc top_0_leds 1 2 1 380 -10n
 preplace netloc top_0_row 1 2 1 390 -30n
-preplace netloc btns_0_1 1 0 2 -140J 10 50J
-levelinfo -pg 1 -160 -40 270 410
-pagesize -pg 1 -db -bbox -sgen -290 -200 520 140
+levelinfo -pg 1 -160 -40 270 420
+pagesize -pg 1 -db -bbox -sgen -290 -200 530 140
 "
 }
 {

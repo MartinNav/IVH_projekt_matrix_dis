@@ -43,7 +43,7 @@ architecture Behavioral of fsm_top_tb is
     signal row: std_ulogic_vector(7 downto 0);
     signal col: std_ulogic_vector(7 downto 0);
     signal leds: std_logic_vector(3 downto 0);
-    signal btns: std_logic_vector(3 downto 0);
+    signal btns: std_logic_vector(3 downto 0):="0000";
     signal clk_cntr: integer :=0;
 begin
 -- TOP is basically the FSM but named differently

@@ -2,10 +2,10 @@
 // Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
 // --------------------------------------------------------------------------------
 // Tool Version: Vivado v.2023.2 (win64) Build 4029153 Fri Oct 13 20:14:34 MDT 2023
-// Date        : Tue May 14 19:10:16 2024
+// Date        : Tue May 14 19:36:43 2024
 // Host        : LAPTOP-O3BSDE06 running 64-bit major release  (build 9200)
-// Command     : write_verilog -force -mode funcsim
-//               d:/VUT_FIT/IVH/IVH_projekt_matrix_dis/IVH_projekt_matrix_dis.gen/sources_1/bd/design_1/ip/design_1_top_0_0/design_1_top_0_0_sim_netlist.v
+// Command     : write_verilog -force -mode funcsim -rename_top decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix -prefix
+//               decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ design_1_top_0_0_sim_netlist.v
 // Design      : design_1_top_0_0
 // Purpose     : This verilog netlist is a functional simulation representation of the design and should not be modified
 //               or synthesized. This netlist cannot be used for SDF annotated simulation.
@@ -13,39 +13,7 @@
 // --------------------------------------------------------------------------------
 `timescale 1 ps / 1 ps
 
-(* CHECK_LICENSE_TYPE = "design_1_top_0_0,top,{}" *) (* downgradeipidentifiedwarnings = "yes" *) (* ip_definition_source = "module_ref" *) 
-(* x_core_info = "top,Vivado 2023.2" *) 
-(* NotValidForBitStream *)
-module design_1_top_0_0
-   (clk,
-    btns,
-    col,
-    row,
-    leds);
-  (* x_interface_info = "xilinx.com:signal:clock:1.0 clk CLK" *) (* x_interface_parameter = "XIL_INTERFACENAME clk, FREQ_HZ 25000000, FREQ_TOLERANCE_HZ 0, PHASE 0.0, CLK_DOMAIN /clk_wiz_0_clk_out1, INSERT_VIP 0" *) input clk;
-  input [3:0]btns;
-  output [7:0]col;
-  output [7:0]row;
-  output [3:0]leds;
-
-  wire [3:0]btns;
-  wire clk;
-  wire [7:0]col;
-  wire [3:0]leds;
-  wire [7:0]row;
-
-  design_1_top_0_0_top U0
-       (.btns(btns),
-        .clk(clk),
-        .col(col),
-        .leds(leds[3:2]),
-        .\pre_leds_reg[0]_0 (leds[0]),
-        .\pre_leds_reg[1]_0 (leds[1]),
-        .row(row));
-endmodule
-
-(* ORIG_REF_NAME = "counter" *) 
-module design_1_top_0_0_counter
+module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_counter
    (E,
     D,
     clk,
@@ -283,7 +251,7 @@ module design_1_top_0_0_counter
 endmodule
 
 (* ORIG_REF_NAME = "counter" *) 
-module design_1_top_0_0_counter_0
+module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_counter_0
    (D,
     E,
     clk,
@@ -456,8 +424,7 @@ module design_1_top_0_0_counter_0
         .O(D[3]));
 endmodule
 
-(* ORIG_REF_NAME = "counter_anim" *) 
-module design_1_top_0_0_counter_anim
+module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_counter_anim
    (\screen_value_reg[63]_0 ,
     Q,
     \screen_value_reg[62]_0 ,
@@ -496,13 +463,13 @@ module design_1_top_0_0_counter_anim
   wire [23:3]second_value;
   wire [23:3]second_value_1;
 
-  design_1_top_0_0_counter cnt1
+  decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_counter cnt1
        (.AR(AR),
         .D({first_value_0[23],first_value_0[21],first_value_0[19],first_value_0[14],first_value_0[12],first_value_0[10],first_value_0[6:3]}),
         .E(en_2nd_ctr),
         .\bcd_value_reg[0]_0 (E),
         .clk(clk));
-  design_1_top_0_0_counter_0 cnt2
+  decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_counter_0 cnt2
        (.AR(AR),
         .D({second_value_1[23],second_value_1[21],second_value_1[19],second_value_1[14],second_value_1[12],second_value_1[10],second_value_1[6:3]}),
         .E(en_2nd_ctr),
@@ -871,8 +838,38 @@ module design_1_top_0_0_counter_anim
         .R(1'b0));
 endmodule
 
-(* ORIG_REF_NAME = "graphics" *) 
-module design_1_top_0_0_graphics
+(* CHECK_LICENSE_TYPE = "design_1_top_0_0,top,{}" *) (* downgradeipidentifiedwarnings = "yes" *) (* ip_definition_source = "module_ref" *) 
+(* x_core_info = "top,Vivado 2023.2" *) 
+(* NotValidForBitStream *)
+module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix
+   (clk,
+    btns,
+    col,
+    row,
+    leds);
+  (* x_interface_info = "xilinx.com:signal:clock:1.0 clk CLK" *) (* x_interface_parameter = "XIL_INTERFACENAME clk, FREQ_HZ 25000000, FREQ_TOLERANCE_HZ 0, PHASE 0.0, CLK_DOMAIN /clk_wiz_0_clk_out1, INSERT_VIP 0" *) input clk;
+  input [3:0]btns;
+  output [7:0]col;
+  output [7:0]row;
+  output [3:0]leds;
+
+  wire [3:0]btns;
+  wire clk;
+  wire [7:0]col;
+  wire [3:0]leds;
+  wire [7:0]row;
+
+  decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_top U0
+       (.btns(btns),
+        .clk(clk),
+        .col(col),
+        .leds(leds[3:2]),
+        .\pre_leds_reg[0]_0 (leds[0]),
+        .\pre_leds_reg[1]_0 (leds[1]),
+        .row(row));
+endmodule
+
+module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_graphics
    (\time_from_start_reg[2] ,
     \time_from_start_reg[2]_0 ,
     \time_from_start_reg[2]_1 ,
@@ -3360,22 +3357,21 @@ module design_1_top_0_0_graphics
         .S(clear));
 endmodule
 
-(* ORIG_REF_NAME = "top" *) 
-module design_1_top_0_0_top
+module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_top
    (\pre_leds_reg[0]_0 ,
     col,
     row,
     \pre_leds_reg[1]_0 ,
     leds,
-    btns,
-    clk);
+    clk,
+    btns);
   output \pre_leds_reg[0]_0 ;
   output [7:0]col;
   output [7:0]row;
   output \pre_leds_reg[1]_0 ;
   output [1:0]leds;
-  input [3:0]btns;
   input clk;
+  input [3:0]btns;
 
   wire [22:0]anim_ctr;
   wire anim_ctr0_carry__0_n_0;
@@ -3572,9 +3568,11 @@ module design_1_top_0_0_top
   wire \pre_leds[3]_i_6_n_0 ;
   wire \pre_leds[3]_i_7_n_0 ;
   wire \pre_leds[3]_i_8_n_0 ;
+  wire \pre_leds[3]_i_9_n_0 ;
   wire \pre_leds_reg[0]_0 ;
   wire \pre_leds_reg[1]_0 ;
   wire [7:0]row;
+  wire [7:0]scol;
   wire \scol[0]_i_2_n_0 ;
   wire \scol[0]_i_3_n_0 ;
   wire \scol[1]_i_2_n_0 ;
@@ -3589,10 +3587,9 @@ module design_1_top_0_0_top
   wire \scol[5]_i_3_n_0 ;
   wire \scol[6]_i_2_n_0 ;
   wire \scol[6]_i_3_n_0 ;
-  wire \scol[7]_i_2_n_0 ;
+  wire \scol[7]_i_1_n_0 ;
   wire \scol[7]_i_3_n_0 ;
-  wire [7:0]scol__0;
-  wire scol_n_0;
+  wire \scol[7]_i_4_n_0 ;
   wire [61:11]screen_value;
   wire [24:0]sec_cnt;
   wire sec_cnt0_carry__0_n_0;
@@ -3986,7 +3983,7 @@ module design_1_top_0_0_top
         .D(anim_mode_i_1_n_0),
         .Q(anim_mode),
         .R(1'b0));
-  design_1_top_0_0_graphics animation
+  decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_graphics animation
        (.D({animation_n_16,animation_n_17,animation_n_18,animation_n_19,animation_n_20,animation_n_21,animation_n_22,animation_n_23,animation_n_24,animation_n_25,animation_n_26,animation_n_27,animation_n_28,animation_n_29,animation_n_30,animation_n_31,animation_n_32,animation_n_33,animation_n_34,animation_n_35}),
         .E(anim_enable),
         .Q({screen_value[61],screen_value[59],screen_value[54],screen_value[52],screen_value[50],screen_value[46:43],screen_value[29],screen_value[27],screen_value[22],screen_value[20],screen_value[18],screen_value[14:11]}),
@@ -4088,7 +4085,7 @@ module design_1_top_0_0_top
         .I4(cnt[6]),
         .I5(\srow[7]_i_3_n_0 ),
         .O(\cnt[0]_i_2_n_0 ));
-  design_1_top_0_0_counter_anim cnt_dis
+  decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_counter_anim cnt_dis
        (.AR(cnt_dis_rst),
         .E(cnt_dis_enable_reg_n_0),
         .Q({screen_value[61],screen_value[59],screen_value[54],screen_value[52],screen_value[50],screen_value[46:43],screen_value[29],screen_value[27],screen_value[22],screen_value[20],screen_value[18],screen_value[14:11]}),
@@ -4841,14 +4838,14 @@ module design_1_top_0_0_top
   LUT2 #(
     .INIT(4'h9)) 
     \pre_leds[0]_i_1 
-       (.I0(\pre_leds[3]_i_2_n_0 ),
+       (.I0(\pre_leds[3]_i_3_n_0 ),
         .I1(\pre_leds_reg[0]_0 ),
         .O(\pre_leds[0]_i_1_n_0 ));
   (* SOFT_HLUTNM = "soft_lutpair29" *) 
   LUT3 #(
     .INIT(8'hB4)) 
     \pre_leds[1]_i_1 
-       (.I0(\pre_leds[3]_i_2_n_0 ),
+       (.I0(\pre_leds[3]_i_3_n_0 ),
         .I1(\pre_leds_reg[0]_0 ),
         .I2(\pre_leds_reg[1]_0 ),
         .O(\pre_leds[1]_i_1_n_0 ));
@@ -4856,113 +4853,113 @@ module design_1_top_0_0_top
   LUT4 #(
     .INIT(16'hBF40)) 
     \pre_leds[2]_i_1 
-       (.I0(\pre_leds[3]_i_2_n_0 ),
+       (.I0(\pre_leds[3]_i_3_n_0 ),
         .I1(\pre_leds_reg[1]_0 ),
         .I2(\pre_leds_reg[0]_0 ),
         .I3(leds[0]),
         .O(\pre_leds[2]_i_1_n_0 ));
+  LUT4 #(
+    .INIT(16'h0100)) 
+    \pre_leds[3]_i_1 
+       (.I0(btns[1]),
+        .I1(btns[0]),
+        .I2(btns[3]),
+        .I3(btns[2]),
+        .O(\pre_leds[3]_i_1_n_0 ));
   (* SOFT_HLUTNM = "soft_lutpair24" *) 
   LUT5 #(
     .INIT(32'hBFFF4000)) 
-    \pre_leds[3]_i_1 
-       (.I0(\pre_leds[3]_i_2_n_0 ),
+    \pre_leds[3]_i_2 
+       (.I0(\pre_leds[3]_i_3_n_0 ),
         .I1(\pre_leds_reg[0]_0 ),
         .I2(\pre_leds_reg[1]_0 ),
         .I3(leds[0]),
         .I4(leds[1]),
-        .O(\pre_leds[3]_i_1_n_0 ));
+        .O(\pre_leds[3]_i_2_n_0 ));
   LUT6 #(
     .INIT(64'hFFFFFFFFFFFFFFFE)) 
-    \pre_leds[3]_i_2 
-       (.I0(\pre_leds[3]_i_3_n_0 ),
-        .I1(\pre_leds[3]_i_4_n_0 ),
-        .I2(\pre_leds[3]_i_5_n_0 ),
-        .I3(\pre_leds[3]_i_6_n_0 ),
-        .I4(\pre_leds[3]_i_7_n_0 ),
-        .I5(\pre_leds[3]_i_8_n_0 ),
-        .O(\pre_leds[3]_i_2_n_0 ));
+    \pre_leds[3]_i_3 
+       (.I0(\pre_leds[3]_i_4_n_0 ),
+        .I1(\pre_leds[3]_i_5_n_0 ),
+        .I2(\pre_leds[3]_i_6_n_0 ),
+        .I3(\pre_leds[3]_i_7_n_0 ),
+        .I4(\pre_leds[3]_i_8_n_0 ),
+        .I5(\pre_leds[3]_i_9_n_0 ),
+        .O(\pre_leds[3]_i_3_n_0 ));
   LUT4 #(
     .INIT(16'hFFDF)) 
-    \pre_leds[3]_i_3 
+    \pre_leds[3]_i_4 
        (.I0(sec_cnt[16]),
         .I1(sec_cnt[15]),
         .I2(sec_cnt[18]),
         .I3(sec_cnt[17]),
-        .O(\pre_leds[3]_i_3_n_0 ));
+        .O(\pre_leds[3]_i_4_n_0 ));
   LUT4 #(
     .INIT(16'h7FFF)) 
-    \pre_leds[3]_i_4 
+    \pre_leds[3]_i_5 
        (.I0(sec_cnt[20]),
         .I1(sec_cnt[19]),
         .I2(sec_cnt[22]),
         .I3(sec_cnt[21]),
-        .O(\pre_leds[3]_i_4_n_0 ));
+        .O(\pre_leds[3]_i_5_n_0 ));
   LUT4 #(
     .INIT(16'hFFFE)) 
-    \pre_leds[3]_i_5 
+    \pre_leds[3]_i_6 
        (.I0(sec_cnt[8]),
         .I1(sec_cnt[7]),
         .I2(sec_cnt[10]),
         .I3(sec_cnt[9]),
-        .O(\pre_leds[3]_i_5_n_0 ));
+        .O(\pre_leds[3]_i_6_n_0 ));
   LUT4 #(
     .INIT(16'h7FFF)) 
-    \pre_leds[3]_i_6 
+    \pre_leds[3]_i_7 
        (.I0(sec_cnt[12]),
         .I1(sec_cnt[11]),
         .I2(sec_cnt[14]),
         .I3(sec_cnt[13]),
-        .O(\pre_leds[3]_i_6_n_0 ));
+        .O(\pre_leds[3]_i_7_n_0 ));
   LUT4 #(
     .INIT(16'hFF7F)) 
-    \pre_leds[3]_i_7 
+    \pre_leds[3]_i_8 
        (.I0(sec_cnt[4]),
         .I1(sec_cnt[3]),
         .I2(sec_cnt[5]),
         .I3(sec_cnt[6]),
-        .O(\pre_leds[3]_i_7_n_0 ));
+        .O(\pre_leds[3]_i_8_n_0 ));
   (* SOFT_HLUTNM = "soft_lutpair25" *) 
   LUT5 #(
     .INIT(32'hEFFFFFFF)) 
-    \pre_leds[3]_i_8 
+    \pre_leds[3]_i_9 
        (.I0(sec_cnt[0]),
         .I1(sec_cnt[23]),
         .I2(sec_cnt[24]),
         .I3(sec_cnt[2]),
         .I4(sec_cnt[1]),
-        .O(\pre_leds[3]_i_8_n_0 ));
+        .O(\pre_leds[3]_i_9_n_0 ));
   FDRE \pre_leds_reg[0] 
        (.C(clk),
         .CE(1'b1),
         .D(\pre_leds[0]_i_1_n_0 ),
         .Q(\pre_leds_reg[0]_0 ),
-        .R(1'b0));
+        .R(\pre_leds[3]_i_1_n_0 ));
   FDRE \pre_leds_reg[1] 
        (.C(clk),
         .CE(1'b1),
         .D(\pre_leds[1]_i_1_n_0 ),
         .Q(\pre_leds_reg[1]_0 ),
-        .R(1'b0));
+        .R(\pre_leds[3]_i_1_n_0 ));
   FDRE \pre_leds_reg[2] 
        (.C(clk),
         .CE(1'b1),
         .D(\pre_leds[2]_i_1_n_0 ),
         .Q(leds[0]),
-        .R(1'b0));
+        .R(\pre_leds[3]_i_1_n_0 ));
   FDRE \pre_leds_reg[3] 
        (.C(clk),
         .CE(1'b1),
-        .D(\pre_leds[3]_i_1_n_0 ),
+        .D(\pre_leds[3]_i_2_n_0 ),
         .Q(leds[1]),
-        .R(1'b0));
-  LUT4 #(
-    .INIT(16'h0010)) 
-    scol
-       (.I0(btns[0]),
-        .I1(btns[2]),
-        .I2(btns[3]),
-        .I3(btns[1]),
-        .O(scol_n_0));
+        .R(\pre_leds[3]_i_1_n_0 ));
   LUT6 #(
     .INIT(64'hAFA0CFCFAFA0C0C0)) 
     \scol[0]_i_2 
@@ -5103,129 +5100,137 @@ module design_1_top_0_0_top
         .I4(col_indx[0]),
         .I5(data4[6]),
         .O(\scol[6]_i_3_n_0 ));
+  LUT4 #(
+    .INIT(16'h0100)) 
+    \scol[7]_i_1 
+       (.I0(btns[1]),
+        .I1(btns[0]),
+        .I2(btns[2]),
+        .I3(btns[3]),
+        .O(\scol[7]_i_1_n_0 ));
   LUT6 #(
     .INIT(64'hAFA0CFCFAFA0C0C0)) 
-    \scol[7]_i_2 
+    \scol[7]_i_3 
        (.I0(data3[7]),
         .I1(data2[7]),
         .I2(col_indx[1]),
         .I3(data1[7]),
         .I4(col_indx[0]),
         .I5(data0[7]),
-        .O(\scol[7]_i_2_n_0 ));
+        .O(\scol[7]_i_3_n_0 ));
   LUT6 #(
     .INIT(64'hAFA0CFCFAFA0C0C0)) 
-    \scol[7]_i_3 
+    \scol[7]_i_4 
        (.I0(\display_buffer_reg_n_0_[7] ),
         .I1(data6[7]),
         .I2(col_indx[1]),
         .I3(data5[7]),
         .I4(col_indx[0]),
         .I5(data4[7]),
-        .O(\scol[7]_i_3_n_0 ));
+        .O(\scol[7]_i_4_n_0 ));
   FDSE #(
     .INIT(1'b1)) 
     \scol_reg[0] 
        (.C(clk),
         .CE(1'b1),
-        .D(scol__0[0]),
+        .D(scol[0]),
         .Q(col[0]),
-        .S(scol_n_0));
+        .S(\scol[7]_i_1_n_0 ));
   MUXF7 \scol_reg[0]_i_1 
        (.I0(\scol[0]_i_2_n_0 ),
         .I1(\scol[0]_i_3_n_0 ),
-        .O(scol__0[0]),
+        .O(scol[0]),
         .S(col_indx[2]));
   FDSE #(
     .INIT(1'b1)) 
     \scol_reg[1] 
        (.C(clk),
         .CE(1'b1),
-        .D(scol__0[1]),
+        .D(scol[1]),
         .Q(col[1]),
-        .S(scol_n_0));
+        .S(\scol[7]_i_1_n_0 ));
   MUXF7 \scol_reg[1]_i_1 
        (.I0(\scol[1]_i_2_n_0 ),
         .I1(\scol[1]_i_3_n_0 ),
-        .O(scol__0[1]),
+        .O(scol[1]),
         .S(col_indx[2]));
   FDSE #(
     .INIT(1'b1)) 
     \scol_reg[2] 
        (.C(clk),
         .CE(1'b1),
-        .D(scol__0[2]),
+        .D(scol[2]),
         .Q(col[2]),
-        .S(scol_n_0));
+        .S(\scol[7]_i_1_n_0 ));
   MUXF7 \scol_reg[2]_i_1 
        (.I0(\scol[2]_i_2_n_0 ),
         .I1(\scol[2]_i_3_n_0 ),
-        .O(scol__0[2]),
+        .O(scol[2]),
         .S(col_indx[2]));
   FDSE #(
     .INIT(1'b1)) 
     \scol_reg[3] 
        (.C(clk),
         .CE(1'b1),
-        .D(scol__0[3]),
+        .D(scol[3]),
         .Q(col[3]),
-        .S(scol_n_0));
+        .S(\scol[7]_i_1_n_0 ));
   MUXF7 \scol_reg[3]_i_1 
        (.I0(\scol[3]_i_2_n_0 ),
         .I1(\scol[3]_i_3_n_0 ),
-        .O(scol__0[3]),
+        .O(scol[3]),
         .S(col_indx[2]));
   FDSE #(
     .INIT(1'b1)) 
     \scol_reg[4] 
        (.C(clk),
         .CE(1'b1),
-        .D(scol__0[4]),
+        .D(scol[4]),
         .Q(col[4]),
-        .S(scol_n_0));
+        .S(\scol[7]_i_1_n_0 ));
   MUXF7 \scol_reg[4]_i_1 
        (.I0(\scol[4]_i_2_n_0 ),
         .I1(\scol[4]_i_3_n_0 ),
-        .O(scol__0[4]),
+        .O(scol[4]),
         .S(col_indx[2]));
   FDSE #(
     .INIT(1'b1)) 
     \scol_reg[5] 
        (.C(clk),
         .CE(1'b1),
-        .D(scol__0[5]),
+        .D(scol[5]),
         .Q(col[5]),
-        .S(scol_n_0));
+        .S(\scol[7]_i_1_n_0 ));
   MUXF7 \scol_reg[5]_i_1 
        (.I0(\scol[5]_i_2_n_0 ),
         .I1(\scol[5]_i_3_n_0 ),
-        .O(scol__0[5]),
+        .O(scol[5]),
         .S(col_indx[2]));
   FDSE #(
     .INIT(1'b1)) 
     \scol_reg[6] 
        (.C(clk),
         .CE(1'b1),
-        .D(scol__0[6]),
+        .D(scol[6]),
         .Q(col[6]),
-        .S(scol_n_0));
+        .S(\scol[7]_i_1_n_0 ));
   MUXF7 \scol_reg[6]_i_1 
        (.I0(\scol[6]_i_2_n_0 ),
         .I1(\scol[6]_i_3_n_0 ),
-        .O(scol__0[6]),
+        .O(scol[6]),
         .S(col_indx[2]));
   FDSE #(
     .INIT(1'b1)) 
     \scol_reg[7] 
        (.C(clk),
         .CE(1'b1),
-        .D(scol__0[7]),
+        .D(scol[7]),
         .Q(col[7]),
-        .S(scol_n_0));
-  MUXF7 \scol_reg[7]_i_1 
-       (.I0(\scol[7]_i_2_n_0 ),
-        .I1(\scol[7]_i_3_n_0 ),
-        .O(scol__0[7]),
+        .S(\scol[7]_i_1_n_0 ));
+  MUXF7 \scol_reg[7]_i_2 
+       (.I0(\scol[7]_i_3_n_0 ),
+        .I1(\scol[7]_i_4_n_0 ),
+        .O(scol[7]),
         .S(col_indx[2]));
   (* ADDER_THRESHOLD = "35" *) 
   CARRY4 sec_cnt0_carry
@@ -5284,7 +5289,7 @@ module design_1_top_0_0_top
   LUT1 #(
     .INIT(2'h1)) 
     \sec_cnt[24]_i_1 
-       (.I0(\pre_leds[3]_i_2_n_0 ),
+       (.I0(\pre_leds[3]_i_3_n_0 ),
         .O(p_0_in));
   FDRE #(
     .INIT(1'b0)) 
@@ -5597,7 +5602,7 @@ module design_1_top_0_0_top
         .I1(time_from_start[3]),
         .I2(\time_from_start[5]_i_4_n_0 ),
         .I3(time_from_start[4]),
-        .I4(\pre_leds[3]_i_2_n_0 ),
+        .I4(\pre_leds[3]_i_3_n_0 ),
         .I5(time_from_start[0]),
         .O(\time_from_start[0]_i_1_n_0 ));
   (* SOFT_HLUTNM = "soft_lutpair30" *) 
@@ -5646,7 +5651,7 @@ module design_1_top_0_0_top
   LUT6 #(
     .INIT(64'h5D55555555555555)) 
     \time_from_start[5]_i_2 
-       (.I0(\pre_leds[3]_i_2_n_0 ),
+       (.I0(\pre_leds[3]_i_3_n_0 ),
         .I1(time_from_start[4]),
         .I2(\time_from_start[5]_i_4_n_0 ),
         .I3(time_from_start[3]),

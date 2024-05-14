@@ -68,7 +68,7 @@ signal display_buffer: std_logic_vector(63 downto 0):=(others=>'0');
 signal anim_mode: std_logic :='0';
 signal anim_enable: std_logic:='0';
 
-constant anim_ctr_max: integer := (25_000_000/5) -1;
+constant anim_ctr_max: integer := (max_sec_cnt/5) -1;
 signal anim_ctr: integer range 0 to anim_ctr_max:=0;
 
 signal pre_leds: std_logic_vector(3 downto 0);
@@ -147,6 +147,9 @@ begin
         if time_from_start=loop_t then
             cnt_dis_rst<='1';
             time_from_start<=0;
+        end if;
+        if btns = "0100" then
+            pre_leds<="0000";            
         end if;
     end if;
 
