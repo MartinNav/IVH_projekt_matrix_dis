@@ -2,7 +2,7 @@
 --Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
 ----------------------------------------------------------------------------------
 --Tool Version: Vivado v.2023.2 (win64) Build 4029153 Fri Oct 13 20:14:34 MDT 2023
---Date        : Mon May 13 18:21:35 2024
+--Date        : Tue May 14 19:08:38 2024
 --Host        : LAPTOP-O3BSDE06 running 64-bit major release  (build 9200)
 --Command     : generate_target design_1.bd
 --Design      : design_1
@@ -14,13 +14,14 @@ library UNISIM;
 use UNISIM.VCOMPONENTS.ALL;
 entity design_1 is
   port (
+    btn : in STD_LOGIC_VECTOR ( 3 downto 0 );
     col : out STD_LOGIC_VECTOR ( 7 downto 0 );
     led : out STD_LOGIC_VECTOR ( 3 downto 0 );
     row : out STD_LOGIC_VECTOR ( 7 downto 0 );
     sysclk : in STD_LOGIC
   );
   attribute CORE_GENERATION_INFO : string;
-  attribute CORE_GENERATION_INFO of design_1 : entity is "design_1,IP_Integrator,{x_ipVendor=xilinx.com,x_ipLibrary=BlockDiagram,x_ipName=design_1,x_ipVersion=1.00.a,x_ipLanguage=VHDL,numBlks=2,numReposBlks=2,numNonXlnxBlks=0,numHierBlks=0,maxHierDepth=0,numSysgenBlks=0,numHlsBlks=0,numHdlrefBlks=1,numPkgbdBlks=0,bdsource=USER,da_board_cnt=3,synth_mode=Hierarchical}";
+  attribute CORE_GENERATION_INFO of design_1 : entity is "design_1,IP_Integrator,{x_ipVendor=xilinx.com,x_ipLibrary=BlockDiagram,x_ipName=design_1,x_ipVersion=1.00.a,x_ipLanguage=VHDL,numBlks=2,numReposBlks=2,numNonXlnxBlks=0,numHierBlks=0,maxHierDepth=0,numSysgenBlks=0,numHlsBlks=0,numHdlrefBlks=1,numPkgbdBlks=0,bdsource=USER,da_board_cnt=2,synth_mode=Hierarchical}";
   attribute HW_HANDOFF : string;
   attribute HW_HANDOFF of design_1 : entity is "design_1.hwdef";
 end design_1;
@@ -37,11 +38,13 @@ architecture STRUCTURE of design_1 is
   component design_1_top_0_0 is
   port (
     clk : in STD_LOGIC;
+    btns : in STD_LOGIC_VECTOR ( 3 downto 0 );
     col : out STD_LOGIC_VECTOR ( 7 downto 0 );
     row : out STD_LOGIC_VECTOR ( 7 downto 0 );
     leds : out STD_LOGIC_VECTOR ( 3 downto 0 )
   );
   end component design_1_top_0_0;
+  signal btns_0_1 : STD_LOGIC_VECTOR ( 3 downto 0 );
   signal clk_in1_0_1 : STD_LOGIC;
   signal clk_wiz_0_clk_out1 : STD_LOGIC;
   signal top_0_col : STD_LOGIC_VECTOR ( 7 downto 0 );
@@ -53,6 +56,7 @@ architecture STRUCTURE of design_1 is
   attribute X_INTERFACE_PARAMETER : string;
   attribute X_INTERFACE_PARAMETER of sysclk : signal is "XIL_INTERFACENAME CLK.SYSCLK, CLK_DOMAIN design_1_clk_in1_0, FREQ_HZ 20000000, FREQ_TOLERANCE_HZ 0, INSERT_VIP 0, PHASE 0.0";
 begin
+  btns_0_1(3 downto 0) <= btn(3 downto 0);
   clk_in1_0_1 <= sysclk;
   col(7 downto 0) <= top_0_col(7 downto 0);
   led(3 downto 0) <= top_0_leds(3 downto 0);
@@ -66,6 +70,7 @@ clk_wiz_0: component design_1_clk_wiz_0_0
     );
 top_0: component design_1_top_0_0
      port map (
+      btns(3 downto 0) => btns_0_1(3 downto 0),
       clk => clk_wiz_0_clk_out1,
       col(7 downto 0) => top_0_col(7 downto 0),
       leds(3 downto 0) => top_0_leds(3 downto 0),

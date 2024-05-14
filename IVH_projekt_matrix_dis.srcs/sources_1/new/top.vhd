@@ -31,6 +31,7 @@ use xil_defaultlib.all;
 
 entity top is
     Port ( clk : in STD_LOGIC;
+           btns: in STD_LOGIC_VECTOR(3 downto 0);
            col : out STD_LOGIC_VECTOR (7 downto 0);
            row : out STD_LOGIC_VECTOR (7 downto 0);
            leds: out STD_LOGIC_VECTOR(3 downto 0));
@@ -188,7 +189,9 @@ begin
 --                scol<=display_buffer(63-(8*ii) downto 56-(8*ii));
 --            end if;
 --        end generate f_gen;
-        
+        if btns = "1000" then
+            scol<="11111111";
+        end if;
       end if;
 end process;
 

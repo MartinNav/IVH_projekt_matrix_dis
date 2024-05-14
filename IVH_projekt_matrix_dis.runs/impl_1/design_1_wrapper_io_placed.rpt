@@ -1,7 +1,7 @@
 Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
 ----------------------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version              : Vivado v.2023.2 (win64) Build 4029153 Fri Oct 13 20:14:34 MDT 2023
-| Date                      : Mon May 13 18:24:57 2024
+| Date                      : Tue May 14 19:12:54 2024
 | Host                      : LAPTOP-O3BSDE06 running 64-bit major release  (build 9200)
 | Command                   : report_io -file design_1_wrapper_io_placed.rpt
 | Design                    : design_1_wrapper
@@ -25,7 +25,7 @@ Table of Contents
 +---------------+
 | Total User IO |
 +---------------+
-|            21 |
+|            25 |
 +---------------+
 
 
@@ -113,8 +113,8 @@ Table of Contents
 | D16        |             |            | PS_MIO46_501            | PSS IO      |             |         |            |      |                     |                      |         |            |           |          |      |                  |              |                   |              |
 | D17        |             |            | GND                     | GND         |             |         |            |      |                     |                      |     0.0 |            |           |          |      |                  |              |                   |              |
 | D18        |             | High Range | IO_L3N_T0_DQS_AD1N_35   | User IO     |             |      35 |            |      |                     |                      |         |            |           |          |      |                  |              |                   |              |
-| D19        |             | High Range | IO_L4P_T0_35            | User IO     |             |      35 |            |      |                     |                      |         |            |           |          |      |                  |              |                   |              |
-| D20        |             | High Range | IO_L4N_T0_35            | User IO     |             |      35 |            |      |                     |                      |         |            |           |          |      |                  |              |                   |              |
+| D19        | btn[0]      | High Range | IO_L4P_T0_35            | INPUT       | LVCMOS33    |      35 |            |      |                     |                 NONE |         | FIXED      |           |          |      | NONE             |              |                   |              |
+| D20        | btn[1]      | High Range | IO_L4N_T0_35            | INPUT       | LVCMOS33    |      35 |            |      |                     |                 NONE |         | FIXED      |           |          |      | NONE             |              |                   |              |
 | E1         |             |            | PS_DDR_DQ7_502          | PSS IO      |             |         |            |      |                     |                      |         |            |           |          |      |                  |              |                   |              |
 | E2         |             |            | PS_DDR_DQ8_502          | PSS IO      |             |         |            |      |                     |                      |         |            |           |          |      |                  |              |                   |              |
 | E3         |             |            | PS_DDR_DQ9_502          | PSS IO      |             |         |            |      |                     |                      |         |            |           |          |      |                  |              |                   |              |
@@ -253,8 +253,8 @@ Table of Contents
 | L16        |             | High Range | IO_L11P_T1_SRCC_35      | User IO     |             |      35 |            |      |                     |                      |         |            |           |          |      |                  |              |                   |              |
 | L17        |             | High Range | IO_L11N_T1_SRCC_35      | User IO     |             |      35 |            |      |                     |                      |         |            |           |          |      |                  |              |                   |              |
 | L18        |             |            | GND                     | GND         |             |         |            |      |                     |                      |     0.0 |            |           |          |      |                  |              |                   |              |
-| L19        |             | High Range | IO_L9P_T1_DQS_AD3P_35   | User IO     |             |      35 |            |      |                     |                      |         |            |           |          |      |                  |              |                   |              |
-| L20        |             | High Range | IO_L9N_T1_DQS_AD3N_35   | User IO     |             |      35 |            |      |                     |                      |         |            |           |          |      |                  |              |                   |              |
+| L19        | btn[3]      | High Range | IO_L9P_T1_DQS_AD3P_35   | INPUT       | LVCMOS33    |      35 |            |      |                     |                 NONE |         | FIXED      |           |          |      | NONE             |              |                   |              |
+| L20        | btn[2]      | High Range | IO_L9N_T1_DQS_AD3N_35   | INPUT       | LVCMOS33    |      35 |            |      |                     |                 NONE |         | FIXED      |           |          |      | NONE             |              |                   |              |
 | M1         |             |            | GND                     | GND         |             |         |            |      |                     |                      |     0.0 |            |           |          |      |                  |              |                   |              |
 | M2         |             |            | PS_DDR_CKN_502          | PSS IO      |             |         |            |      |                     |                      |         |            |           |          |      |                  |              |                   |              |
 | M3         |             |            | PS_DDR_A2_502           | PSS IO      |             |         |            |      |                     |                      |         |            |           |          |      |                  |              |                   |              |

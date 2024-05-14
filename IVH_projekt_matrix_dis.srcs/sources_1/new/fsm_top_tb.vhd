@@ -35,24 +35,27 @@ use xil_defaultlib.all;
 --use UNISIM.VComponents.all;
 
 entity fsm_top_tb is
-    Port ( clk : in STD_LOGIC);
+    --Port ( clk : in STD_LOGIC);
 end fsm_top_tb;
 
 architecture Behavioral of fsm_top_tb is
+    signal clk: std_logic;
     signal row: std_ulogic_vector(7 downto 0);
     signal col: std_ulogic_vector(7 downto 0);
     signal leds: std_logic_vector(3 downto 0);
+    signal btns: std_logic_vector(3 downto 0);
     signal clk_cntr: integer :=0;
 begin
 -- TOP is basically the FSM but named differently
     fsm: entity xil_defaultlib.top
     port map(
         clk=>clk,
+        btns=>btns,
         col=>col,
         row=>row,
         leds=>leds
     ); 
-process(clk)
+process
 begin
     if rising_edge(clk) then
 
@@ -68,7 +71,7 @@ begin
 
     clk_cntr<=clk+1;
     end if;
-
+    clk<= not clk;
 end process;
 
 

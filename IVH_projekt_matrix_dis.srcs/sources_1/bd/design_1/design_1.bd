@@ -1,7 +1,7 @@
 {
   "design": {
     "design_info": {
-      "boundary_crc": "0x7DA723726F518A4E",
+      "boundary_crc": "0x51C002CC770D4450",
       "device": "xc7z020clg400-1",
       "gen_directory": "../../../../IVH_projekt_matrix_dis.gen/sources_1/bd/design_1",
       "name": "design_1",
@@ -52,6 +52,11 @@
       },
       "led": {
         "direction": "O",
+        "left": "3",
+        "right": "0"
+      },
+      "btn": {
+        "direction": "I",
         "left": "3",
         "right": "0"
       }
@@ -123,6 +128,11 @@
               }
             }
           },
+          "btns": {
+            "direction": "I",
+            "left": "3",
+            "right": "0"
+          },
           "col": {
             "direction": "O",
             "left": "7",
@@ -142,6 +152,12 @@
       }
     },
     "nets": {
+      "btns_0_1": {
+        "ports": [
+          "btn",
+          "top_0/btns"
+        ]
+      },
       "clk_in1_0_1": {
         "ports": [
           "sysclk",

@@ -1,9 +1,14 @@
 ﻿<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
-<EDKSYSTEM EDWVERSION="1.2" TIMESTAMP="Mon May 13 18:21:35 2024" VIVADOVERSION="2023.2">
+<EDKSYSTEM EDWVERSION="1.2" TIMESTAMP="Tue May 14 19:08:39 2024" VIVADOVERSION="2023.2">
 
   <SYSTEMINFO ARCH="zynq" DEVICE="7z020" NAME="design_1" PACKAGE="clg400" SPEEDGRADE="-1"/>
 
   <EXTERNALPORTS>
+    <PORT DIR="I" LEFT="3" NAME="btn" RIGHT="0" SIGIS="undef" SIGNAME="External_Ports_btn">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="top_0" PORT="btns"/>
+      </CONNECTIONS>
+    </PORT>
     <PORT DIR="O" LEFT="7" NAME="col" RIGHT="0" SIGIS="undef" SIGNAME="top_0_col">
       <CONNECTIONS>
         <CONNECTION INSTANCE="top_0" PORT="col"/>
@@ -631,6 +636,11 @@
         <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
       </PARAMETERS>
       <PORTS>
+        <PORT DIR="I" LEFT="3" NAME="btns" RIGHT="0" SIGIS="undef" SIGNAME="External_Ports_btn">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="btn"/>
+          </CONNECTIONS>
+        </PORT>
         <PORT CLKFREQUENCY="25000000" DIR="I" NAME="clk" SIGIS="clk" SIGNAME="clk_wiz_0_clk_out1">
           <CONNECTIONS>
             <CONNECTION INSTANCE="clk_wiz_0" PORT="clk_out1"/>

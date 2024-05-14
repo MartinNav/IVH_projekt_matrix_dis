@@ -2,10 +2,10 @@
 // Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
 // --------------------------------------------------------------------------------
 // Tool Version: Vivado v.2023.2 (win64) Build 4029153 Fri Oct 13 20:14:34 MDT 2023
-// Date        : Mon May 13 15:47:44 2024
+// Date        : Tue May 14 19:10:16 2024
 // Host        : LAPTOP-O3BSDE06 running 64-bit major release  (build 9200)
-// Command     : write_verilog -force -mode synth_stub -rename_top design_1_top_0_0 -prefix
-//               design_1_top_0_0_ design_1_top_0_0_stub.v
+// Command     : write_verilog -force -mode synth_stub
+//               d:/VUT_FIT/IVH/IVH_projekt_matrix_dis/IVH_projekt_matrix_dis.gen/sources_1/bd/design_1/ip/design_1_top_0_0/design_1_top_0_0_stub.v
 // Design      : design_1_top_0_0
 // Purpose     : Stub declaration of top-level module interface
 // Device      : xc7z020clg400-1
@@ -15,10 +15,11 @@
 // The synthesis directives are for Synopsys Synplify support to prevent IO buffer insertion.
 // Please paste the declaration into a Verilog source file or add the file as an additional source.
 (* x_core_info = "top,Vivado 2023.2" *)
-module design_1_top_0_0(clk, col, row, leds)
-/* synthesis syn_black_box black_box_pad_pin="col[7:0],row[7:0],leds[3:0]" */
+module design_1_top_0_0(clk, btns, col, row, leds)
+/* synthesis syn_black_box black_box_pad_pin="btns[3:0],col[7:0],row[7:0],leds[3:0]" */
 /* synthesis syn_force_seq_prim="clk" */;
   input clk /* synthesis syn_isclock = 1 */;
+  input [3:0]btns;
   output [7:0]col;
   output [7:0]row;
   output [3:0]leds;

@@ -2,10 +2,10 @@
 // Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
 // --------------------------------------------------------------------------------
 // Tool Version: Vivado v.2023.2 (win64) Build 4029153 Fri Oct 13 20:14:34 MDT 2023
-// Date        : Mon May 13 15:47:44 2024
+// Date        : Tue May 14 19:10:16 2024
 // Host        : LAPTOP-O3BSDE06 running 64-bit major release  (build 9200)
-// Command     : write_verilog -force -mode funcsim -rename_top design_1_top_0_0 -prefix
-//               design_1_top_0_0_ design_1_top_0_0_sim_netlist.v
+// Command     : write_verilog -force -mode funcsim
+//               d:/VUT_FIT/IVH/IVH_projekt_matrix_dis/IVH_projekt_matrix_dis.gen/sources_1/bd/design_1/ip/design_1_top_0_0/design_1_top_0_0_sim_netlist.v
 // Design      : design_1_top_0_0
 // Purpose     : This verilog netlist is a functional simulation representation of the design and should not be modified
 //               or synthesized. This netlist cannot be used for SDF annotated simulation.
@@ -13,6 +13,38 @@
 // --------------------------------------------------------------------------------
 `timescale 1 ps / 1 ps
 
+(* CHECK_LICENSE_TYPE = "design_1_top_0_0,top,{}" *) (* downgradeipidentifiedwarnings = "yes" *) (* ip_definition_source = "module_ref" *) 
+(* x_core_info = "top,Vivado 2023.2" *) 
+(* NotValidForBitStream *)
+module design_1_top_0_0
+   (clk,
+    btns,
+    col,
+    row,
+    leds);
+  (* x_interface_info = "xilinx.com:signal:clock:1.0 clk CLK" *) (* x_interface_parameter = "XIL_INTERFACENAME clk, FREQ_HZ 25000000, FREQ_TOLERANCE_HZ 0, PHASE 0.0, CLK_DOMAIN /clk_wiz_0_clk_out1, INSERT_VIP 0" *) input clk;
+  input [3:0]btns;
+  output [7:0]col;
+  output [7:0]row;
+  output [3:0]leds;
+
+  wire [3:0]btns;
+  wire clk;
+  wire [7:0]col;
+  wire [3:0]leds;
+  wire [7:0]row;
+
+  design_1_top_0_0_top U0
+       (.btns(btns),
+        .clk(clk),
+        .col(col),
+        .leds(leds[3:2]),
+        .\pre_leds_reg[0]_0 (leds[0]),
+        .\pre_leds_reg[1]_0 (leds[1]),
+        .row(row));
+endmodule
+
+(* ORIG_REF_NAME = "counter" *) 
 module design_1_top_0_0_counter
    (E,
     D,
@@ -424,6 +456,7 @@ module design_1_top_0_0_counter_0
         .O(D[3]));
 endmodule
 
+(* ORIG_REF_NAME = "counter_anim" *) 
 module design_1_top_0_0_counter_anim
    (\screen_value_reg[63]_0 ,
     Q,
@@ -838,33 +871,7 @@ module design_1_top_0_0_counter_anim
         .R(1'b0));
 endmodule
 
-(* CHECK_LICENSE_TYPE = "design_1_top_0_0,top,{}" *) (* downgradeipidentifiedwarnings = "yes" *) (* ip_definition_source = "module_ref" *) 
-(* x_core_info = "top,Vivado 2023.2" *) 
-(* NotValidForBitStream *)
-module design_1_top_0_0
-   (clk,
-    col,
-    row,
-    leds);
-  (* x_interface_info = "xilinx.com:signal:clock:1.0 clk CLK" *) (* x_interface_parameter = "XIL_INTERFACENAME clk, FREQ_HZ 25000000, FREQ_TOLERANCE_HZ 0, PHASE 0.0, CLK_DOMAIN /clk_wiz_0_clk_out1, INSERT_VIP 0" *) input clk;
-  output [7:0]col;
-  output [7:0]row;
-  output [3:0]leds;
-
-  wire clk;
-  wire [7:0]col;
-  wire [3:0]leds;
-  wire [7:0]row;
-
-  design_1_top_0_0_top U0
-       (.clk(clk),
-        .col(col),
-        .leds(leds[3:2]),
-        .\pre_leds_reg[0]_0 (leds[0]),
-        .\pre_leds_reg[1]_0 (leds[1]),
-        .row(row));
-endmodule
-
+(* ORIG_REF_NAME = "graphics" *) 
 module design_1_top_0_0_graphics
    (\time_from_start_reg[2] ,
     \time_from_start_reg[2]_0 ,
@@ -3353,18 +3360,21 @@ module design_1_top_0_0_graphics
         .S(clear));
 endmodule
 
+(* ORIG_REF_NAME = "top" *) 
 module design_1_top_0_0_top
    (\pre_leds_reg[0]_0 ,
     col,
     row,
     \pre_leds_reg[1]_0 ,
     leds,
+    btns,
     clk);
   output \pre_leds_reg[0]_0 ;
   output [7:0]col;
   output [7:0]row;
   output \pre_leds_reg[1]_0 ;
   output [1:0]leds;
+  input [3:0]btns;
   input clk;
 
   wire [22:0]anim_ctr;
@@ -3486,6 +3496,7 @@ module design_1_top_0_0_top
   wire animation_n_7;
   wire animation_n_8;
   wire animation_n_9;
+  wire [3:0]btns;
   wire clk;
   wire [14:0]cnt;
   wire cnt0_carry__0_n_0;
@@ -3564,7 +3575,6 @@ module design_1_top_0_0_top
   wire \pre_leds_reg[0]_0 ;
   wire \pre_leds_reg[1]_0 ;
   wire [7:0]row;
-  wire [7:0]scol;
   wire \scol[0]_i_2_n_0 ;
   wire \scol[0]_i_3_n_0 ;
   wire \scol[1]_i_2_n_0 ;
@@ -3581,6 +3591,8 @@ module design_1_top_0_0_top
   wire \scol[6]_i_3_n_0 ;
   wire \scol[7]_i_2_n_0 ;
   wire \scol[7]_i_3_n_0 ;
+  wire [7:0]scol__0;
+  wire scol_n_0;
   wire [61:11]screen_value;
   wire [24:0]sec_cnt;
   wire sec_cnt0_carry__0_n_0;
@@ -4943,6 +4955,14 @@ module design_1_top_0_0_top
         .D(\pre_leds[3]_i_1_n_0 ),
         .Q(leds[1]),
         .R(1'b0));
+  LUT4 #(
+    .INIT(16'h0010)) 
+    scol
+       (.I0(btns[0]),
+        .I1(btns[2]),
+        .I2(btns[3]),
+        .I3(btns[1]),
+        .O(scol_n_0));
   LUT6 #(
     .INIT(64'hAFA0CFCFAFA0C0C0)) 
     \scol[0]_i_2 
@@ -5103,109 +5123,109 @@ module design_1_top_0_0_top
         .I4(col_indx[0]),
         .I5(data4[7]),
         .O(\scol[7]_i_3_n_0 ));
-  FDRE #(
+  FDSE #(
     .INIT(1'b1)) 
     \scol_reg[0] 
        (.C(clk),
         .CE(1'b1),
-        .D(scol[0]),
+        .D(scol__0[0]),
         .Q(col[0]),
-        .R(1'b0));
+        .S(scol_n_0));
   MUXF7 \scol_reg[0]_i_1 
        (.I0(\scol[0]_i_2_n_0 ),
         .I1(\scol[0]_i_3_n_0 ),
-        .O(scol[0]),
+        .O(scol__0[0]),
         .S(col_indx[2]));
-  FDRE #(
+  FDSE #(
     .INIT(1'b1)) 
     \scol_reg[1] 
        (.C(clk),
         .CE(1'b1),
-        .D(scol[1]),
+        .D(scol__0[1]),
         .Q(col[1]),
-        .R(1'b0));
+        .S(scol_n_0));
   MUXF7 \scol_reg[1]_i_1 
        (.I0(\scol[1]_i_2_n_0 ),
         .I1(\scol[1]_i_3_n_0 ),
-        .O(scol[1]),
+        .O(scol__0[1]),
         .S(col_indx[2]));
-  FDRE #(
+  FDSE #(
     .INIT(1'b1)) 
     \scol_reg[2] 
        (.C(clk),
         .CE(1'b1),
-        .D(scol[2]),
+        .D(scol__0[2]),
         .Q(col[2]),
-        .R(1'b0));
+        .S(scol_n_0));
   MUXF7 \scol_reg[2]_i_1 
        (.I0(\scol[2]_i_2_n_0 ),
         .I1(\scol[2]_i_3_n_0 ),
-        .O(scol[2]),
+        .O(scol__0[2]),
         .S(col_indx[2]));
-  FDRE #(
+  FDSE #(
     .INIT(1'b1)) 
     \scol_reg[3] 
        (.C(clk),
         .CE(1'b1),
-        .D(scol[3]),
+        .D(scol__0[3]),
         .Q(col[3]),
-        .R(1'b0));
+        .S(scol_n_0));
   MUXF7 \scol_reg[3]_i_1 
        (.I0(\scol[3]_i_2_n_0 ),
         .I1(\scol[3]_i_3_n_0 ),
-        .O(scol[3]),
+        .O(scol__0[3]),
         .S(col_indx[2]));
-  FDRE #(
+  FDSE #(
     .INIT(1'b1)) 
     \scol_reg[4] 
        (.C(clk),
         .CE(1'b1),
-        .D(scol[4]),
+        .D(scol__0[4]),
         .Q(col[4]),
-        .R(1'b0));
+        .S(scol_n_0));
   MUXF7 \scol_reg[4]_i_1 
        (.I0(\scol[4]_i_2_n_0 ),
         .I1(\scol[4]_i_3_n_0 ),
-        .O(scol[4]),
+        .O(scol__0[4]),
         .S(col_indx[2]));
-  FDRE #(
+  FDSE #(
     .INIT(1'b1)) 
     \scol_reg[5] 
        (.C(clk),
         .CE(1'b1),
-        .D(scol[5]),
+        .D(scol__0[5]),
         .Q(col[5]),
-        .R(1'b0));
+        .S(scol_n_0));
   MUXF7 \scol_reg[5]_i_1 
        (.I0(\scol[5]_i_2_n_0 ),
         .I1(\scol[5]_i_3_n_0 ),
-        .O(scol[5]),
+        .O(scol__0[5]),
         .S(col_indx[2]));
-  FDRE #(
+  FDSE #(
     .INIT(1'b1)) 
     \scol_reg[6] 
        (.C(clk),
         .CE(1'b1),
-        .D(scol[6]),
+        .D(scol__0[6]),
         .Q(col[6]),
-        .R(1'b0));
+        .S(scol_n_0));
   MUXF7 \scol_reg[6]_i_1 
        (.I0(\scol[6]_i_2_n_0 ),
         .I1(\scol[6]_i_3_n_0 ),
-        .O(scol[6]),
+        .O(scol__0[6]),
         .S(col_indx[2]));
-  FDRE #(
+  FDSE #(
     .INIT(1'b1)) 
     \scol_reg[7] 
        (.C(clk),
         .CE(1'b1),
-        .D(scol[7]),
+        .D(scol__0[7]),
         .Q(col[7]),
-        .R(1'b0));
+        .S(scol_n_0));
   MUXF7 \scol_reg[7]_i_1 
        (.I0(\scol[7]_i_2_n_0 ),
         .I1(\scol[7]_i_3_n_0 ),
-        .O(scol[7]),
+        .O(scol__0[7]),
         .S(col_indx[2]));
   (* ADDER_THRESHOLD = "35" *) 
   CARRY4 sec_cnt0_carry

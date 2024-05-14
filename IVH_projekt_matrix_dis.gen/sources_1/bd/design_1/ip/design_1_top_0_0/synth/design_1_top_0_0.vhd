@@ -56,6 +56,7 @@ USE ieee.numeric_std.ALL;
 ENTITY design_1_top_0_0 IS
   PORT (
     clk : IN STD_LOGIC;
+    btns : IN STD_LOGIC_VECTOR(3 DOWNTO 0);
     col : OUT STD_LOGIC_VECTOR(7 DOWNTO 0);
     row : OUT STD_LOGIC_VECTOR(7 DOWNTO 0);
     leds : OUT STD_LOGIC_VECTOR(3 DOWNTO 0)
@@ -68,6 +69,7 @@ ARCHITECTURE design_1_top_0_0_arch OF design_1_top_0_0 IS
   COMPONENT top IS
     PORT (
       clk : IN STD_LOGIC;
+      btns : IN STD_LOGIC_VECTOR(3 DOWNTO 0);
       col : OUT STD_LOGIC_VECTOR(7 DOWNTO 0);
       row : OUT STD_LOGIC_VECTOR(7 DOWNTO 0);
       leds : OUT STD_LOGIC_VECTOR(3 DOWNTO 0)
@@ -89,6 +91,7 @@ BEGIN
   U0 : top
     PORT MAP (
       clk => clk,
+      btns => btns,
       col => col,
       row => row,
       leds => leds

@@ -2,10 +2,10 @@
 -- Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
 -- --------------------------------------------------------------------------------
 -- Tool Version: Vivado v.2023.2 (win64) Build 4029153 Fri Oct 13 20:14:34 MDT 2023
--- Date        : Mon May 13 15:47:44 2024
+-- Date        : Tue May 14 19:10:16 2024
 -- Host        : LAPTOP-O3BSDE06 running 64-bit major release  (build 9200)
--- Command     : write_vhdl -force -mode funcsim -rename_top design_1_top_0_0 -prefix
---               design_1_top_0_0_ design_1_top_0_0_sim_netlist.vhdl
+-- Command     : write_vhdl -force -mode funcsim
+--               d:/VUT_FIT/IVH/IVH_projekt_matrix_dis/IVH_projekt_matrix_dis.gen/sources_1/bd/design_1/ip/design_1_top_0_0/design_1_top_0_0_sim_netlist.vhdl
 -- Design      : design_1_top_0_0
 -- Purpose     : This VHDL netlist is a functional simulation representation of the design and should not be modified or
 --               synthesized. This netlist cannot be used for SDF annotated simulation.
@@ -23,6 +23,8 @@ entity design_1_top_0_0_counter is
     \bcd_value_reg[0]_0\ : in STD_LOGIC_VECTOR ( 0 to 0 );
     AR : in STD_LOGIC_VECTOR ( 0 to 0 )
   );
+  attribute ORIG_REF_NAME : string;
+  attribute ORIG_REF_NAME of design_1_top_0_0_counter : entity is "counter";
 end design_1_top_0_0_counter;
 
 architecture STRUCTURE of design_1_top_0_0_counter is
@@ -610,6 +612,8 @@ entity design_1_top_0_0_graphics is
     E : in STD_LOGIC_VECTOR ( 0 to 0 );
     clk : in STD_LOGIC
   );
+  attribute ORIG_REF_NAME : string;
+  attribute ORIG_REF_NAME of design_1_top_0_0_graphics : entity is "graphics";
 end design_1_top_0_0_graphics;
 
 architecture STRUCTURE of design_1_top_0_0_graphics is
@@ -3782,6 +3786,8 @@ entity design_1_top_0_0_counter_anim is
     E : in STD_LOGIC_VECTOR ( 0 to 0 );
     AR : in STD_LOGIC_VECTOR ( 0 to 0 )
   );
+  attribute ORIG_REF_NAME : string;
+  attribute ORIG_REF_NAME of design_1_top_0_0_counter_anim : entity is "counter_anim";
 end design_1_top_0_0_counter_anim;
 
 architecture STRUCTURE of design_1_top_0_0_counter_anim is
@@ -4329,8 +4335,11 @@ entity design_1_top_0_0_top is
     row : out STD_LOGIC_VECTOR ( 7 downto 0 );
     \pre_leds_reg[1]_0\ : out STD_LOGIC;
     leds : out STD_LOGIC_VECTOR ( 1 downto 0 );
+    btns : in STD_LOGIC_VECTOR ( 3 downto 0 );
     clk : in STD_LOGIC
   );
+  attribute ORIG_REF_NAME : string;
+  attribute ORIG_REF_NAME of design_1_top_0_0_top : entity is "top";
 end design_1_top_0_0_top;
 
 architecture STRUCTURE of design_1_top_0_0_top is
@@ -4529,7 +4538,6 @@ architecture STRUCTURE of design_1_top_0_0_top is
   signal \^pre_leds_reg[0]_0\ : STD_LOGIC;
   signal \^pre_leds_reg[1]_0\ : STD_LOGIC;
   signal \^row\ : STD_LOGIC_VECTOR ( 7 downto 0 );
-  signal scol : STD_LOGIC_VECTOR ( 7 downto 0 );
   signal \scol[0]_i_2_n_0\ : STD_LOGIC;
   signal \scol[0]_i_3_n_0\ : STD_LOGIC;
   signal \scol[1]_i_2_n_0\ : STD_LOGIC;
@@ -4546,6 +4554,8 @@ architecture STRUCTURE of design_1_top_0_0_top is
   signal \scol[6]_i_3_n_0\ : STD_LOGIC;
   signal \scol[7]_i_2_n_0\ : STD_LOGIC;
   signal \scol[7]_i_3_n_0\ : STD_LOGIC;
+  signal \scol__0\ : STD_LOGIC_VECTOR ( 7 downto 0 );
+  signal scol_n_0 : STD_LOGIC;
   signal screen_value : STD_LOGIC_VECTOR ( 61 downto 11 );
   signal sec_cnt : STD_LOGIC_VECTOR ( 24 downto 0 );
   signal \sec_cnt0_carry__0_n_0\ : STD_LOGIC;
@@ -6473,6 +6483,17 @@ cnt_dis_rst_reg: unisim.vcomponents.FDRE
       Q => \^leds\(1),
       R => '0'
     );
+scol: unisim.vcomponents.LUT4
+    generic map(
+      INIT => X"0010"
+    )
+        port map (
+      I0 => btns(0),
+      I1 => btns(2),
+      I2 => btns(3),
+      I3 => btns(1),
+      O => scol_n_0
+    );
 \scol[0]_i_2\: unisim.vcomponents.LUT6
     generic map(
       INIT => X"AFA0CFCFAFA0C0C0"
@@ -6681,148 +6702,148 @@ cnt_dis_rst_reg: unisim.vcomponents.FDRE
       I5 => data4(7),
       O => \scol[7]_i_3_n_0\
     );
-\scol_reg[0]\: unisim.vcomponents.FDRE
+\scol_reg[0]\: unisim.vcomponents.FDSE
     generic map(
       INIT => '1'
     )
         port map (
       C => clk,
       CE => '1',
-      D => scol(0),
+      D => \scol__0\(0),
       Q => col(0),
-      R => '0'
+      S => scol_n_0
     );
 \scol_reg[0]_i_1\: unisim.vcomponents.MUXF7
      port map (
       I0 => \scol[0]_i_2_n_0\,
       I1 => \scol[0]_i_3_n_0\,
-      O => scol(0),
+      O => \scol__0\(0),
       S => col_indx(2)
     );
-\scol_reg[1]\: unisim.vcomponents.FDRE
+\scol_reg[1]\: unisim.vcomponents.FDSE
     generic map(
       INIT => '1'
     )
         port map (
       C => clk,
       CE => '1',
-      D => scol(1),
+      D => \scol__0\(1),
       Q => col(1),
-      R => '0'
+      S => scol_n_0
     );
 \scol_reg[1]_i_1\: unisim.vcomponents.MUXF7
      port map (
       I0 => \scol[1]_i_2_n_0\,
       I1 => \scol[1]_i_3_n_0\,
-      O => scol(1),
+      O => \scol__0\(1),
       S => col_indx(2)
     );
-\scol_reg[2]\: unisim.vcomponents.FDRE
+\scol_reg[2]\: unisim.vcomponents.FDSE
     generic map(
       INIT => '1'
     )
         port map (
       C => clk,
       CE => '1',
-      D => scol(2),
+      D => \scol__0\(2),
       Q => col(2),
-      R => '0'
+      S => scol_n_0
     );
 \scol_reg[2]_i_1\: unisim.vcomponents.MUXF7
      port map (
       I0 => \scol[2]_i_2_n_0\,
       I1 => \scol[2]_i_3_n_0\,
-      O => scol(2),
+      O => \scol__0\(2),
       S => col_indx(2)
     );
-\scol_reg[3]\: unisim.vcomponents.FDRE
+\scol_reg[3]\: unisim.vcomponents.FDSE
     generic map(
       INIT => '1'
     )
         port map (
       C => clk,
       CE => '1',
-      D => scol(3),
+      D => \scol__0\(3),
       Q => col(3),
-      R => '0'
+      S => scol_n_0
     );
 \scol_reg[3]_i_1\: unisim.vcomponents.MUXF7
      port map (
       I0 => \scol[3]_i_2_n_0\,
       I1 => \scol[3]_i_3_n_0\,
-      O => scol(3),
+      O => \scol__0\(3),
       S => col_indx(2)
     );
-\scol_reg[4]\: unisim.vcomponents.FDRE
+\scol_reg[4]\: unisim.vcomponents.FDSE
     generic map(
       INIT => '1'
     )
         port map (
       C => clk,
       CE => '1',
-      D => scol(4),
+      D => \scol__0\(4),
       Q => col(4),
-      R => '0'
+      S => scol_n_0
     );
 \scol_reg[4]_i_1\: unisim.vcomponents.MUXF7
      port map (
       I0 => \scol[4]_i_2_n_0\,
       I1 => \scol[4]_i_3_n_0\,
-      O => scol(4),
+      O => \scol__0\(4),
       S => col_indx(2)
     );
-\scol_reg[5]\: unisim.vcomponents.FDRE
+\scol_reg[5]\: unisim.vcomponents.FDSE
     generic map(
       INIT => '1'
     )
         port map (
       C => clk,
       CE => '1',
-      D => scol(5),
+      D => \scol__0\(5),
       Q => col(5),
-      R => '0'
+      S => scol_n_0
     );
 \scol_reg[5]_i_1\: unisim.vcomponents.MUXF7
      port map (
       I0 => \scol[5]_i_2_n_0\,
       I1 => \scol[5]_i_3_n_0\,
-      O => scol(5),
+      O => \scol__0\(5),
       S => col_indx(2)
     );
-\scol_reg[6]\: unisim.vcomponents.FDRE
+\scol_reg[6]\: unisim.vcomponents.FDSE
     generic map(
       INIT => '1'
     )
         port map (
       C => clk,
       CE => '1',
-      D => scol(6),
+      D => \scol__0\(6),
       Q => col(6),
-      R => '0'
+      S => scol_n_0
     );
 \scol_reg[6]_i_1\: unisim.vcomponents.MUXF7
      port map (
       I0 => \scol[6]_i_2_n_0\,
       I1 => \scol[6]_i_3_n_0\,
-      O => scol(6),
+      O => \scol__0\(6),
       S => col_indx(2)
     );
-\scol_reg[7]\: unisim.vcomponents.FDRE
+\scol_reg[7]\: unisim.vcomponents.FDSE
     generic map(
       INIT => '1'
     )
         port map (
       C => clk,
       CE => '1',
-      D => scol(7),
+      D => \scol__0\(7),
       Q => col(7),
-      R => '0'
+      S => scol_n_0
     );
 \scol_reg[7]_i_1\: unisim.vcomponents.MUXF7
      port map (
       I0 => \scol[7]_i_2_n_0\,
       I1 => \scol[7]_i_3_n_0\,
-      O => scol(7),
+      O => \scol__0\(7),
       S => col_indx(2)
     );
 sec_cnt0_carry: unisim.vcomponents.CARRY4
@@ -7524,6 +7545,7 @@ use UNISIM.VCOMPONENTS.ALL;
 entity design_1_top_0_0 is
   port (
     clk : in STD_LOGIC;
+    btns : in STD_LOGIC_VECTOR ( 3 downto 0 );
     col : out STD_LOGIC_VECTOR ( 7 downto 0 );
     row : out STD_LOGIC_VECTOR ( 7 downto 0 );
     leds : out STD_LOGIC_VECTOR ( 3 downto 0 )
@@ -7548,6 +7570,7 @@ architecture STRUCTURE of design_1_top_0_0 is
 begin
 U0: entity work.design_1_top_0_0_top
      port map (
+      btns(3 downto 0) => btns(3 downto 0),
       clk => clk,
       col(7 downto 0) => col(7 downto 0),
       leds(1 downto 0) => leds(3 downto 2),
