@@ -188,10 +188,8 @@ begin
         when 6 => scol<=display_buffer(15 downto 8);
         when 7 => scol<=display_buffer(7 downto 0);
 
-        when others => scol<=(others=>'1');--this will make failure green
+        when others => scol<=(others=>'1');--this will make failure green    
         end case;
-
-
 
 --        f_gen:for ii in 0 to 7 generate -- version with for generate does not want to work (4h wasted here)
 --            if col_indx = conv_integer(i) then

@@ -40,8 +40,8 @@ end fsm_top_tb;
 
 architecture Behavioral of fsm_top_tb is
     signal clk: std_logic;
-    signal row: std_ulogic_vector(7 downto 0);
-    signal col: std_ulogic_vector(7 downto 0);
+    signal row: std_logic_vector(7 downto 0);
+    signal col: std_logic_vector(7 downto 0);
     signal leds: std_logic_vector(3 downto 0);
     signal btns: std_logic_vector(3 downto 0):="0000";
     signal clk_cntr: integer :=0;
@@ -64,6 +64,7 @@ begin
                 assert row = "11111110" report "incorrect value in row in 1. test";
                 assert col = "11111111" report "incorrect value in col in 1. test";
                 assert leds = "0000" report "incorrect initial led value";
+                
         
         
            when others => NULL;
