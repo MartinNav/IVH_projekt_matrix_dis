@@ -1,7 +1,7 @@
 Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
 ---------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2023.2 (win64) Build 4029153 Fri Oct 13 20:14:34 MDT 2023
-| Date         : Tue May 14 20:32:41 2024
+| Date         : Tue May 14 22:57:42 2024
 | Host         : LAPTOP-O3BSDE06 running 64-bit major release  (build 9200)
 | Command      : report_utilization -file design_1_wrapper_utilization_placed.rpt -pb design_1_wrapper_utilization_placed.pb
 | Design       : design_1_wrapper
@@ -69,21 +69,21 @@ Table of Contents
 +--------------------------------------------+------+-------+------------+-----------+-------+
 |                  Site Type                 | Used | Fixed | Prohibited | Available | Util% |
 +--------------------------------------------+------+-------+------------+-----------+-------+
-| Slice                                      |  101 |     0 |          0 |     13300 |  0.76 |
-|   SLICEL                                   |   73 |     0 |            |           |       |
-|   SLICEM                                   |   28 |     0 |            |           |       |
+| Slice                                      |   96 |     0 |          0 |     13300 |  0.72 |
+|   SLICEL                                   |   75 |     0 |            |           |       |
+|   SLICEM                                   |   21 |     0 |            |           |       |
 | LUT as Logic                               |  204 |     0 |          0 |     53200 |  0.38 |
 |   using O5 output only                     |    0 |       |            |           |       |
-|   using O6 output only                     |  167 |       |            |           |       |
-|   using O5 and O6                          |   37 |       |            |           |       |
+|   using O6 output only                     |  166 |       |            |           |       |
+|   using O5 and O6                          |   38 |       |            |           |       |
 | LUT as Memory                              |    0 |     0 |          0 |     17400 |  0.00 |
 |   LUT as Distributed RAM                   |    0 |     0 |            |           |       |
 |   LUT as Shift Register                    |    0 |     0 |            |           |       |
 | Slice Registers                            |  358 |     0 |          0 |    106400 |  0.34 |
-|   Register driven from within the Slice    |  250 |       |            |           |       |
-|   Register driven from outside the Slice   |  108 |       |            |           |       |
-|     LUT in front of the register is unused |   99 |       |            |           |       |
-|     LUT in front of the register is used   |    9 |       |            |           |       |
+|   Register driven from within the Slice    |  253 |       |            |           |       |
+|   Register driven from outside the Slice   |  105 |       |            |           |       |
+|     LUT in front of the register is unused |   94 |       |            |           |       |
+|     LUT in front of the register is used   |   11 |       |            |           |       |
 | Unique Control Sets                        |   19 |       |          0 |     13300 |  0.14 |
 +--------------------------------------------+------+-------+------------+-----------+-------+
 * * Note: Available Control Sets calculated as Slice * 1, Review the Control Sets Report for more information regarding control sets.
@@ -181,7 +181,7 @@ Table of Contents
 | FDSE       |   80 |        Flop & Latch |
 | LUT4       |   67 |                 LUT |
 | LUT1       |   30 |                 LUT |
-| LUT5       |   28 |                 LUT |
+| LUT5       |   29 |                 LUT |
 | OBUF       |   20 |                  IO |
 | LUT2       |   16 |                 LUT |
 | CARRY4     |   16 |          CarryLogic |

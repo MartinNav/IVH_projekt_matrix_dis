@@ -56,7 +56,7 @@ signal cnt_dis_enable: std_logic:='0';
 signal cnt_dis_rst: std_logic:='0';
 signal col_indx: integer range 0 to 7:=0;
 
-constant loop_t: integer:=63;
+constant loop_t: integer:=42;
 signal time_from_start: integer range 0 to loop_t:=0;
 
 
@@ -103,7 +103,7 @@ begin
             cnt<=0;
             
 --            scol<= not scol;
-           if time_from_start<30 then
+           if time_from_start<31 then
             anim_mode<='0';
             --anim_enable<='0';
             if time_from_start>20 then
@@ -112,7 +112,7 @@ begin
                 display_buffer<=counter_display;
             end if;
             else 
-                if time_from_start=35 then
+                if time_from_start=36 then
                     anim_mode<='1';
                 end if;
                display_buffer<=animation_dis;
@@ -133,7 +133,7 @@ begin
 end process;
 
 
-process(clk)
+led_and_frame_logic: process(clk)
 begin
     if rising_edge(clk) then
         cnt_dis_rst<='0';
@@ -158,7 +158,7 @@ begin
         end if;
     end if;
 
-end process;
+end process led_and_frame_logic;
 
 process (clk)
 begin
@@ -175,7 +175,7 @@ begin
 end process;
 
 
-process (clk)--writeout buffer
+write_out: process (clk)--writeout buffer
 begin
    if rising_edge(clk) then
     case col_indx is 
@@ -200,7 +200,7 @@ begin
             scol<="11111111";
         end if;
       end if;
-end process;
+end process write_out;
 
 
 

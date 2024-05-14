@@ -2,10 +2,10 @@
 -- Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
 -- --------------------------------------------------------------------------------
 -- Tool Version: Vivado v.2023.2 (win64) Build 4029153 Fri Oct 13 20:14:34 MDT 2023
--- Date        : Tue May 14 20:30:14 2024
+-- Date        : Tue May 14 22:55:17 2024
 -- Host        : LAPTOP-O3BSDE06 running 64-bit major release  (build 9200)
--- Command     : write_vhdl -force -mode funcsim
---               d:/VUT_FIT/IVH/IVH_projekt_matrix_dis/IVH_projekt_matrix_dis.gen/sources_1/bd/design_1/ip/design_1_top_0_0/design_1_top_0_0_sim_netlist.vhdl
+-- Command     : write_vhdl -force -mode funcsim -rename_top decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix -prefix
+--               decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ design_1_top_0_0_sim_netlist.vhdl
 -- Design      : design_1_top_0_0
 -- Purpose     : This VHDL netlist is a functional simulation representation of the design and should not be modified or
 --               synthesized. This netlist cannot be used for SDF annotated simulation.
@@ -15,7 +15,7 @@ library IEEE;
 use IEEE.STD_LOGIC_1164.ALL;
 library UNISIM;
 use UNISIM.VCOMPONENTS.ALL;
-entity design_1_top_0_0_counter is
+entity decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_counter is
   port (
     E : out STD_LOGIC_VECTOR ( 0 to 0 );
     D : out STD_LOGIC_VECTOR ( 9 downto 0 );
@@ -23,11 +23,9 @@ entity design_1_top_0_0_counter is
     \bcd_value_reg[0]_0\ : in STD_LOGIC_VECTOR ( 0 to 0 );
     AR : in STD_LOGIC_VECTOR ( 0 to 0 )
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of design_1_top_0_0_counter : entity is "counter";
-end design_1_top_0_0_counter;
+end decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_counter;
 
-architecture STRUCTURE of design_1_top_0_0_counter is
+architecture STRUCTURE of decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_counter is
   signal \^e\ : STD_LOGIC_VECTOR ( 0 to 0 );
   signal \bcd_value[0]_i_1_n_0\ : STD_LOGIC;
   signal bcd_value_reg : STD_LOGIC_VECTOR ( 3 downto 0 );
@@ -328,7 +326,7 @@ library IEEE;
 use IEEE.STD_LOGIC_1164.ALL;
 library UNISIM;
 use UNISIM.VCOMPONENTS.ALL;
-entity design_1_top_0_0_counter_0 is
+entity decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_counter_0 is
   port (
     D : out STD_LOGIC_VECTOR ( 9 downto 0 );
     E : in STD_LOGIC_VECTOR ( 0 to 0 );
@@ -336,10 +334,10 @@ entity design_1_top_0_0_counter_0 is
     AR : in STD_LOGIC_VECTOR ( 0 to 0 )
   );
   attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of design_1_top_0_0_counter_0 : entity is "counter";
-end design_1_top_0_0_counter_0;
+  attribute ORIG_REF_NAME of decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_counter_0 : entity is "counter";
+end decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_counter_0;
 
-architecture STRUCTURE of design_1_top_0_0_counter_0 is
+architecture STRUCTURE of decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_counter_0 is
   signal \bcd_value[0]_i_1__0_n_0\ : STD_LOGIC;
   signal bcd_value_reg : STD_LOGIC_VECTOR ( 3 downto 0 );
   signal \p_0_in__1\ : STD_LOGIC_VECTOR ( 3 downto 1 );
@@ -557,7 +555,7 @@ library IEEE;
 use IEEE.STD_LOGIC_1164.ALL;
 library UNISIM;
 use UNISIM.VCOMPONENTS.ALL;
-entity design_1_top_0_0_graphics is
+entity decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_graphics is
   port (
     \time_from_start_reg[2]\ : out STD_LOGIC;
     \time_from_start_reg[2]_0\ : out STD_LOGIC;
@@ -612,11 +610,9 @@ entity design_1_top_0_0_graphics is
     E : in STD_LOGIC_VECTOR ( 0 to 0 );
     clk : in STD_LOGIC
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of design_1_top_0_0_graphics : entity is "graphics";
-end design_1_top_0_0_graphics;
+end decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_graphics;
 
-architecture STRUCTURE of design_1_top_0_0_graphics is
+architecture STRUCTURE of decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_graphics is
   signal VUT_LOGO : STD_LOGIC_VECTOR ( 63 downto 0 );
   signal \VUT_LOGO[0]_i_1_n_0\ : STD_LOGIC;
   signal \VUT_LOGO[10]_i_1_n_0\ : STD_LOGIC;
@@ -3773,7 +3769,7 @@ library IEEE;
 use IEEE.STD_LOGIC_1164.ALL;
 library UNISIM;
 use UNISIM.VCOMPONENTS.ALL;
-entity design_1_top_0_0_counter_anim is
+entity decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_counter_anim is
   port (
     \screen_value_reg[63]_0\ : out STD_LOGIC;
     Q : out STD_LOGIC_VECTOR ( 17 downto 0 );
@@ -3786,11 +3782,9 @@ entity design_1_top_0_0_counter_anim is
     E : in STD_LOGIC_VECTOR ( 0 to 0 );
     AR : in STD_LOGIC_VECTOR ( 0 to 0 )
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of design_1_top_0_0_counter_anim : entity is "counter_anim";
-end design_1_top_0_0_counter_anim;
+end decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_counter_anim;
 
-architecture STRUCTURE of design_1_top_0_0_counter_anim is
+architecture STRUCTURE of decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_counter_anim is
   signal en_2nd_ctr : STD_LOGIC;
   signal first_value : STD_LOGIC_VECTOR ( 23 downto 3 );
   signal first_value_0 : STD_LOGIC_VECTOR ( 23 downto 3 );
@@ -3801,7 +3795,7 @@ architecture STRUCTURE of design_1_top_0_0_counter_anim is
   attribute SOFT_HLUTNM of \display_buffer[62]_i_1\ : label is "soft_lutpair23";
   attribute SOFT_HLUTNM of \display_buffer[63]_i_1\ : label is "soft_lutpair23";
 begin
-cnt1: entity work.design_1_top_0_0_counter
+cnt1: entity work.decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_counter
      port map (
       AR(0) => AR(0),
       D(9) => first_value_0(23),
@@ -3815,7 +3809,7 @@ cnt1: entity work.design_1_top_0_0_counter
       \bcd_value_reg[0]_0\(0) => E(0),
       clk => clk
     );
-cnt2: entity work.design_1_top_0_0_counter_0
+cnt2: entity work.decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_counter_0
      port map (
       AR(0) => AR(0),
       D(9) => second_value_1(23),
@@ -4328,7 +4322,7 @@ library IEEE;
 use IEEE.STD_LOGIC_1164.ALL;
 library UNISIM;
 use UNISIM.VCOMPONENTS.ALL;
-entity design_1_top_0_0_top is
+entity decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_top is
   port (
     col : out STD_LOGIC_VECTOR ( 7 downto 0 );
     row : out STD_LOGIC_VECTOR ( 7 downto 0 );
@@ -4336,11 +4330,9 @@ entity design_1_top_0_0_top is
     clk : in STD_LOGIC;
     btns : in STD_LOGIC_VECTOR ( 3 downto 0 )
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of design_1_top_0_0_top : entity is "top";
-end design_1_top_0_0_top;
+end decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_top;
 
-architecture STRUCTURE of design_1_top_0_0_top is
+architecture STRUCTURE of decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_top is
   signal anim_ctr : STD_LOGIC_VECTOR ( 22 downto 0 );
   signal \anim_ctr0_carry__0_n_0\ : STD_LOGIC;
   signal \anim_ctr0_carry__0_n_1\ : STD_LOGIC;
@@ -4610,13 +4602,13 @@ architecture STRUCTURE of design_1_top_0_0_top is
   signal \srow[7]_i_5_n_0\ : STD_LOGIC;
   signal time_from_start : STD_LOGIC_VECTOR ( 5 downto 0 );
   signal \time_from_start[0]_i_1_n_0\ : STD_LOGIC;
+  signal \time_from_start[0]_i_2_n_0\ : STD_LOGIC;
   signal \time_from_start[1]_i_1_n_0\ : STD_LOGIC;
   signal \time_from_start[2]_i_1_n_0\ : STD_LOGIC;
   signal \time_from_start[3]_i_1_n_0\ : STD_LOGIC;
   signal \time_from_start[4]_i_1_n_0\ : STD_LOGIC;
   signal \time_from_start[5]_i_1_n_0\ : STD_LOGIC;
   signal \time_from_start[5]_i_3_n_0\ : STD_LOGIC;
-  signal \time_from_start[5]_i_4_n_0\ : STD_LOGIC;
   signal time_from_start_1 : STD_LOGIC;
   signal \NLW_anim_ctr0_carry__4_CO_UNCONNECTED\ : STD_LOGIC_VECTOR ( 3 downto 1 );
   signal \NLW_anim_ctr0_carry__4_O_UNCONNECTED\ : STD_LOGIC_VECTOR ( 3 downto 2 );
@@ -4630,27 +4622,29 @@ architecture STRUCTURE of design_1_top_0_0_top is
   attribute ADDER_THRESHOLD of \anim_ctr0_carry__2\ : label is 35;
   attribute ADDER_THRESHOLD of \anim_ctr0_carry__3\ : label is 35;
   attribute ADDER_THRESHOLD of \anim_ctr0_carry__4\ : label is 35;
+  attribute SOFT_HLUTNM : string;
+  attribute SOFT_HLUTNM of anim_mode_i_2 : label is "soft_lutpair28";
   attribute ADDER_THRESHOLD of cnt0_carry : label is 35;
   attribute ADDER_THRESHOLD of \cnt0_carry__0\ : label is 35;
   attribute ADDER_THRESHOLD of \cnt0_carry__1\ : label is 35;
   attribute ADDER_THRESHOLD of \cnt0_carry__2\ : label is 35;
-  attribute SOFT_HLUTNM : string;
-  attribute SOFT_HLUTNM of \cnt[0]_i_1\ : label is "soft_lutpair26";
-  attribute SOFT_HLUTNM of \col_indx[1]_i_1\ : label is "soft_lutpair28";
-  attribute SOFT_HLUTNM of \col_indx[2]_i_1\ : label is "soft_lutpair28";
-  attribute SOFT_HLUTNM of \pre_leds[0]_i_1\ : label is "soft_lutpair29";
-  attribute SOFT_HLUTNM of \pre_leds[1]_i_1\ : label is "soft_lutpair29";
-  attribute SOFT_HLUTNM of \pre_leds[2]_i_1\ : label is "soft_lutpair25";
-  attribute SOFT_HLUTNM of \pre_leds[3]_i_3\ : label is "soft_lutpair25";
+  attribute SOFT_HLUTNM of \cnt[0]_i_1\ : label is "soft_lutpair27";
+  attribute SOFT_HLUTNM of \col_indx[1]_i_1\ : label is "soft_lutpair29";
+  attribute SOFT_HLUTNM of \col_indx[2]_i_1\ : label is "soft_lutpair29";
+  attribute SOFT_HLUTNM of \display_buffer[61]_i_2\ : label is "soft_lutpair25";
+  attribute SOFT_HLUTNM of \pre_leds[0]_i_1\ : label is "soft_lutpair30";
+  attribute SOFT_HLUTNM of \pre_leds[1]_i_1\ : label is "soft_lutpair30";
+  attribute SOFT_HLUTNM of \pre_leds[2]_i_1\ : label is "soft_lutpair26";
+  attribute SOFT_HLUTNM of \pre_leds[3]_i_3\ : label is "soft_lutpair26";
   attribute ADDER_THRESHOLD of sec_cnt0_carry : label is 35;
   attribute ADDER_THRESHOLD of \sec_cnt0_carry__0\ : label is 35;
   attribute ADDER_THRESHOLD of \sec_cnt0_carry__1\ : label is 35;
   attribute ADDER_THRESHOLD of \sec_cnt0_carry__2\ : label is 35;
   attribute ADDER_THRESHOLD of \sec_cnt0_carry__3\ : label is 35;
   attribute ADDER_THRESHOLD of \sec_cnt0_carry__4\ : label is 35;
-  attribute SOFT_HLUTNM of \srow[7]_i_2\ : label is "soft_lutpair26";
-  attribute SOFT_HLUTNM of \time_from_start[1]_i_1\ : label is "soft_lutpair27";
-  attribute SOFT_HLUTNM of \time_from_start[2]_i_1\ : label is "soft_lutpair27";
+  attribute SOFT_HLUTNM of \srow[7]_i_2\ : label is "soft_lutpair27";
+  attribute SOFT_HLUTNM of \time_from_start[0]_i_2\ : label is "soft_lutpair25";
+  attribute SOFT_HLUTNM of \time_from_start[2]_i_1\ : label is "soft_lutpair28";
   attribute SOFT_HLUTNM of \time_from_start[3]_i_1\ : label is "soft_lutpair24";
   attribute SOFT_HLUTNM of \time_from_start[4]_i_1\ : label is "soft_lutpair24";
 begin
@@ -5091,28 +5085,28 @@ anim_enable_reg: unisim.vcomponents.FDRE
       Q => anim_enable,
       R => '0'
     );
-anim_mode_i_1: unisim.vcomponents.LUT4
+anim_mode_i_1: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"EE20"
+      INIT => X"EEEEEEEE00000200"
     )
         port map (
       I0 => \display_buffer[61]_i_2_n_0\,
       I1 => \srow[7]_i_2_n_0\,
-      I2 => anim_mode_i_2_n_0,
-      I3 => anim_mode,
+      I2 => time_from_start(3),
+      I3 => time_from_start(0),
+      I4 => anim_mode_i_2_n_0,
+      I5 => anim_mode,
       O => anim_mode_i_1_n_0
     );
-anim_mode_i_2: unisim.vcomponents.LUT6
+anim_mode_i_2: unisim.vcomponents.LUT4
     generic map(
-      INIT => X"0010000000000000"
+      INIT => X"FFDF"
     )
         port map (
-      I0 => time_from_start(3),
-      I1 => time_from_start(4),
-      I2 => time_from_start(1),
-      I3 => time_from_start(2),
-      I4 => time_from_start(5),
-      I5 => time_from_start(0),
+      I0 => time_from_start(1),
+      I1 => time_from_start(2),
+      I2 => time_from_start(5),
+      I3 => time_from_start(4),
       O => anim_mode_i_2_n_0
     );
 anim_mode_reg: unisim.vcomponents.FDRE
@@ -5126,7 +5120,7 @@ anim_mode_reg: unisim.vcomponents.FDRE
       Q => anim_mode,
       R => '0'
     );
-animation: entity work.design_1_top_0_0_graphics
+animation: entity work.decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_graphics
      port map (
       D(19) => animation_n_16,
       D(18) => animation_n_17,
@@ -5291,7 +5285,7 @@ cnt0_carry: unisim.vcomponents.CARRY4
       I5 => \srow[7]_i_3_n_0\,
       O => \cnt[0]_i_2_n_0\
     );
-cnt_dis: entity work.design_1_top_0_0_counter_anim
+cnt_dis: entity work.decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_counter_anim
      port map (
       AR(0) => cnt_dis_rst,
       E(0) => cnt_dis_enable_reg_n_0,
@@ -5374,15 +5368,15 @@ cnt_dis_enable_reg: unisim.vcomponents.FDRE
     );
 cnt_dis_rst_i_1: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"8000000000000000"
+      INIT => X"0010000000000000"
     )
         port map (
-      I0 => time_from_start(4),
-      I1 => time_from_start(1),
-      I2 => time_from_start(2),
-      I3 => time_from_start(3),
-      I4 => time_from_start(0),
-      I5 => time_from_start(5),
+      I0 => time_from_start(0),
+      I1 => time_from_start(4),
+      I2 => time_from_start(5),
+      I3 => time_from_start(2),
+      I4 => time_from_start(1),
+      I5 => time_from_start(3),
       O => cnt_dis_rst_i_1_n_0
     );
 cnt_dis_rst_reg: unisim.vcomponents.FDRE
@@ -7457,15 +7451,27 @@ sec_cnt0_carry: unisim.vcomponents.CARRY4
     );
 \time_from_start[0]_i_1\: unisim.vcomponents.LUT5
     generic map(
-      INIT => X"2AAAD555"
+      INIT => X"7F807F00"
     )
         port map (
-      I0 => \time_from_start[5]_i_4_n_0\,
-      I1 => \pre_leds[3]_i_4_n_0\,
-      I2 => \pre_leds[3]_i_5_n_0\,
-      I3 => \pre_leds[3]_i_6_n_0\,
-      I4 => time_from_start(0),
+      I0 => \pre_leds[3]_i_6_n_0\,
+      I1 => \pre_leds[3]_i_5_n_0\,
+      I2 => \pre_leds[3]_i_4_n_0\,
+      I3 => time_from_start(0),
+      I4 => \time_from_start[0]_i_2_n_0\,
       O => \time_from_start[0]_i_1_n_0\
+    );
+\time_from_start[0]_i_2\: unisim.vcomponents.LUT5
+    generic map(
+      INIT => X"FBFFFFFF"
+    )
+        port map (
+      I0 => time_from_start(4),
+      I1 => time_from_start(5),
+      I2 => time_from_start(2),
+      I3 => time_from_start(1),
+      I4 => time_from_start(3),
+      O => \time_from_start[0]_i_2_n_0\
     );
 \time_from_start[1]_i_1\: unisim.vcomponents.LUT2
     generic map(
@@ -7509,12 +7515,17 @@ sec_cnt0_carry: unisim.vcomponents.CARRY4
       I4 => time_from_start(4),
       O => \time_from_start[4]_i_1_n_0\
     );
-\time_from_start[5]_i_1\: unisim.vcomponents.LUT1
+\time_from_start[5]_i_1\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"1"
+      INIT => X"0000000000000800"
     )
         port map (
-      I0 => \time_from_start[5]_i_4_n_0\,
+      I0 => time_from_start(3),
+      I1 => time_from_start(1),
+      I2 => time_from_start(2),
+      I3 => time_from_start(5),
+      I4 => time_from_start(4),
+      I5 => time_from_start(0),
       O => \time_from_start[5]_i_1_n_0\
     );
 \time_from_start[5]_i_2\: unisim.vcomponents.LUT3
@@ -7539,19 +7550,6 @@ sec_cnt0_carry: unisim.vcomponents.CARRY4
       I4 => time_from_start(0),
       I5 => time_from_start(5),
       O => \time_from_start[5]_i_3_n_0\
-    );
-\time_from_start[5]_i_4\: unisim.vcomponents.LUT6
-    generic map(
-      INIT => X"7FFFFFFFFFFFFFFF"
-    )
-        port map (
-      I0 => time_from_start(5),
-      I1 => time_from_start(0),
-      I2 => time_from_start(3),
-      I3 => time_from_start(2),
-      I4 => time_from_start(1),
-      I5 => time_from_start(4),
-      O => \time_from_start[5]_i_4_n_0\
     );
 \time_from_start_reg[0]\: unisim.vcomponents.FDRE
     generic map(
@@ -7624,7 +7622,7 @@ library IEEE;
 use IEEE.STD_LOGIC_1164.ALL;
 library UNISIM;
 use UNISIM.VCOMPONENTS.ALL;
-entity design_1_top_0_0 is
+entity decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix is
   port (
     clk : in STD_LOGIC;
     btns : in STD_LOGIC_VECTOR ( 3 downto 0 );
@@ -7633,24 +7631,24 @@ entity design_1_top_0_0 is
     leds : out STD_LOGIC_VECTOR ( 3 downto 0 )
   );
   attribute NotValidForBitStream : boolean;
-  attribute NotValidForBitStream of design_1_top_0_0 : entity is true;
+  attribute NotValidForBitStream of decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix : entity is true;
   attribute CHECK_LICENSE_TYPE : string;
-  attribute CHECK_LICENSE_TYPE of design_1_top_0_0 : entity is "design_1_top_0_0,top,{}";
+  attribute CHECK_LICENSE_TYPE of decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix : entity is "design_1_top_0_0,top,{}";
   attribute downgradeipidentifiedwarnings : string;
-  attribute downgradeipidentifiedwarnings of design_1_top_0_0 : entity is "yes";
+  attribute downgradeipidentifiedwarnings of decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix : entity is "yes";
   attribute ip_definition_source : string;
-  attribute ip_definition_source of design_1_top_0_0 : entity is "module_ref";
+  attribute ip_definition_source of decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix : entity is "module_ref";
   attribute x_core_info : string;
-  attribute x_core_info of design_1_top_0_0 : entity is "top,Vivado 2023.2";
-end design_1_top_0_0;
+  attribute x_core_info of decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix : entity is "top,Vivado 2023.2";
+end decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix;
 
-architecture STRUCTURE of design_1_top_0_0 is
+architecture STRUCTURE of decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix is
   attribute x_interface_info : string;
   attribute x_interface_info of clk : signal is "xilinx.com:signal:clock:1.0 clk CLK";
   attribute x_interface_parameter : string;
   attribute x_interface_parameter of clk : signal is "XIL_INTERFACENAME clk, FREQ_HZ 25000000, FREQ_TOLERANCE_HZ 0, PHASE 0.0, CLK_DOMAIN /clk_wiz_0_clk_out1, INSERT_VIP 0";
 begin
-U0: entity work.design_1_top_0_0_top
+U0: entity work.decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_top
      port map (
       btns(3 downto 0) => btns(3 downto 0),
       clk => clk,
