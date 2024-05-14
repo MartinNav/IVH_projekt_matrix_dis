@@ -56,7 +56,7 @@ signal cnt_dis_enable: std_logic:='0';
 signal cnt_dis_rst: std_logic:='0';
 signal col_indx: integer range 0 to 7:=0;
 
-constant loop_t: integer:=42;
+constant loop_t: integer:=41;
 signal time_from_start: integer range 0 to loop_t:=0;
 
 

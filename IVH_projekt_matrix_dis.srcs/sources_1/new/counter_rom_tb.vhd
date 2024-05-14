@@ -28,17 +28,19 @@ use xil_defaultlib.all;
 -- arithmetic functions with Signed or Unsigned values
 --use IEEE.NUMERIC_STD.ALL;
 
+
+
 -- Uncomment the following library declaration if instantiating
 -- any Xilinx leaf cells in this code.
 --library UNISIM;
 --use UNISIM.VComponents.all;
 
 entity counter_rom_tb is
- -- Port ( clk:in std_logic);
+  Port ( clk:in std_logic);
 end counter_rom_tb;
 
 architecture Behavioral of counter_rom_tb is
-    signal clk: std_logic:=0;
+   -- signal clk: std_logic:='0';
     signal ctr: integer:=0;
     signal output: std_logic_vector(63 downto 0):=(others=>'0');
 begin
@@ -51,6 +53,7 @@ output=>output
 );
 
 process
+--variable clk: std_logic :='0';
 begin
     if rising_edge(clk) then
     -- these values may seem weird but they are not it is because I am using little endian to represen the display instead of big endian
@@ -91,7 +94,7 @@ begin
         ctr<=ctr+1;
         
     end if;
-    clk<= not clk after 16ns;
+   -- clk<= not clk after 16ns;
 end process;
 
 

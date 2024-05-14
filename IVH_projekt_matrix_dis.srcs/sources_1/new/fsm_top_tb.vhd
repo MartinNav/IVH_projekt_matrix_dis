@@ -65,12 +65,13 @@ begin
                 assert col = "11111111" report "incorrect value in col in 1. test";
                 assert leds = "0000" report "incorrect initial led value";
                 
+            when 2 => wait;
         
         
            when others => NULL;
         end case;
 
-    clk_cntr<=clk+1;
+    clk_cntr<=clk_cntr+1;
     end if;
     clk<= not clk after 16ns;
 end process;
