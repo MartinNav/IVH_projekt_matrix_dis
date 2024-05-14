@@ -91,7 +91,7 @@ begin
         ctr<=ctr+1;
         
     end if;
-    clk<= not clk;
+    clk<= not clk after 16ns;
 end process;
 
 

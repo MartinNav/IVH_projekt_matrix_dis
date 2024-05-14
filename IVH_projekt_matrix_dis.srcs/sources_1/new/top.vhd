@@ -73,6 +73,8 @@ signal anim_ctr: integer range 0 to anim_ctr_max:=0;
 
 signal pre_leds: std_logic_vector(3 downto 0);
 
+signal prev_btns: std_logic_vector(3 downto 0):=(others=>'0');
+
 begin
 
 
@@ -151,6 +153,9 @@ begin
         if btns = "0100" then
             pre_leds<="0000";            
         end if;
+        if btns /= prev_btns and btns = "0010" then -- this feature is very experimental
+            cnt_dis_enable<='1';
+        end if;
     end if;
 
 end process;
@@ -158,6 +163,7 @@ end process;
 process (clk)
 begin
     if rising_edge(clk)then
+    prev_btns<=btns;
         if anim_ctr = anim_ctr_max then
             anim_ctr<=0;
             anim_enable<='1';
