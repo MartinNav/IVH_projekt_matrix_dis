@@ -35,11 +35,11 @@ use xil_defaultlib.all;
 --use UNISIM.VComponents.all;
 
 entity fsm_top_tb is
-    --Port ( clk : in STD_LOGIC);
+    Port ( clk : in STD_LOGIC);
 end fsm_top_tb;
 
 architecture Behavioral of fsm_top_tb is
-    signal clk: std_logic;
+    --signal clk: std_logic;
     signal row: std_logic_vector(7 downto 0);
     signal col: std_logic_vector(7 downto 0);
     signal leds: std_logic_vector(3 downto 0);
@@ -55,17 +55,24 @@ begin
         row=>row,
         leds=>leds
     ); 
-process
+process(clk)
 begin
     if rising_edge(clk) then
 
         case clk_cntr is
             when 1 =>
-                assert row = "11111110" report "incorrect value in row in 1. test";
-                assert col = "11111111" report "incorrect value in col in 1. test";
-                assert leds = "0000" report "incorrect initial led value";
-                
-            when 2 => wait;
+                assert row = "11111110" report "incorrect value in row in 1. test case";
+                assert col = "00000000" report "incorrect value in col in 1. test case";
+             when 30300 =>
+                assert row = "11111101" report "incorrect value in row in 2. test case";
+                assert col = "01000100" report "incorrect value in col in 2. test case ";
+             when 25010000=>
+                assert row = "11111110" report "incorrect value in row in 3. test case";--first switch from 00 to 01
+                assert col = "01111100" report "incorrect value in col in 3. test case ";
+             when 50011000 =>
+                assert row = "11111110" report "incorrect value in row in 4. test case";--switch from 01 to 02
+                assert col = "01110100" report "incorrect value in col in 4. test case ";
+            --when 2 => wait;
         
         
            when others => NULL;
@@ -73,7 +80,7 @@ begin
 
     clk_cntr<=clk_cntr+1;
     end if;
-    clk<= not clk after 16ns;
+   -- clk<= not clk after 16ns;
 end process;
 
 

@@ -27,9 +27,6 @@ use xil_defaultlib.all;
 -- Uncomment the following library declaration if using
 -- arithmetic functions with Signed or Unsigned values
 --use IEEE.NUMERIC_STD.ALL;
-
-
-
 -- Uncomment the following library declaration if instantiating
 -- any Xilinx leaf cells in this code.
 --library UNISIM;
@@ -52,7 +49,7 @@ en=>'1',
 output=>output
 );
 
-process
+process(clk)
 --variable clk: std_logic :='0';
 begin
     if rising_edge(clk) then
